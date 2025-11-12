@@ -1,0 +1,36 @@
+{
+  "version": "1.0.0",
+  "dimensions": 384,
+  "nextId": 2,
+  "patternsWithIds": [
+    [
+      0,
+      {
+        "action": "test1",
+        "success": true,
+        "timestamp": "2025-10-31T04:31:32.253Z"
+      }
+    ],
+    [
+      1,
+      {
+        "action": "test2",
+        "success": true,
+        "timestamp": "2025-10-31T04:31:32.255Z"
+      }
+    ]
+  ],
+  "patterns": [
+    {
+      "action": "test1",
+      "success": true,
+      "timestamp": "2025-10-31T04:31:32.253Z"
+    },
+    {
+      "action": "test2",
+      "success": true,
+      "timestamp": "2025-10-31T04:31:32.255Z"
+    }
+  ],
+  "savedAt": "2025-10-31T04:31:32.257Z"
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      width: 350px;
+      padding: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 20px;
+      margin: 0 0 15px 0;
+      color: #333;
+    }
+
+    .network-btn {
+      width: 100%;
+      padding: 15px;
+      margin: 10px 0;
+      border: 2px solid #667eea;
+      background: white;
+      color: #667eea;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .network-btn:hover {
+      background: #667eea;
+      color: white;
+    }
+
+    .network-btn.active {
+      background: #667eea;
+      color: white;
+    }
+
+    .user-data {
+      background: #f5f5f5;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 15px 0;
+      font-size: 14px;
+    }
+
+    .user-data div {
+      margin: 5px 0;
+    }
+
+    .status {
+      padding: 10px;
+      border-radius: 6px;
+      margin: 10px 0;
+      font-size: 14px;
+    }
+
+    .status.success {
+      background: #d4edda;
+      color: #155724;
+    }
+
+    .status.error {
+      background: #f8d7da;
+      color: #721c24;
+    }
+
+    .status.info {
+      background: #d1ecf1;
+      color: #0c5460;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎯 Affiliate Signup Helper</h1>
+
+  <div class="user-data">
+    <div><strong>Name:</strong> <span id="user-name">Loading...</span></div>
+    <div><strong>Email:</strong> <span id="user-email">Loading...</span></div>
+  </div>
+
+  <div id="status"></div>
+
+  <button class="network-btn" data-site="partnerstack">
+    PartnerStack
+  </button>
+
+  <button class="network-btn" data-site="shareasale">
+    ShareASale
+  </button>
+
+  <button class="network-btn" data-site="impact">
+    Impact.com
+  </button>
+
+  <button class="network-btn" data-site="cj">
+    CJ Affiliate
+  </button>
+
+  <script src="popup.js"></script>
+</body>
+</html>

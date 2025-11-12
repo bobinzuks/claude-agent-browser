@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affiliate Signup Test Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .landing-page {
+            background: white;
+            border-radius: 20px;
+            padding: 60px;
+            max-width: 800px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .landing-page h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .landing-page p {
+            font-size: 20px;
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 18px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: transform 0.2s;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.6);
+        }
+
+        .choice-page {
+            background: white;
+            border-radius: 20px;
+            padding: 60px;
+            max-width: 900px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .choice-page h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+            text-align: center;
+            color: #333;
+        }
+
+        .choices {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .choice-card {
+            flex: 1;
+            border: 3px solid #e0e0e0;
+            border-radius: 15px;
+            padding: 40px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-align: center;
+        }
+
+        .choice-card:hover {
+            border-color: #667eea;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .choice-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #667eea;
+        }
+
+        .choice-card p {
+            color: #666;
+            font-size: 16px;
+        }
+
+        .form-page {
+            background: white;
+            border-radius: 20px;
+            padding: 60px;
+            max-width: 600px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .form-page h2 {
+            font-size: 32px;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .form-group.error input {
+            border-color: #f44336;
+        }
+
+        .error-message {
+            color: #f44336;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        .success-page {
+            background: white;
+            border-radius: 20px;
+            padding: 60px;
+            max-width: 600px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .success-page h2 {
+            font-size: 36px;
+            color: #4caf50;
+            margin-bottom: 20px;
+        }
+
+        .success-page .checkmark {
+            font-size: 80px;
+            color: #4caf50;
+            margin-bottom: 20px;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        .back-btn {
+            background: #e0e0e0;
+            color: #333;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Landing Page -->
+    <div id="landing" class="landing-page">
+        <h1>🚀 Affiliate Network Platform</h1>
+        <p>Join thousands of partners earning commissions</p>
+        <button class="btn-primary" onclick="showChoice()">Get Started</button>
+    </div>
+
+    <!-- Choice Page -->
+    <div id="choice" class="choice-page hidden">
+        <button class="back-btn" onclick="showLanding()">← Previous</button>
+        <h2>What best describes you?</h2>
+        <div class="choices">
+            <div class="choice-card" onclick="showForm('vendor')">
+                <h3>🔧 I'm a software vendor</h3>
+                <p>I need to run or manage a partner program</p>
+            </div>
+            <div class="choice-card" onclick="showForm('partner')">
+                <h3>🤝 I'm a partner</h3>
+                <p>I want to join programs and earn commissions</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Form Page -->
+    <div id="form" class="form-page hidden">
+        <button class="back-btn" onclick="showChoice()">← Previous</button>
+        <h2 id="form-title">Sign Up</h2>
+        <form id="signup-form" onsubmit="handleSubmit(event)">
+            <div class="form-group">
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" name="firstName" required>
+                <div class="error-message" id="firstName-error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="lastName">Last Name *</label>
+                <input type="text" id="lastName" name="lastName" required>
+                <div class="error-message" id="lastName-error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Business Email *</label>
+                <input type="email" id="email" name="email" required>
+                <div class="error-message" id="email-error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="company">Company/Website *</label>
+                <input type="text" id="company" name="company" required>
+                <div class="error-message" id="company-error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone (optional)</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+
+            <button type="submit" class="btn-primary" style="width: 100%;">Submit Application</button>
+        </form>
+    </div>
+
+    <!-- Success Page -->
+    <div id="success" class="success-page hidden">
+        <div class="checkmark">✓</div>
+        <h2>Application Submitted!</h2>
+        <p>Thank you for signing up. We'll review your application and get back to you soon.</p>
+        <br>
+        <button class="btn-primary" onclick="resetForm()">Submit Another</button>
+    </div>
+
+    <script>
+        let userType = '';
+
+        function showLanding() {
+            document.getElementById('landing').classList.remove('hidden');
+            document.getElementById('choice').classList.add('hidden');
+            document.getElementById('form').classList.add('hidden');
+            document.getElementById('success').classList.add('hidden');
+        }
+
+        function showChoice() {
+            document.getElementById('landing').classList.add('hidden');
+            document.getElementById('choice').classList.remove('hidden');
+            document.getElementById('form').classList.add('hidden');
+            document.getElementById('success').classList.add('hidden');
+        }
+
+        function showForm(type) {
+            userType = type;
+            document.getElementById('landing').classList.add('hidden');
+            document.getElementById('choice').classList.add('hidden');
+            document.getElementById('form').classList.remove('hidden');
+            document.getElementById('success').classList.add('hidden');
+
+            const title = type === 'vendor' ? 'Software Vendor Sign Up' : 'Partner Sign Up';
+            document.getElementById('form-title').textContent = title;
+        }
+
+        function handleSubmit(event) {
+            event.preventDefault();
+
+            const formData = {
+                type: userType,
+                firstName: document.getElementById('firstName').value,
+                lastName: document.getElementById('lastName').value,
+                email: document.getElementById('email').value,
+                company: document.getElementById('company').value,
+                phone: document.getElementById('phone').value
+            };
+
+            console.log('Form submitted:', formData);
+
+            // Show success
+            document.getElementById('landing').classList.add('hidden');
+            document.getElementById('choice').classList.add('hidden');
+            document.getElementById('form').classList.add('hidden');
+            document.getElementById('success').classList.remove('hidden');
+
+            // Store submission
+            const submissions = JSON.parse(localStorage.getItem('submissions') || '[]');
+            submissions.push({
+                ...formData,
+                timestamp: new Date().toISOString()
+            });
+            localStorage.setItem('submissions', JSON.stringify(submissions));
+        }
+
+        function resetForm() {
+            document.getElementById('signup-form').reset();
+            showLanding();
+        }
+    </script>
+</body>
+</html>

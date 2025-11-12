@@ -1,0 +1,23 @@
+{
+  "id": "a8214a0016adea71",
+  "name": "stealth-profile",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+  "fingerprint": {
+    "screen": {
+      "width": 1536,
+      "height": 864,
+      "colorDepth": 24
+    },
+    "timezone": "Europe/Paris",
+    "language": "en-GB",
+    "platform": "MacIntel",
+    "vendor": "Apple Computer, Inc.",
+    "hardwareConcurrency": 12,
+    "deviceMemory": 16,
+    "webgl": {
+      "vendor": "WebKit",
+      "renderer": "WebKit WebGL"
+    }
+  },
+  "createdAt": "2025-11-12T19:41:18.181Z"
+}

@@ -1,0 +1,365 @@
+{
+  "version": "1.0.0",
+  "dimensions": 384,
+  "nextId": 15,
+  "patternsWithIds": [
+    [
+      0,
+      {
+        "action": "navigate",
+        "url": "https://www.guerrillamail.com/",
+        "success": true,
+        "metadata": {
+          "provider": "GuerrillaMail",
+          "stepType": "navigate"
+        },
+        "timestamp": "2025-10-26T20:37:29.192Z"
+      }
+    ],
+    [
+      1,
+      {
+        "action": "wait",
+        "url": "https://www.guerrillamail.com/",
+        "success": true,
+        "metadata": {
+          "provider": "GuerrillaMail",
+          "stepType": "wait"
+        },
+        "timestamp": "2025-10-26T20:37:29.228Z"
+      }
+    ],
+    [
+      2,
+      {
+        "action": "extract",
+        "selector": "#email-widget",
+        "url": "https://www.guerrillamail.com/",
+        "success": true,
+        "metadata": {
+          "provider": "GuerrillaMail",
+          "stepType": "extract"
+        },
+        "timestamp": "2025-10-26T20:37:29.233Z"
+      }
+    ],
+    [
+      3,
+      {
+        "action": "navigate",
+        "url": "https://temp-mail.org/",
+        "success": true,
+        "metadata": {
+          "provider": "TempMail",
+          "stepType": "navigate"
+        },
+        "timestamp": "2025-10-26T20:37:29.295Z"
+      }
+    ],
+    [
+      4,
+      {
+        "action": "wait",
+        "url": "https://temp-mail.org/",
+        "success": true,
+        "metadata": {
+          "provider": "TempMail",
+          "stepType": "wait"
+        },
+        "timestamp": "2025-10-26T20:37:29.298Z"
+      }
+    ],
+    [
+      5,
+      {
+        "action": "extract",
+        "selector": "#mail",
+        "url": "https://temp-mail.org/",
+        "success": true,
+        "metadata": {
+          "provider": "TempMail",
+          "stepType": "extract"
+        },
+        "timestamp": "2025-10-26T20:37:29.301Z"
+      }
+    ],
+    [
+      6,
+      {
+        "action": "navigate",
+        "url": "https://10minutemail.com/",
+        "success": true,
+        "metadata": {
+          "provider": "10MinuteMail",
+          "stepType": "navigate"
+        },
+        "timestamp": "2025-10-26T20:37:29.318Z"
+      }
+    ],
+    [
+      7,
+      {
+        "action": "wait",
+        "url": "https://10minutemail.com/",
+        "success": true,
+        "metadata": {
+          "provider": "10MinuteMail",
+          "stepType": "wait"
+        },
+        "timestamp": "2025-10-26T20:37:29.326Z"
+      }
+    ],
+    [
+      8,
+      {
+        "action": "extract",
+        "selector": "#mailAddress",
+        "url": "https://10minutemail.com/",
+        "success": true,
+        "metadata": {
+          "provider": "10MinuteMail",
+          "stepType": "extract"
+        },
+        "timestamp": "2025-10-26T20:37:29.331Z"
+      }
+    ],
+    [
+      9,
+      {
+        "action": "navigate",
+        "url": "https://maildrop.cc/",
+        "success": true,
+        "metadata": {
+          "provider": "MailDrop",
+          "stepType": "navigate"
+        },
+        "timestamp": "2025-10-26T20:37:29.340Z"
+      }
+    ],
+    [
+      10,
+      {
+        "action": "signup_flow",
+        "url": "https://maildrop.cc/",
+        "success": false,
+        "metadata": {
+          "provider": "MailDrop",
+          "error": "ReferenceError: MutationObserver is not defined"
+        },
+        "timestamp": "2025-10-26T20:37:29.361Z"
+      }
+    ],
+    [
+      11,
+      {
+        "action": "navigate",
+        "url": "https://www.mohmal.com/en",
+        "success": true,
+        "metadata": {
+          "provider": "Mohmal",
+          "stepType": "navigate"
+        },
+        "timestamp": "2025-10-26T20:37:29.366Z"
+      }
+    ],
+    [
+      12,
+      {
+        "action": "click",
+        "selector": "button[onclick=\"randomMail()\"]",
+        "url": "https://www.mohmal.com/en",
+        "success": true,
+        "metadata": {
+          "provider": "Mohmal",
+          "stepType": "click"
+        },
+        "timestamp": "2025-10-26T20:37:29.370Z"
+      }
+    ],
+    [
+      13,
+      {
+        "action": "wait",
+        "url": "https://www.mohmal.com/en",
+        "success": true,
+        "metadata": {
+          "provider": "Mohmal",
+          "stepType": "wait"
+        },
+        "timestamp": "2025-10-26T20:37:29.372Z"
+      }
+    ],
+    [
+      14,
+      {
+        "action": "extract",
+        "selector": "#mailAddress",
+        "url": "https://www.mohmal.com/en",
+        "success": true,
+        "metadata": {
+          "provider": "Mohmal",
+          "stepType": "extract"
+        },
+        "timestamp": "2025-10-26T20:37:29.373Z"
+      }
+    ]
+  ],
+  "patterns": [
+    {
+      "action": "navigate",
+      "url": "https://www.guerrillamail.com/",
+      "success": true,
+      "metadata": {
+        "provider": "GuerrillaMail",
+        "stepType": "navigate"
+      },
+      "timestamp": "2025-10-26T20:37:29.192Z"
+    },
+    {
+      "action": "wait",
+      "url": "https://www.guerrillamail.com/",
+      "success": true,
+      "metadata": {
+        "provider": "GuerrillaMail",
+        "stepType": "wait"
+      },
+      "timestamp": "2025-10-26T20:37:29.228Z"
+    },
+    {
+      "action": "extract",
+      "selector": "#email-widget",
+      "url": "https://www.guerrillamail.com/",
+      "success": true,
+      "metadata": {
+        "provider": "GuerrillaMail",
+        "stepType": "extract"
+      },
+      "timestamp": "2025-10-26T20:37:29.233Z"
+    },
+    {
+      "action": "navigate",
+      "url": "https://temp-mail.org/",
+      "success": true,
+      "metadata": {
+        "provider": "TempMail",
+        "stepType": "navigate"
+      },
+      "timestamp": "2025-10-26T20:37:29.295Z"
+    },
+    {
+      "action": "wait",
+      "url": "https://temp-mail.org/",
+      "success": true,
+      "metadata": {
+        "provider": "TempMail",
+        "stepType": "wait"
+      },
+      "timestamp": "2025-10-26T20:37:29.298Z"
+    },
+    {
+      "action": "extract",
+      "selector": "#mail",
+      "url": "https://temp-mail.org/",
+      "success": true,
+      "metadata": {
+        "provider": "TempMail",
+        "stepType": "extract"
+      },
+      "timestamp": "2025-10-26T20:37:29.301Z"
+    },
+    {
+      "action": "navigate",
+      "url": "https://10minutemail.com/",
+      "success": true,
+      "metadata": {
+        "provider": "10MinuteMail",
+        "stepType": "navigate"
+      },
+      "timestamp": "2025-10-26T20:37:29.318Z"
+    },
+    {
+      "action": "wait",
+      "url": "https://10minutemail.com/",
+      "success": true,
+      "metadata": {
+        "provider": "10MinuteMail",
+        "stepType": "wait"
+      },
+      "timestamp": "2025-10-26T20:37:29.326Z"
+    },
+    {
+      "action": "extract",
+      "selector": "#mailAddress",
+      "url": "https://10minutemail.com/",
+      "success": true,
+      "metadata": {
+        "provider": "10MinuteMail",
+        "stepType": "extract"
+      },
+      "timestamp": "2025-10-26T20:37:29.331Z"
+    },
+    {
+      "action": "navigate",
+      "url": "https://maildrop.cc/",
+      "success": true,
+      "metadata": {
+        "provider": "MailDrop",
+        "stepType": "navigate"
+      },
+      "timestamp": "2025-10-26T20:37:29.340Z"
+    },
+    {
+      "action": "signup_flow",
+      "url": "https://maildrop.cc/",
+      "success": false,
+      "metadata": {
+        "provider": "MailDrop",
+        "error": "ReferenceError: MutationObserver is not defined"
+      },
+      "timestamp": "2025-10-26T20:37:29.361Z"
+    },
+    {
+      "action": "navigate",
+      "url": "https://www.mohmal.com/en",
+      "success": true,
+      "metadata": {
+        "provider": "Mohmal",
+        "stepType": "navigate"
+      },
+      "timestamp": "2025-10-26T20:37:29.366Z"
+    },
+    {
+      "action": "click",
+      "selector": "button[onclick=\"randomMail()\"]",
+      "url": "https://www.mohmal.com/en",
+      "success": true,
+      "metadata": {
+        "provider": "Mohmal",
+        "stepType": "click"
+      },
+      "timestamp": "2025-10-26T20:37:29.370Z"
+    },
+    {
+      "action": "wait",
+      "url": "https://www.mohmal.com/en",
+      "success": true,
+      "metadata": {
+        "provider": "Mohmal",
+        "stepType": "wait"
+      },
+      "timestamp": "2025-10-26T20:37:29.372Z"
+    },
+    {
+      "action": "extract",
+      "selector": "#mailAddress",
+      "url": "https://www.mohmal.com/en",
+      "success": true,
+      "metadata": {
+        "provider": "Mohmal",
+        "stepType": "extract"
+      },
+      "timestamp": "2025-10-26T20:37:29.373Z"
+    }
+  ],
+  "savedAt": "2025-10-26T20:37:29.388Z"
+}

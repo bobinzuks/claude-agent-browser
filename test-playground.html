@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boss Battle Test Playground</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.2em;
+        }
+
+        .instructions {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border-left: 4px solid #667eea;
+        }
+
+        .instructions h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        .instructions ol {
+            margin-left: 20px;
+        }
+
+        .instructions li {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+
+        .test-section {
+            margin-top: 30px;
+            padding: 20px;
+            background: #fff;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+        }
+
+        .test-section h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        /* Test Form Elements */
+        form {
+            margin-top: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        button {
+            background: #667eea;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-right: 10px;
+        }
+
+        button:hover {
+            background: #5568d3;
+        }
+
+        button.secondary {
+            background: #6c757d;
+        }
+
+        button.secondary:hover {
+            background: #5a6268;
+        }
+
+        /* Quick Start Box */
+        .quick-start {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 30px;
+        }
+
+        .quick-start h2 {
+            margin-bottom: 20px;
+        }
+
+        .quick-start code {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+
+        .quick-start .command-list {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+
+        .quick-start .command-list pre {
+            margin: 5px 0;
+            font-family: 'Courier New', monospace;
+        }
+
+        /* Feature Boxes */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .feature-box {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #e0e0e0;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-box h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        /* Shadow DOM Test */
+        .shadow-host {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f0f0f0;
+            border-radius: 5px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎮 Boss Battle Test Playground</h1>
+        <p class="subtitle">A complete testing environment for the Boss Battle System</p>
+
+        <div class="instructions">
+            <h2>🚀 Quick Start Instructions</h2>
+            <ol>
+                <li>Press <strong>F12</strong> (or Cmd+Option+I on Mac) to open Developer Tools</li>
+                <li>Click on the <strong>Console</strong> tab</li>
+                <li>Copy the contents of <code>console-test-commands.js</code></li>
+                <li>Paste into the console and press Enter</li>
+                <li>Start testing with <code>bossFight.listBosses()</code></li>
+            </ol>
+        </div>
+
+        <div class="quick-start">
+            <h2>💡 Test Commands</h2>
+            <p>After loading the test system, try these commands:</p>
+            <div class="command-list">
+                <pre>// See all available bosses</pre>
+                <pre>bossFight.listBosses()</pre>
+                <pre></pre>
+                <pre>// Test DOM automation on this page</pre>
+                <pre>testBoss('dom')</pre>
+                <pre>bossFight.simulate()</pre>
+                <pre></pre>
+                <pre>// Test form analysis</pre>
+                <pre>testBoss('form')</pre>
+                <pre>bossFight.attack(0)</pre>
+                <pre></pre>
+                <pre>// Check battle status</pre>
+                <pre>bossFight.debug()</pre>
+            </div>
+        </div>
+
+        <!-- Test Section 1: Login Form -->
+        <div class="test-section">
+            <h3>📝 Test Section 1: Login Form</h3>
+            <p>This form tests basic DOM automation and form filling capabilities.</p>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="test@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter password">
+                </div>
+                <button type="submit">Log In</button>
+                <button type="button" class="secondary">Cancel</button>
+            </form>
+        </div>
+
+        <!-- Test Section 2: Registration Form -->
+        <div class="test-section">
+            <h3>✍️ Test Section 2: Registration Form</h3>
+            <p>This form tests advanced form analysis and input classification.</p>
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Choose username">
+                </div>
+                <div class="form-group">
+                    <label for="reg-email">Email</label>
+                    <input type="email" id="reg-email" name="email" placeholder="your@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="reg-password">Password</label>
+                    <input type="password" id="reg-password" name="password" placeholder="Strong password">
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Repeat password">
+                </div>
+                <div class="form-group">
+                    <label for="country">Country</label>
+                    <select id="country" name="country">
+                        <option value="">Select country...</option>
+                        <option value="us">United States</option>
+                        <option value="uk">United Kingdom</option>
+                        <option value="ca">Canada</option>
+                        <option value="au">Australia</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="bio">Bio</label>
+                    <textarea id="bio" name="bio" rows="4" placeholder="Tell us about yourself..."></textarea>
+                </div>
+                <button type="submit">Register</button>
+                <button type="reset" class="secondary">Clear Form</button>
+            </form>
+        </div>
+
+        <!-- Test Section 3: Search Form -->
+        <div class="test-section">
+            <h3>🔍 Test Section 3: Search Form</h3>
+            <p>This form tests search field detection and smart selectors.</p>
+            <form id="search-form">
+                <div class="form-group">
+                    <label for="search">Search</label>
+                    <input type="search" id="search" name="search" placeholder="Search for anything...">
+                </div>
+                <button type="submit">Search</button>
+            </form>
+        </div>
+
+        <!-- Test Section 4: Shadow DOM -->
+        <div class="test-section">
+            <h3>👻 Test Section 4: Shadow DOM</h3>
+            <p>This section contains shadow DOM elements for testing.</p>
+            <div id="shadow-host" class="shadow-host">
+                <p>Shadow DOM will be attached here</p>
+            </div>
+        </div>
+
+        <!-- Feature Boxes -->
+        <div class="features">
+            <div class="feature-box">
+                <h4>🎯 DOM Testing</h4>
+                <p>Test form filling, element detection, and shadow DOM access.</p>
+            </div>
+            <div class="feature-box">
+                <h4>📋 Form Analysis</h4>
+                <p>Analyze form structure, input types, and submit buttons.</p>
+            </div>
+            <div class="feature-box">
+                <h4>⚡ JavaScript</h4>
+                <p>Test event simulation, storage, and cookie access.</p>
+            </div>
+            <div class="feature-box">
+                <h4>🌐 Network</h4>
+                <p>Discover API endpoints and test XHR interception.</p>
+            </div>
+            <div class="feature-box">
+                <h4>⏱️ Performance</h4>
+                <p>Profile page load times and resource counts.</p>
+            </div>
+            <div class="feature-box">
+                <h4>🤖 CAPTCHA</h4>
+                <p>Detect reCAPTCHA, hCaptcha, and image CAPTCHAs.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Create Shadow DOM for testing
+        const shadowHost = document.getElementById('shadow-host');
+        const shadowRoot = shadowHost.attachShadow({ mode: 'open' });
+        shadowRoot.innerHTML = `
+            <style>
+                .shadow-content {
+                    padding: 20px;
+                    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                    color: white;
+                    border-radius: 10px;
+                }
+                input {
+                    width: 100%;
+                    padding: 10px;
+                    margin-top: 10px;
+                    border: none;
+                    border-radius: 5px;
+                }
+            </style>
+            <div class="shadow-content">
+                <h4>Shadow DOM Content</h4>
+                <p>This content is inside a shadow root!</p>
+                <input type="text" id="shadow-input" placeholder="Shadow DOM input field">
+            </div>
+        `;
+
+        // Prevent form submissions (for testing)
+        document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                console.log('Form submission prevented (test mode)');
+                console.log('Form data:', new FormData(form));
+                alert('Form submission prevented (test mode). Check console for details.');
+            });
+        });
+
+        // Add some test data to localStorage
+        localStorage.setItem('test-key', 'test-value');
+        localStorage.setItem('boss-battle-data', JSON.stringify({
+            timestamp: Date.now(),
+            page: 'test-playground'
+        }));
+
+        // Log page load
+        console.log('🎮 Boss Battle Test Playground loaded!');
+        console.log('📝 This page contains:');
+        console.log('   - 3 test forms (login, registration, search)');
+        console.log('   - Shadow DOM element');
+        console.log('   - localStorage data');
+        console.log('   - Various input types');
+        console.log('');
+        console.log('💡 Open F12 Console and load console-test-commands.js to start testing!');
+        console.log('');
+        console.log('Quick start:');
+        console.log('  1. Copy console-test-commands.js contents');
+        console.log('  2. Paste into console');
+        console.log('  3. Run: bossFight.listBosses()');
+        console.log('  4. Run: testBoss("dom")');
+        console.log('  5. Run: bossFight.simulate()');
+    </script>
+</body>
+</html>

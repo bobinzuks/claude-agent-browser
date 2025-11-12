@@ -1,0 +1,13 @@
+{
+  "firstName": "Terrance",
+  "lastName": "YOUR_LAST_NAME",
+  "email": "YOUR_EMAIL@example.com",
+  "company": "YOUR_COMPANY_NAME",
+  "website": "https://YOUR_WEBSITE.com",
+  "phone": "YOUR_PHONE_NUMBER_OPTIONAL",
+  "address": "YOUR_STREET_ADDRESS",
+  "city": "YOUR_CITY",
+  "state": "YOUR_STATE",
+  "zip": "YOUR_ZIP",
+  "country": "YOUR_COUNTRY"
+}

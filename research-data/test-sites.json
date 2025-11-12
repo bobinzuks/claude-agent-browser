@@ -1,0 +1,826 @@
+[
+  {
+    "name": "DemoQA - Practice Form",
+    "url": "https://demoqa.com/automation-practice-form",
+    "fields": 10,
+    "type": "simple",
+    "category": "Form Testing Playground",
+    "description": "Comprehensive form with text inputs, radio buttons, checkboxes, date picker, file upload"
+  },
+  {
+    "name": "DemoQA - Elements",
+    "url": "https://demoqa.com/elements",
+    "fields": 8,
+    "type": "simple",
+    "category": "UI Testing",
+    "description": "Text boxes, checkboxes, radio buttons, web tables, buttons, links"
+  },
+  {
+    "name": "DemoQA - Forms",
+    "url": "https://demoqa.com/forms",
+    "fields": 12,
+    "type": "multi-step",
+    "category": "Form Testing Playground",
+    "description": "Complete practice form with validation"
+  },
+  {
+    "name": "DemoQA - Text Box",
+    "url": "https://demoqa.com/text-box",
+    "fields": 4,
+    "type": "simple",
+    "category": "Form Testing Playground",
+    "description": "Simple text input fields with submission"
+  },
+  {
+    "name": "Expand Testing - Practice Form",
+    "url": "https://practice.expandtesting.com/form-validation",
+    "fields": 8,
+    "type": "simple",
+    "category": "Form Testing Playground",
+    "description": "Form validation practice with dynamic fields"
+  },
+  {
+    "name": "Expand Testing - Login Page",
+    "url": "https://practice.expandtesting.com/login",
+    "fields": 2,
+    "type": "simple",
+    "category": "Automation Practice",
+    "description": "Login workflow testing"
+  },
+  {
+    "name": "Expand Testing - Register",
+    "url": "https://practice.expandtesting.com/register",
+    "fields": 5,
+    "type": "simple",
+    "category": "Automation Practice",
+    "description": "User registration form"
+  },
+  {
+    "name": "Expand Testing - Inputs",
+    "url": "https://practice.expandtesting.com/inputs",
+    "fields": 3,
+    "type": "simple",
+    "category": "Form Testing Playground",
+    "description": "Various input types practice"
+  },
+  {
+    "name": "The Internet Heroku - Login",
+    "url": "https://the-internet.herokuapp.com/login",
+    "fields": 2,
+    "type": "simple",
+    "category": "Automation Practice",
+    "description": "Basic login form with authentication"
+  },
+  {
+    "name": "The Internet Heroku - Checkboxes",
+    "url": "https://the-internet.herokuapp.com/checkboxes",
+    "fields": 2,
+    "type": "simple",
+    "category": "UI Testing",
+    "description": "Checkbox testing practice"
+  },
+  {
+    "name": "The Internet Heroku - Dropdown",
+    "url": "https://the-internet.herokuapp.com/dropdown",
+    "fields": 1,
+    "type": "simple",
+    "category": "UI Testing",
+    "description": "Dropdown selection practice"
+  },
+  {
+    "name": "The Internet Heroku - File Upload",
+    "url": "https://the-internet.herokuapp.com/upload",
+    "fields": 2,
+    "type": "simple",
+    "category": "Form Testing Playground",
+    "description": "File upload functionality testing"
+  },
+  {
+    "name": "The Internet Heroku - Dynamic Loading",
+    "url": "https://the-internet.herokuapp.com/dynamic_loading/1",
+    "fields": 1,
+    "type": "simple",
+    "category": "UI Testing",
+    "description": "Dynamically loaded elements"
+  },
+  {
+    "name": "The Internet Heroku - Add/Remove Elements",
+    "url": "https://the-internet.herokuapp.com/add_remove_elements/",
+    "fields": 0,
+    "type": "simple",
+    "category": "UI Testing",
+    "description": "Dynamic element manipulation"
+  },
+  {
+    "name": "Test Pages Heroku - Form Processor",
+    "url": "https://testpages.herokuapp.com/styled/basic-html-form-test.html",
+    "fields": 6,
+    "type": "simple",
+    "category": "Form Testing Playground",
+    "description": "Basic HTML form with various input types"
+  },
+  {
+    "name": "Test Pages Heroku - Calculate",
+    "url": "https://testpages.herokuapp.com/styled/calculator",
+    "fields": 3,
+    "type": "simple",
+    "category": "UI Testing",
+    "description": "Calculator form with number inputs"
+  },
+  {
+    "name": "Test Pages Heroku - Alerts",
+    "url": "https://testpages.herokuapp.com/styled/alerts/alert-test.html",
+    "fields": 1,
+    "type": "simple",
+    "category": "UI Testing",
+    "description": "Alert handling practice"
+  },
+  {
+    "name": "WebDriverUniversity - Contact Us",
+    "url": "https://webdriveruniversity.com/Contact-Us/contactus.html",
+    "fields": 4,
+    "type": "simple",
+    "category": "Contact Forms",
+    "description": "Contact form with email validation"
+  },
+  {
+    "name": "WebDriverUniversity - Login Portal",
+    "url": "https://webdriveruniversity.com/Login-Portal/index.html",
+    "fields": 2,
+    "type": "simple",
+    "category": "Automation Practice",
+    "description": "Login form testing"
+  },
+  {
+    "name": "WebDriverUniversity - Dropdown Menu",
+    "url": "https://webdriveruniversity.com/Dropdown-Checkboxes-RadioButtons/index.html",
+    "fields": 8,
+    "type": "simple",
+    "category": "UI Testing",
+    "description": "Dropdowns, checkboxes, and radio buttons"
+  },
+  {
+    "name": "WebDriverUniversity - To Do List",
+    "url": "https://webdriveruniversity.com/To-Do-List/index.html",
+    "fields": 1,
+    "type": "simple",
+    "category": "UI Testing",
+    "description": "Dynamic list management"
+  },
+  {
+    "name": "Sauce Demo - Login",
+    "url": "https://www.saucedemo.com",
+    "fields": 2,
+    "type": "simple",
+    "category": "Automation Practice",
+    "description": "E-commerce login page"
+  },
+  {
+    "name": "Techlistic - Automation Practice Form",
+    "url": "https://www.techlistic.com/p/selenium-practice-form.html",
+    "fields": 9,
+    "type": "simple",
+    "category": "Form Testing Playground",
+    "description": "Practice form with various field types"
+  },
+  {
+    "name": "TutorialsPoint - Selenium Practice",
+    "url": "https://www.tutorialspoint.com/selenium/practice/selenium_automation_practice.php",
+    "fields": 11,
+    "type": "simple",
+    "category": "Form Testing Playground",
+    "description": "Student registration form"
+  },
+  {
+    "name": "TutorialsPoint - Login Form",
+    "url": "https://www.tutorialspoint.com/selenium/practice/login.php",
+    "fields": 2,
+    "type": "simple",
+    "category": "Automation Practice",
+    "description": "Login practice page"
+  },
+  {
+    "name": "TutorialsPoint - Register",
+    "url": "https://www.tutorialspoint.com/selenium/practice/register.php",
+    "fields": 6,
+    "type": "simple",
+    "category": "Automation Practice",
+    "description": "User registration form"
+  },
+  {
+    "name": "TutorialsPoint - Text Box",
+    "url": "https://www.tutorialspoint.com/selenium/practice/text-box.php",
+    "fields": 4,
+    "type": "simple",
+    "category": "Form Testing Playground",
+    "description": "Text box practice"
+  },
+  {
+    "name": "TutorialsPoint - Buttons",
+    "url": "https://www.tutorialspoint.com/selenium/practice/buttons.php",
+    "fields": 0,
+    "type": "simple",
+    "category": "UI Testing",
+    "description": "Button interaction practice"
+  },
+  {
+    "name": "TutorialsPoint - Check Box",
+    "url": "https://www.tutorialspoint.com/selenium/practice/check-box.php",
+    "fields": 5,
+    "type": "simple",
+    "category": "UI Testing",
+    "description": "Checkbox practice"
+  },
+  {
+    "name": "TutorialsPoint - Radio Button",
+    "url": "https://www.tutorialspoint.com/selenium/practice/radio-button.php",
+    "fields": 3,
+    "type": "simple",
+    "category": "UI Testing",
+    "description": "Radio button practice"
+  },
+  {
+    "name": "TutorialsPoint - Select Menu",
+    "url": "https://www.tutorialspoint.com/selenium/practice/select-menu.php",
+    "fields": 2,
+    "type": "simple",
+    "category": "UI Testing",
+    "description": "Dropdown selection practice"
+  },
+  {
+    "name": "TutorialsPoint - Web Tables",
+    "url": "https://www.tutorialspoint.com/selenium/practice/webtables.php",
+    "fields": 6,
+    "type": "simple",
+    "category": "UI Testing",
+    "description": "Web table interaction"
+  },
+  {
+    "name": "TutorialsPoint - Links",
+    "url": "https://www.tutorialspoint.com/selenium/practice/links.php",
+    "fields": 0,
+    "type": "simple",
+    "category": "UI Testing",
+    "description": "Link testing practice"
+  },
+  {
+    "name": "TutorialsPoint - Upload and Download",
+    "url": "https://www.tutorialspoint.com/selenium/practice/upload-download.php",
+    "fields": 2,
+    "type": "simple",
+    "category": "Form Testing Playground",
+    "description": "File upload/download testing"
+  },
+  {
+    "name": "TutorialsPoint - Alerts",
+    "url": "https://www.tutorialspoint.com/selenium/practice/alerts.php",
+    "fields": 1,
+    "type": "simple",
+    "category": "UI Testing",
+    "description": "Alert handling practice"
+  },
+  {
+    "name": "TutorialsPoint - Frames",
+    "url": "https://www.tutorialspoint.com/selenium/practice/frames.php",
+    "fields": 0,
+    "type": "simple",
+    "category": "UI Testing",
+    "description": "Frame handling practice"
+  },
+  {
+    "name": "TutorialsPoint - Nested Frames",
+    "url": "https://www.tutorialspoint.com/selenium/practice/nestedframes.php",
+    "fields": 0,
+    "type": "simple",
+    "category": "UI Testing",
+    "description": "Nested frame handling"
+  },
+  {
+    "name": "TutorialsPoint - Browser Windows",
+    "url": "https://www.tutorialspoint.com/selenium/practice/browser-windows.php",
+    "fields": 0,
+    "type": "simple",
+    "category": "UI Testing",
+    "description": "Window handling practice"
+  },
+  {
+    "name": "ArtOfTesting - Sample Site",
+    "url": "https://artoftesting.com/samplesiteforselenium",
+    "fields": 7,
+    "type": "simple",
+    "category": "Form Testing Playground",
+    "description": "Comprehensive sample site with various elements"
+  },
+  {
+    "name": "Cypress Playground - Forms",
+    "url": "https://cypress-playground.s3.eu-central-1.amazonaws.com/index.html",
+    "fields": 8,
+    "type": "simple",
+    "category": "Form Testing Playground",
+    "description": "Cypress-specific form testing playground"
+  },
+  {
+    "name": "Cypress Testing Demo",
+    "url": "https://qatester1320.github.io/Demo-AutomationTesting-Website-with-all-elements/",
+    "fields": 10,
+    "type": "simple",
+    "category": "Form Testing Playground",
+    "description": "Comprehensive demo site for Cypress automation"
+  },
+  {
+    "name": "SeleniumBase Demo Page",
+    "url": "https://seleniumbase.io/demo_page",
+    "fields": 6,
+    "type": "simple",
+    "category": "Form Testing Playground",
+    "description": "SeleniumBase practice page"
+  },
+  {
+    "name": "QA Brains Practice Site",
+    "url": "https://qabrains.com/practice-site",
+    "fields": 8,
+    "type": "simple",
+    "category": "Form Testing Playground",
+    "description": "Form submission and validation practice"
+  },
+  {
+    "name": "LambdaTest Playground - Simple Form",
+    "url": "https://www.lambdatest.com/selenium-playground/simple-form-demo",
+    "fields": 2,
+    "type": "simple",
+    "category": "Form Testing Playground",
+    "description": "Simple form demo"
+  },
+  {
+    "name": "LambdaTest - Input Form",
+    "url": "https://www.lambdatest.com/selenium-playground/input-form-demo",
+    "fields": 8,
+    "type": "simple",
+    "category": "Form Testing Playground",
+    "description": "Comprehensive input form with validation"
+  },
+  {
+    "name": "LambdaTest - Checkbox Demo",
+    "url": "https://www.lambdatest.com/selenium-playground/checkbox-demo",
+    "fields": 4,
+    "type": "simple",
+    "category": "UI Testing",
+    "description": "Checkbox functionality testing"
+  },
+  {
+    "name": "LambdaTest - Radio Button",
+    "url": "https://www.lambdatest.com/selenium-playground/radiobutton-demo",
+    "fields": 3,
+    "type": "simple",
+    "category": "UI Testing",
+    "description": "Radio button testing"
+  },
+  {
+    "name": "LambdaTest - Select Dropdown",
+    "url": "https://www.lambdatest.com/selenium-playground/select-dropdown-demo",
+    "fields": 2,
+    "type": "simple",
+    "category": "UI Testing",
+    "description": "Dropdown selection practice"
+  },
+  {
+    "name": "LambdaTest - AJAX Form",
+    "url": "https://www.lambdatest.com/selenium-playground/ajax-form-submit-demo",
+    "fields": 2,
+    "type": "simple",
+    "category": "Form Testing Playground",
+    "description": "AJAX form submission"
+  },
+  {
+    "name": "LambdaTest - File Upload",
+    "url": "https://www.lambdatest.com/selenium-playground/upload-file-demo",
+    "fields": 1,
+    "type": "simple",
+    "category": "Form Testing Playground",
+    "description": "File upload testing"
+  },
+  {
+    "name": "LambdaTest - Bootstrap Modal",
+    "url": "https://www.lambdatest.com/selenium-playground/bootstrap-modal-demo",
+    "fields": 3,
+    "type": "simple",
+    "category": "UI Testing",
+    "description": "Modal form testing"
+  },
+  {
+    "name": "LambdaTest - Bootstrap Alert",
+    "url": "https://www.lambdatest.com/selenium-playground/bootstrap-alert-messages-demo",
+    "fields": 0,
+    "type": "simple",
+    "category": "UI Testing",
+    "description": "Alert message handling"
+  },
+  {
+    "name": "LambdaTest - JQuery Dropdown",
+    "url": "https://www.lambdatest.com/selenium-playground/jquery-dropdown-search-demo",
+    "fields": 1,
+    "type": "simple",
+    "category": "UI Testing",
+    "description": "JQuery dropdown with search"
+  },
+  {
+    "name": "LambdaTest - JQuery Select",
+    "url": "https://www.lambdatest.com/selenium-playground/jquery-dual-list-box-demo",
+    "fields": 2,
+    "type": "simple",
+    "category": "UI Testing",
+    "description": "Dual list box selection"
+  },
+  {
+    "name": "LambdaTest - Data List Filter",
+    "url": "https://www.lambdatest.com/selenium-playground/data-list-filter-demo",
+    "fields": 1,
+    "type": "simple",
+    "category": "UI Testing",
+    "description": "Data filtering practice"
+  },
+  {
+    "name": "LambdaTest - Table Pagination",
+    "url": "https://www.lambdatest.com/selenium-playground/table-pagination-demo",
+    "fields": 0,
+    "type": "simple",
+    "category": "UI Testing",
+    "description": "Table pagination testing"
+  },
+  {
+    "name": "LambdaTest - Table Data Search",
+    "url": "https://www.lambdatest.com/selenium-playground/table-search-filter-demo",
+    "fields": 1,
+    "type": "simple",
+    "category": "UI Testing",
+    "description": "Table search and filter"
+  },
+  {
+    "name": "LambdaTest - Table Sort & Search",
+    "url": "https://www.lambdatest.com/selenium-playground/table-sort-search-demo",
+    "fields": 1,
+    "type": "simple",
+    "category": "UI Testing",
+    "description": "Table sorting and searching"
+  },
+  {
+    "name": "Contact List App",
+    "url": "https://thinking-tester-contact-list.herokuapp.com",
+    "fields": 7,
+    "type": "simple",
+    "category": "Contact Forms",
+    "description": "Contact management with forms"
+  },
+  {
+    "name": "Contact List - Login",
+    "url": "https://thinking-tester-contact-list.herokuapp.com/login",
+    "fields": 2,
+    "type": "simple",
+    "category": "Automation Practice",
+    "description": "Contact list login"
+  },
+  {
+    "name": "Contact List - Add User",
+    "url": "https://thinking-tester-contact-list.herokuapp.com/addUser",
+    "fields": 5,
+    "type": "simple",
+    "category": "Automation Practice",
+    "description": "User registration form"
+  },
+  {
+    "name": "Automation Exercise",
+    "url": "https://automationexercise.com",
+    "fields": 0,
+    "type": "multi-step",
+    "category": "Automation Practice",
+    "description": "E-commerce practice site"
+  },
+  {
+    "name": "Automation Exercise - Login",
+    "url": "https://automationexercise.com/login",
+    "fields": 2,
+    "type": "simple",
+    "category": "Automation Practice",
+    "description": "Login/signup page"
+  },
+  {
+    "name": "Automation Exercise - Contact Us",
+    "url": "https://automationexercise.com/contact_us",
+    "fields": 4,
+    "type": "simple",
+    "category": "Contact Forms",
+    "description": "Contact form with file upload"
+  },
+  {
+    "name": "UITestingPlayground - Text Input",
+    "url": "http://uitestingplayground.com/textinput",
+    "fields": 1,
+    "type": "simple",
+    "category": "Form Testing Playground",
+    "description": "Text input testing"
+  },
+  {
+    "name": "UITestingPlayground - Dynamic ID",
+    "url": "http://uitestingplayground.com/dynamicid",
+    "fields": 0,
+    "type": "simple",
+    "category": "UI Testing",
+    "description": "Dynamic ID element testing"
+  },
+  {
+    "name": "UITestingPlayground - Class Attribute",
+    "url": "http://uitestingplayground.com/classattr",
+    "fields": 0,
+    "type": "simple",
+    "category": "UI Testing",
+    "description": "Class attribute testing"
+  },
+  {
+    "name": "UITestingPlayground - Hidden Layers",
+    "url": "http://uitestingplayground.com/hiddenlayers",
+    "fields": 0,
+    "type": "simple",
+    "category": "UI Testing",
+    "description": "Hidden layers testing"
+  },
+  {
+    "name": "UITestingPlayground - Load Delay",
+    "url": "http://uitestingplayground.com/loaddelay",
+    "fields": 0,
+    "type": "simple",
+    "category": "UI Testing",
+    "description": "Load delay testing"
+  },
+  {
+    "name": "UITestingPlayground - AJAX Data",
+    "url": "http://uitestingplayground.com/ajax",
+    "fields": 0,
+    "type": "simple",
+    "category": "UI Testing",
+    "description": "AJAX loading testing"
+  },
+  {
+    "name": "UITestingPlayground - Click",
+    "url": "http://uitestingplayground.com/click",
+    "fields": 0,
+    "type": "simple",
+    "category": "UI Testing",
+    "description": "Button click testing"
+  },
+  {
+    "name": "Practice Test Automation",
+    "url": "https://practicetestautomation.com/practice-test-login/",
+    "fields": 2,
+    "type": "simple",
+    "category": "Automation Practice",
+    "description": "Login practice with validation"
+  },
+  {
+    "name": "OrangeHRM Demo",
+    "url": "https://opensource-demo.orangehrmlive.com",
+    "fields": 2,
+    "type": "simple",
+    "category": "Automation Practice",
+    "description": "HR management system demo"
+  },
+  {
+    "name": "Parabank - Register",
+    "url": "https://parabank.parasoft.com/parabank/register.htm",
+    "fields": 11,
+    "type": "simple",
+    "category": "Free Trial Signup",
+    "description": "Banking demo registration"
+  },
+  {
+    "name": "Parabank - Login",
+    "url": "https://parabank.parasoft.com/parabank/index.htm",
+    "fields": 2,
+    "type": "simple",
+    "category": "Automation Practice",
+    "description": "Banking demo login"
+  },
+  {
+    "name": "Guru99 Bank",
+    "url": "https://demo.guru99.com/V4/",
+    "fields": 2,
+    "type": "simple",
+    "category": "Automation Practice",
+    "description": "Banking application demo"
+  },
+  {
+    "name": "Guru99 Insurance",
+    "url": "https://demo.guru99.com/insurance/v1/index.php",
+    "fields": 2,
+    "type": "simple",
+    "category": "Automation Practice",
+    "description": "Insurance portal demo"
+  },
+  {
+    "name": "OpenCart Demo",
+    "url": "https://demo.opencart.com",
+    "fields": 0,
+    "type": "multi-step",
+    "category": "Automation Practice",
+    "description": "E-commerce platform demo"
+  },
+  {
+    "name": "OpenCart - Register",
+    "url": "https://demo.opencart.com/index.php?route=account/register",
+    "fields": 9,
+    "type": "simple",
+    "category": "Free Trial Signup",
+    "description": "Account registration form"
+  },
+  {
+    "name": "OpenCart - Login",
+    "url": "https://demo.opencart.com/index.php?route=account/login",
+    "fields": 2,
+    "type": "simple",
+    "category": "Automation Practice",
+    "description": "Account login page"
+  },
+  {
+    "name": "Magento Demo",
+    "url": "https://magento.softwaretestingboard.com",
+    "fields": 0,
+    "type": "multi-step",
+    "category": "Automation Practice",
+    "description": "E-commerce testing board"
+  },
+  {
+    "name": "Magento - Create Account",
+    "url": "https://magento.softwaretestingboard.com/customer/account/create/",
+    "fields": 5,
+    "type": "simple",
+    "category": "Free Trial Signup",
+    "description": "Customer account creation"
+  },
+  {
+    "name": "Magento - Login",
+    "url": "https://magento.softwaretestingboard.com/customer/account/login/",
+    "fields": 2,
+    "type": "simple",
+    "category": "Automation Practice",
+    "description": "Customer login page"
+  },
+  {
+    "name": "Prestashop Demo",
+    "url": "https://demo.prestashop.com",
+    "fields": 0,
+    "type": "multi-step",
+    "category": "Automation Practice",
+    "description": "E-commerce demo"
+  },
+  {
+    "name": "Wordpress Login",
+    "url": "https://wordpress.com/log-in",
+    "fields": 1,
+    "type": "simple",
+    "category": "Automation Practice",
+    "description": "WordPress login form"
+  },
+  {
+    "name": "Wordpress Signup",
+    "url": "https://wordpress.com/start",
+    "fields": 2,
+    "type": "multi-step",
+    "category": "Free Trial Signup",
+    "description": "WordPress account creation"
+  },
+  {
+    "name": "W3Schools - HTML Forms",
+    "url": "https://www.w3schools.com/html/tryit.asp?filename=tryhtml_form_submit",
+    "fields": 3,
+    "type": "simple",
+    "category": "Form Testing Playground",
+    "description": "Basic HTML form tryit editor"
+  },
+  {
+    "name": "W3Schools - Input Types",
+    "url": "https://www.w3schools.com/html/tryit.asp?filename=tryhtml_input_date",
+    "fields": 1,
+    "type": "simple",
+    "category": "Form Testing Playground",
+    "description": "Date input tryit editor"
+  },
+  {
+    "name": "FormSpree Test",
+    "url": "https://formspree.io",
+    "fields": 3,
+    "type": "simple",
+    "category": "Contact Forms",
+    "description": "Form backend testing service"
+  },
+  {
+    "name": "Typeform Example",
+    "url": "https://www.typeform.com/templates/",
+    "fields": 5,
+    "type": "multi-step",
+    "category": "Form Testing Playground",
+    "description": "Interactive form templates"
+  },
+  {
+    "name": "Google Forms Test",
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSeYGvA8YEu1Y-xPNGMGPgw_Cz-BzkXPDHcFc3xhpKj6sKj3Cw/viewform",
+    "fields": 5,
+    "type": "simple",
+    "category": "Form Testing Playground",
+    "description": "Public Google Form example"
+  },
+  {
+    "name": "HubSpot Free CRM",
+    "url": "https://app.hubspot.com/signup/crm/step/user-info",
+    "fields": 4,
+    "type": "multi-step",
+    "category": "Free Trial Signup",
+    "description": "CRM signup flow"
+  },
+  {
+    "name": "Salesforce Trailhead",
+    "url": "https://trailhead.salesforce.com/en/users/sign_up",
+    "fields": 5,
+    "type": "simple",
+    "category": "Free Trial Signup",
+    "description": "Salesforce account creation"
+  },
+  {
+    "name": "Mailchimp Signup",
+    "url": "https://login.mailchimp.com/signup/",
+    "fields": 4,
+    "type": "simple",
+    "category": "Free Trial Signup",
+    "description": "Email marketing platform signup"
+  },
+  {
+    "name": "Asana Sign Up",
+    "url": "https://app.asana.com/-/login",
+    "fields": 2,
+    "type": "simple",
+    "category": "Free Trial Signup",
+    "description": "Project management signup"
+  },
+  {
+    "name": "Trello Signup",
+    "url": "https://trello.com/signup",
+    "fields": 2,
+    "type": "simple",
+    "category": "Free Trial Signup",
+    "description": "Trello account creation"
+  },
+  {
+    "name": "Slack Create Workspace",
+    "url": "https://slack.com/get-started#/createnew",
+    "fields": 2,
+    "type": "multi-step",
+    "category": "Free Trial Signup",
+    "description": "Workspace creation flow"
+  },
+  {
+    "name": "Zoom Sign Up",
+    "url": "https://zoom.us/signup",
+    "fields": 3,
+    "type": "simple",
+    "category": "Free Trial Signup",
+    "description": "Video conferencing signup"
+  },
+  {
+    "name": "Canva Signup",
+    "url": "https://www.canva.com/signup",
+    "fields": 3,
+    "type": "simple",
+    "category": "Free Trial Signup",
+    "description": "Design platform signup"
+  },
+  {
+    "name": "Figma Sign Up",
+    "url": "https://www.figma.com/signup",
+    "fields": 3,
+    "type": "simple",
+    "category": "Free Trial Signup",
+    "description": "Design tool account creation"
+  },
+  {
+    "name": "Notion Signup",
+    "url": "https://www.notion.so/signup",
+    "fields": 2,
+    "type": "simple",
+    "category": "Free Trial Signup",
+    "description": "Workspace signup"
+  },
+  {
+    "name": "Monday.com Trial",
+    "url": "https://auth.monday.com/users/sign_up",
+    "fields": 4,
+    "type": "simple",
+    "category": "Free Trial Signup",
+    "description": "Work OS trial signup"
+  },
+  {
+    "name": "Airtable Signup",
+    "url": "https://airtable.com/signup",
+    "fields": 3,
+    "type": "simple",
+    "category": "Free Trial Signup",
+    "description": "Database platform signup"
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "id": "9927e7546904f772",
+  "name": "stealth-profile",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36",
+  "fingerprint": {
+    "screen": {
+      "width": 1920,
+      "height": 1080,
+      "colorDepth": 24
+    },
+    "timezone": "America/Los_Angeles",
+    "language": "fr-FR",
+    "platform": "Linux x86_64",
+    "vendor": "Google Inc.",
+    "hardwareConcurrency": 12,
+    "deviceMemory": 4,
+    "webgl": {
+      "vendor": "WebKit",
+      "renderer": "WebKit WebGL"
+    }
+  },
+  "createdAt": "2025-10-28T07:52:17.201Z"
+}

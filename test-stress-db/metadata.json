@@ -1,0 +1,85 @@
+{
+  "version": "1.0.0",
+  "dimensions": 384,
+  "nextId": 3,
+  "patternsWithIds": [
+    [
+      0,
+      {
+        "action": "navigate_and_analyze",
+        "url": "https://example.com",
+        "success": true,
+        "metadata": {
+          "title": "Example Domain",
+          "url": "https://example.com/",
+          "linkCount": 1
+        },
+        "timestamp": "2025-10-31T04:47:46.558Z"
+      }
+    ],
+    [
+      1,
+      {
+        "action": "navigate_and_analyze",
+        "url": "https://www.iana.org",
+        "success": true,
+        "metadata": {
+          "title": "Example Domain",
+          "url": "https://example.com/",
+          "linkCount": 1
+        },
+        "timestamp": "2025-10-31T04:47:50.777Z"
+      }
+    ],
+    [
+      2,
+      {
+        "action": "navigate_and_analyze",
+        "url": "https://httpbin.org",
+        "success": true,
+        "metadata": {
+          "title": "Example Domain",
+          "url": "https://example.com/",
+          "linkCount": 1
+        },
+        "timestamp": "2025-10-31T04:47:53.903Z"
+      }
+    ]
+  ],
+  "patterns": [
+    {
+      "action": "navigate_and_analyze",
+      "url": "https://example.com",
+      "success": true,
+      "metadata": {
+        "title": "Example Domain",
+        "url": "https://example.com/",
+        "linkCount": 1
+      },
+      "timestamp": "2025-10-31T04:47:46.558Z"
+    },
+    {
+      "action": "navigate_and_analyze",
+      "url": "https://www.iana.org",
+      "success": true,
+      "metadata": {
+        "title": "Example Domain",
+        "url": "https://example.com/",
+        "linkCount": 1
+      },
+      "timestamp": "2025-10-31T04:47:50.777Z"
+    },
+    {
+      "action": "navigate_and_analyze",
+      "url": "https://httpbin.org",
+      "success": true,
+      "metadata": {
+        "title": "Example Domain",
+        "url": "https://example.com/",
+        "linkCount": 1
+      },
+      "timestamp": "2025-10-31T04:47:53.903Z"
+    }
+  ],
+  "savedAt": "2025-10-31T04:47:53.906Z"
+}

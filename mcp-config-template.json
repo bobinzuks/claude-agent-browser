@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "click-factory": {
+      "command": "node",
+      "args": [
+        "/media/terry/data/projects/projects/chatgpt-atlas/claude-agent-browser/dist/mcp/click-factory-server.js"
+      ]
+    }
+  }
+}

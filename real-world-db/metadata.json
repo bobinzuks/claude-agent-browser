@@ -1,0 +1,279 @@
+{
+  "version": "1.0.0",
+  "dimensions": 384,
+  "nextId": 7,
+  "patternsWithIds": [
+    [
+      0,
+      {
+        "action": "navigate",
+        "url": "https://www.guerrillamail.com/",
+        "success": true,
+        "metadata": {
+          "service": "GuerrillaMail",
+          "step": "initial_load"
+        },
+        "timestamp": "2025-10-31T04:52:37.853Z"
+      }
+    ],
+    [
+      1,
+      {
+        "action": "extract_email",
+        "selector": "#email-widget",
+        "value": "vql0vo+3mnmaqjbfyhyg@sharklasers.com",
+        "url": "https://www.guerrillamail.com/",
+        "success": true,
+        "metadata": {
+          "service": "GuerrillaMail",
+          "emailDomain": "sharklasers.com"
+        },
+        "timestamp": "2025-10-31T04:52:40.882Z"
+      }
+    ],
+    [
+      2,
+      {
+        "action": "navigate",
+        "url": "https://twitter.com/i/flow/signup",
+        "success": true,
+        "metadata": {
+          "service": "Twitter",
+          "step": "signup_page"
+        },
+        "timestamp": "2025-10-31T04:52:48.680Z"
+      }
+    ],
+    [
+      3,
+      {
+        "action": "analyze_signup_form",
+        "url": "https://twitter.com/i/flow/signup",
+        "success": true,
+        "metadata": {
+          "service": "Twitter",
+          "formData": {
+            "inputs": [
+              {
+                "type": "checkbox",
+                "name": "alias",
+                "id": "use-alias",
+                "placeholder": "",
+                "ariaLabel": null,
+                "visible": true
+              },
+              {
+                "type": "submit",
+                "name": "",
+                "id": "del_button",
+                "placeholder": "",
+                "ariaLabel": null,
+                "visible": true
+              },
+              {
+                "type": "checkbox",
+                "name": "mid[]",
+                "id": "",
+                "placeholder": "",
+                "ariaLabel": null,
+                "visible": true
+              }
+            ],
+            "buttons": [],
+            "forms": 2,
+            "hasRecaptcha": false
+          },
+          "hasRecaptcha": false
+        },
+        "timestamp": "2025-10-31T04:52:53.031Z"
+      }
+    ],
+    [
+      4,
+      {
+        "action": "analyze_signup_page",
+        "url": "https://mastodon.social/auth/sign_up",
+        "success": true,
+        "metadata": {
+          "service": "Mastodon (mastodon.social)",
+          "formAnalysis": {
+            "emailFields": 0,
+            "passwordFields": 0,
+            "submitButtons": 1,
+            "hasForm": true,
+            "title": "✉ Guerrilla Mail - Disposable Temporary E-Mail Address"
+          },
+          "screenshot": "mastodon-(mastodon.social)-1761886378700.png"
+        },
+        "timestamp": "2025-10-31T04:53:00.401Z"
+      }
+    ],
+    [
+      5,
+      {
+        "action": "analyze_signup_page",
+        "url": "https://www.reddit.com/register/",
+        "success": true,
+        "metadata": {
+          "service": "Reddit",
+          "formAnalysis": {
+            "emailFields": 0,
+            "passwordFields": 0,
+            "submitButtons": 1,
+            "hasForm": true,
+            "title": "✉ Guerrilla Mail - Disposable Temporary E-Mail Address"
+          },
+          "screenshot": "reddit-1761886386694.png"
+        },
+        "timestamp": "2025-10-31T04:53:09.028Z"
+      }
+    ],
+    [
+      6,
+      {
+        "action": "analyze_signup_page",
+        "url": "https://github.com/signup",
+        "success": true,
+        "metadata": {
+          "service": "GitHub",
+          "formAnalysis": {
+            "emailFields": 0,
+            "passwordFields": 0,
+            "submitButtons": 1,
+            "hasForm": true,
+            "title": "✉ Guerrilla Mail - Disposable Temporary E-Mail Address"
+          },
+          "screenshot": "github-1761886395617.png"
+        },
+        "timestamp": "2025-10-31T04:53:17.787Z"
+      }
+    ]
+  ],
+  "patterns": [
+    {
+      "action": "navigate",
+      "url": "https://www.guerrillamail.com/",
+      "success": true,
+      "metadata": {
+        "service": "GuerrillaMail",
+        "step": "initial_load"
+      },
+      "timestamp": "2025-10-31T04:52:37.853Z"
+    },
+    {
+      "action": "extract_email",
+      "selector": "#email-widget",
+      "value": "vql0vo+3mnmaqjbfyhyg@sharklasers.com",
+      "url": "https://www.guerrillamail.com/",
+      "success": true,
+      "metadata": {
+        "service": "GuerrillaMail",
+        "emailDomain": "sharklasers.com"
+      },
+      "timestamp": "2025-10-31T04:52:40.882Z"
+    },
+    {
+      "action": "navigate",
+      "url": "https://twitter.com/i/flow/signup",
+      "success": true,
+      "metadata": {
+        "service": "Twitter",
+        "step": "signup_page"
+      },
+      "timestamp": "2025-10-31T04:52:48.680Z"
+    },
+    {
+      "action": "analyze_signup_form",
+      "url": "https://twitter.com/i/flow/signup",
+      "success": true,
+      "metadata": {
+        "service": "Twitter",
+        "formData": {
+          "inputs": [
+            {
+              "type": "checkbox",
+              "name": "alias",
+              "id": "use-alias",
+              "placeholder": "",
+              "ariaLabel": null,
+              "visible": true
+            },
+            {
+              "type": "submit",
+              "name": "",
+              "id": "del_button",
+              "placeholder": "",
+              "ariaLabel": null,
+              "visible": true
+            },
+            {
+              "type": "checkbox",
+              "name": "mid[]",
+              "id": "",
+              "placeholder": "",
+              "ariaLabel": null,
+              "visible": true
+            }
+          ],
+          "buttons": [],
+          "forms": 2,
+          "hasRecaptcha": false
+        },
+        "hasRecaptcha": false
+      },
+      "timestamp": "2025-10-31T04:52:53.031Z"
+    },
+    {
+      "action": "analyze_signup_page",
+      "url": "https://mastodon.social/auth/sign_up",
+      "success": true,
+      "metadata": {
+        "service": "Mastodon (mastodon.social)",
+        "formAnalysis": {
+          "emailFields": 0,
+          "passwordFields": 0,
+          "submitButtons": 1,
+          "hasForm": true,
+          "title": "✉ Guerrilla Mail - Disposable Temporary E-Mail Address"
+        },
+        "screenshot": "mastodon-(mastodon.social)-1761886378700.png"
+      },
+      "timestamp": "2025-10-31T04:53:00.401Z"
+    },
+    {
+      "action": "analyze_signup_page",
+      "url": "https://www.reddit.com/register/",
+      "success": true,
+      "metadata": {
+        "service": "Reddit",
+        "formAnalysis": {
+          "emailFields": 0,
+          "passwordFields": 0,
+          "submitButtons": 1,
+          "hasForm": true,
+          "title": "✉ Guerrilla Mail - Disposable Temporary E-Mail Address"
+        },
+        "screenshot": "reddit-1761886386694.png"
+      },
+      "timestamp": "2025-10-31T04:53:09.028Z"
+    },
+    {
+      "action": "analyze_signup_page",
+      "url": "https://github.com/signup",
+      "success": true,
+      "metadata": {
+        "service": "GitHub",
+        "formAnalysis": {
+          "emailFields": 0,
+          "passwordFields": 0,
+          "submitButtons": 1,
+          "hasForm": true,
+          "title": "✉ Guerrilla Mail - Disposable Temporary E-Mail Address"
+        },
+        "screenshot": "github-1761886395617.png"
+      },
+      "timestamp": "2025-10-31T04:53:17.787Z"
+    }
+  ],
+  "savedAt": "2025-10-31T04:53:18.788Z"
+}
