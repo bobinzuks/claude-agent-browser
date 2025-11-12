@@ -89,6 +89,22 @@ backup/
 Thumbs.db
 desktop.ini
 
+# Screenshots and images (may contain sensitive data)
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+screenshots/
+images/
+# Allow extension icons
+!extension/icon*.png
+
+# Documentation with credentials
+CONTINUE-TOMORROW.md
+FIXES-COMPLETED-*.md
+docs/fixes/
+
 # Temporary files
 tmp/
 temp/
