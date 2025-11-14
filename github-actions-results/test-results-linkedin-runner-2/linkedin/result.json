@@ -1,0 +1,9 @@
+{
+  "site": "linkedin",
+  "runner": 2,
+  "ip": "48.211.211.32",
+  "result": "FAIL",
+  "captcha_detected": false,
+  "exit_code": 1,
+  "timestamp": "2025-11-14T10:16:07Z"
+}

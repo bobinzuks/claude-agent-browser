@@ -36,6 +36,9 @@
     "src/extension/content/boss-battle-console-test.ts",
     "src/affiliate/**/*",
     "src/extension/content/email-collector.ts",
-    "src/extension/lib/credential-importer.ts"
+    "src/extension/content/email-collector.js",
+    "src/extension/lib/credential-importer.ts",
+    "src/automation/recursive-research-tester.ts",
+    "src/automation/self-healing-engine.ts"
   ]
 }

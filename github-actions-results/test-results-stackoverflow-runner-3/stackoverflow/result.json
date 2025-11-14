@@ -1,0 +1,9 @@
+{
+  "site": "stackoverflow",
+  "runner": 3,
+  "ip": "128.24.162.177",
+  "result": "FAIL",
+  "captcha_detected": false,
+  "exit_code": 1,
+  "timestamp": "2025-11-14T10:15:28Z"
+}

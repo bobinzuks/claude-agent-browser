@@ -1,0 +1,9 @@
+{
+  "site": "theinternet",
+  "runner": 2,
+  "ip": "172.184.209.112",
+  "result": "FAIL",
+  "captcha_detected": false,
+  "exit_code": 1,
+  "timestamp": "2025-11-14T10:15:22Z"
+}

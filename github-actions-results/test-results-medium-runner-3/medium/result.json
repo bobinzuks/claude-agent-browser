@@ -1,0 +1,9 @@
+{
+  "site": "medium",
+  "runner": 3,
+  "ip": "135.232.177.113",
+  "result": "FAIL",
+  "captcha_detected": false,
+  "exit_code": 1,
+  "timestamp": "2025-11-14T10:15:45Z"
+}

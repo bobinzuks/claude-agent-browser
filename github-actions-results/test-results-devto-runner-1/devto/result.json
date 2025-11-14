@@ -1,0 +1,9 @@
+{
+  "site": "devto",
+  "runner": 1,
+  "ip": "172.215.217.100",
+  "result": "FAIL",
+  "captcha_detected": false,
+  "exit_code": 1,
+  "timestamp": "2025-11-14T10:14:30Z"
+}

@@ -95,7 +95,7 @@ export class AgentDBClient {
 
       // Load existing index
       this.index = new HierarchicalNSW('cosine', dimensions);
-      this.index.readIndex(indexPath);
+      this.index.readIndexSync(indexPath);
     } else {
       // Create new index with proper parameters
       this.index = new HierarchicalNSW('cosine', dimensions);
