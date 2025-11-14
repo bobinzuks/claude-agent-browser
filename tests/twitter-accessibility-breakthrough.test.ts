@@ -58,7 +58,7 @@ describe('🚀 Twitter/X Accessibility API Breakthrough', () => {
     console.log('\n🌐 Loading Twitter/X homepage...');
 
     await page.goto('https://twitter.com', {
-      waitUntil: 'networkidle',
+      waitUntil: 'domcontentloaded',
       timeout: 30000,
     });
 
@@ -81,7 +81,7 @@ describe('🚀 Twitter/X Accessibility API Breakthrough', () => {
     console.log('\n🔍 Discovering Twitter/X elements via Accessibility API...');
 
     await page.goto('https://twitter.com', {
-      waitUntil: 'networkidle',
+      waitUntil: 'domcontentloaded',
       timeout: 30000,
     });
 
@@ -97,7 +97,7 @@ describe('🚀 Twitter/X Accessibility API Breakthrough', () => {
     console.log('\n🎯 Finding login button via Accessibility API...');
 
     await page.goto('https://twitter.com', {
-      waitUntil: 'networkidle',
+      waitUntil: 'domcontentloaded',
       timeout: 30000,
     });
 
@@ -155,7 +155,7 @@ describe('🚀 Twitter/X Accessibility API Breakthrough', () => {
     console.log('\n🚀 BREAKTHROUGH: Clicking login via Accessibility API...');
 
     await page.goto('https://twitter.com', {
-      waitUntil: 'networkidle',
+      waitUntil: 'domcontentloaded',
       timeout: 30000,
     });
 
@@ -214,7 +214,7 @@ describe('🚀 Twitter/X Accessibility API Breakthrough', () => {
     console.log('\n🏆 FINAL TEST: Full Twitter/X login flow via Accessibility API...');
 
     await page.goto('https://twitter.com/login', {
-      waitUntil: 'networkidle',
+      waitUntil: 'domcontentloaded',
       timeout: 30000,
     });
 
@@ -267,7 +267,7 @@ describe('🚀 Twitter/X Accessibility API Breakthrough', () => {
     console.log('\n📊 Measuring Accessibility API performance overhead...');
 
     await page.goto('https://twitter.com', {
-      waitUntil: 'networkidle',
+      waitUntil: 'domcontentloaded',
       timeout: 30000,
     });
 
