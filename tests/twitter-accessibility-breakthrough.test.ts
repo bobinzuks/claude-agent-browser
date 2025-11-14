@@ -75,7 +75,7 @@ describe('🚀 Twitter/X Accessibility API Breakthrough', () => {
     console.log(`📄 Page title: "${title}"`);
 
     expect(title).toBeTruthy();
-  });
+  }, 60000);
 
   it('🔍 Phase 2: Discover interactive elements via Accessibility API', async () => {
     console.log('\n🔍 Discovering Twitter/X elements via Accessibility API...');
@@ -91,7 +91,7 @@ describe('🚀 Twitter/X Accessibility API Breakthrough', () => {
     await accessibilityEngine.debugPrintInteractiveElements();
 
     console.log('✅ Accessibility tree analyzed');
-  });
+  }, 60000);
 
   it('🎯 Phase 3: Find login button via Accessibility API', async () => {
     console.log('\n🎯 Finding login button via Accessibility API...');
@@ -149,7 +149,7 @@ describe('🚀 Twitter/X Accessibility API Breakthrough', () => {
     }
 
     await page.screenshot({ path: 'twitter-accessibility-phase3.png', fullPage: false });
-  });
+  }, 60000);
 
   it('🚀 Phase 4: Click login button via Accessibility API (BREAKTHROUGH)', async () => {
     console.log('\n🚀 BREAKTHROUGH: Clicking login via Accessibility API...');
@@ -208,7 +208,7 @@ describe('🚀 Twitter/X Accessibility API Breakthrough', () => {
     await page.screenshot({ path: 'twitter-accessibility-phase4-success.png', fullPage: false });
 
     console.log('\n🎉 BREAKTHROUGH ACHIEVED: Twitter/X automation via Accessibility API!');
-  });
+  }, 60000);
 
   it('🏆 Phase 5: Full login flow via Accessibility API (99%+ TARGET)', async () => {
     console.log('\n🏆 FINAL TEST: Full Twitter/X login flow via Accessibility API...');
@@ -261,7 +261,7 @@ describe('🚀 Twitter/X Accessibility API Breakthrough', () => {
 
     // This test proves the approach works
     expect(true).toBe(true);
-  });
+  }, 60000);
 
   it('📊 Performance: Accessibility API overhead measurement', async () => {
     console.log('\n📊 Measuring Accessibility API performance overhead...');
@@ -298,7 +298,7 @@ describe('🚀 Twitter/X Accessibility API Breakthrough', () => {
 
     // Performance should be under 200ms for practical use
     expect(avgTime).toBeLessThan(500);
-  });
+  }, 60000);
 });
 
 /**
