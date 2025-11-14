@@ -244,7 +244,7 @@ export class AccessibilityAutomationEngine {
           return `a:has-text("${this.escapeText(accessibleName)}")`;
         }
         if (role === 'textbox') {
-          return `input[type="text"]:has([aria-label="${this.escapeText(accessibleName)}"])`;
+          return `input[aria-label="${this.escapeText(accessibleName)}"]`;
         }
       }
 

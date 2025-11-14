@@ -50,6 +50,7 @@ jobs:
           - phase2-discover
           - phase3-find
           - phase4-click
+          - phase5-fullflow
 
     steps:
       - name: Checkout code
@@ -93,6 +94,9 @@ jobs:
               ;;
             phase4-click)
               PATTERN="Phase 4"
+              ;;
+            phase5-fullflow)
+              PATTERN="Phase 5"
               ;;
           esac
 
