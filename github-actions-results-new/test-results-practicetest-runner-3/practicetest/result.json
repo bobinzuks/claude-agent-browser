@@ -1,0 +1,9 @@
+{
+  "site": "practicetest",
+  "runner": 3,
+  "ip": "172.208.127.33",
+  "result": "PASS",
+  "captcha_detected": false,
+  "exit_code": 0,
+  "timestamp": "2025-11-14T10:40:03Z"
+}

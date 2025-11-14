@@ -1,0 +1,9 @@
+{
+  "site": "saucedemo",
+  "runner": 1,
+  "ip": "172.184.220.146",
+  "result": "PASS",
+  "captcha_detected": false,
+  "exit_code": 0,
+  "timestamp": "2025-11-14T10:37:41Z"
+}

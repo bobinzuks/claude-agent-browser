@@ -1,0 +1,9 @@
+{
+  "site": "reddit",
+  "runner": 3,
+  "ip": "48.214.53.81",
+  "result": "FAIL",
+  "captcha_detected": false,
+  "exit_code": 1,
+  "timestamp": "2025-11-14T10:39:10Z"
+}

@@ -1,0 +1,9 @@
+{
+  "site": "uitest-shadow",
+  "runner": 2,
+  "ip": "64.236.200.99",
+  "result": "PASS",
+  "captcha_detected": false,
+  "exit_code": 0,
+  "timestamp": "2025-11-14T10:38:03Z"
+}

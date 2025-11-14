@@ -1,0 +1,5803 @@
+{
+  "timestamp": "2025-11-14T03:50:46.591Z",
+  "summary": {
+    "pagesT": 20,
+    "totalCapabilities": 200,
+    "successfulCapabilities": 178,
+    "avgSuccessRate": 0.89,
+    "totalDuration": 141638,
+    "totalPatterns": 292
+  },
+  "capabilityStats": [
+    {
+      "capability": "DOM Detection",
+      "total": 20,
+      "successful": 20,
+      "successRate": 1
+    },
+    {
+      "capability": "Form Detection",
+      "total": 20,
+      "successful": 20,
+      "successRate": 1
+    },
+    {
+      "capability": "Button Detection",
+      "total": 20,
+      "successful": 20,
+      "successRate": 1
+    },
+    {
+      "capability": "Link Extraction",
+      "total": 20,
+      "successful": 18,
+      "successRate": 0.9
+    },
+    {
+      "capability": "Shadow DOM Detection",
+      "total": 20,
+      "successful": 0,
+      "successRate": 0
+    },
+    {
+      "capability": "Iframe Detection",
+      "total": 20,
+      "successful": 20,
+      "successRate": 1
+    },
+    {
+      "capability": "Dynamic Content Detection",
+      "total": 20,
+      "successful": 20,
+      "successRate": 1
+    },
+    {
+      "capability": "CAPTCHA Detection",
+      "total": 20,
+      "successful": 20,
+      "successRate": 1
+    },
+    {
+      "capability": "Performance Metrics",
+      "total": 20,
+      "successful": 20,
+      "successRate": 1
+    },
+    {
+      "capability": "API Interception",
+      "total": 20,
+      "successful": 20,
+      "successRate": 1
+    }
+  ],
+  "categoryStats": [
+    {
+      "category": "Forms",
+      "siteCount": 5,
+      "avgSuccessRate": 0.8800000000000001
+    },
+    {
+      "category": "Dynamic",
+      "siteCount": 4,
+      "avgSuccessRate": 0.9
+    },
+    {
+      "category": "Shadow DOM",
+      "siteCount": 1,
+      "avgSuccessRate": 0.9
+    },
+    {
+      "category": "Iframes",
+      "siteCount": 2,
+      "avgSuccessRate": 0.8500000000000001
+    },
+    {
+      "category": "Real-World",
+      "siteCount": 8,
+      "avgSuccessRate": 0.9000000000000001
+    }
+  ],
+  "agentDBStats": {
+    "totalActions": 506,
+    "successRate": 1,
+    "actionTypes": {
+      "detect": 130,
+      "detect_field": 129,
+      "detect_button": 159,
+      "extract_links": 33,
+      "measure_performance": 38,
+      "detect_iframes": 8,
+      "detect_captcha": 2,
+      "intercept_api": 7
+    },
+    "averageEmbeddingTime": 3.0547945205479454
+  },
+  "results": [
+    {
+      "site": {
+        "name": "The Internet Herokuapp - Login",
+        "url": "https://the-internet.herokuapp.com/login",
+        "category": "Forms"
+      },
+      "url": "https://the-internet.herokuapp.com/login",
+      "timestamp": "2025-11-14T03:48:19.979Z",
+      "capabilities": [
+        {
+          "capability": "DOM Detection",
+          "action": "detect_elements",
+          "success": true,
+          "duration": 33,
+          "patterns": [
+            {
+              "action": "detect",
+              "selector": "divs",
+              "url": "https://the-internet.herokuapp.com/login",
+              "success": true,
+              "timestamp": "2025-11-14T03:48:16.303Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 12,
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect",
+              "selector": "inputs",
+              "url": "https://the-internet.herokuapp.com/login",
+              "success": true,
+              "timestamp": "2025-11-14T03:48:16.304Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 2,
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect",
+              "selector": "buttons",
+              "url": "https://the-internet.herokuapp.com/login",
+              "success": true,
+              "timestamp": "2025-11-14T03:48:16.304Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 1,
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect",
+              "selector": "links",
+              "url": "https://the-internet.herokuapp.com/login",
+              "success": true,
+              "timestamp": "2025-11-14T03:48:16.304Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 2,
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect",
+              "selector": "forms",
+              "url": "https://the-internet.herokuapp.com/login",
+              "success": true,
+              "timestamp": "2025-11-14T03:48:16.304Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 1,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Form Detection",
+          "action": "detect_form_fields",
+          "success": true,
+          "duration": 14,
+          "patterns": [
+            {
+              "action": "detect_field",
+              "selector": "#username",
+              "url": "https://the-internet.herokuapp.com/login",
+              "success": true,
+              "timestamp": "2025-11-14T03:48:16.319Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "text",
+                "fieldName": "username",
+                "fieldId": "username",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "#password",
+              "url": "https://the-internet.herokuapp.com/login",
+              "success": true,
+              "timestamp": "2025-11-14T03:48:16.319Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "password",
+                "fieldName": "password",
+                "fieldId": "password",
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Button Detection",
+          "action": "detect_buttons",
+          "success": true,
+          "duration": 10,
+          "patterns": [
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(1)",
+              "value": "Login",
+              "url": "https://the-internet.herokuapp.com/login",
+              "success": true,
+              "timestamp": "2025-11-14T03:48:16.330Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "Login",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Link Extraction",
+          "action": "extract_links",
+          "success": true,
+          "duration": 1571,
+          "patterns": [
+            {
+              "action": "extract_links",
+              "selector": "a[href]",
+              "url": "https://the-internet.herokuapp.com/login",
+              "success": true,
+              "timestamp": "2025-11-14T03:48:17.901Z",
+              "metadata": {
+                "capability": "Link Extraction",
+                "linkCount": 2,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Shadow DOM Detection",
+          "action": "detect_shadow_dom",
+          "success": false,
+          "duration": 16,
+          "error": "page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:290:30), <anonymous>:1:208)\n    at UtilityScript.evaluate (<anonymous>:292:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+          "patterns": []
+        },
+        {
+          "capability": "Iframe Detection",
+          "action": "detect_iframes",
+          "success": true,
+          "duration": 7,
+          "patterns": []
+        },
+        {
+          "capability": "Dynamic Content Detection",
+          "action": "detect_spa_framework",
+          "success": true,
+          "duration": 7,
+          "patterns": []
+        },
+        {
+          "capability": "CAPTCHA Detection",
+          "action": "detect_captcha",
+          "success": true,
+          "duration": 8,
+          "patterns": []
+        },
+        {
+          "capability": "Performance Metrics",
+          "action": "measure_performance",
+          "success": true,
+          "duration": 8,
+          "patterns": [
+            {
+              "action": "measure_performance",
+              "selector": "page",
+              "url": "https://the-internet.herokuapp.com/login",
+              "success": true,
+              "timestamp": "2025-11-14T03:48:17.948Z",
+              "metadata": {
+                "capability": "Performance Metrics",
+                "domContentLoaded": 1945.4000000003725,
+                "loadComplete": 2066.100000000559,
+                "responseTime": 93.20000000018626,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "API Interception",
+          "action": "intercept_requests",
+          "success": true,
+          "duration": 2006,
+          "patterns": []
+        }
+      ],
+      "totalDuration": 7232,
+      "successRate": 0.9,
+      "patternsLearned": 10
+    },
+    {
+      "site": {
+        "name": "The Internet Herokuapp - Dropdown",
+        "url": "https://the-internet.herokuapp.com/dropdown",
+        "category": "Forms"
+      },
+      "url": "https://the-internet.herokuapp.com/dropdown",
+      "timestamp": "2025-11-14T03:48:27.879Z",
+      "capabilities": [
+        {
+          "capability": "DOM Detection",
+          "action": "detect_elements",
+          "success": true,
+          "duration": 18,
+          "patterns": [
+            {
+              "action": "detect",
+              "selector": "divs",
+              "url": "https://the-internet.herokuapp.com/dropdown",
+              "success": true,
+              "timestamp": "2025-11-14T03:48:24.281Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 8,
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect",
+              "selector": "links",
+              "url": "https://the-internet.herokuapp.com/dropdown",
+              "success": true,
+              "timestamp": "2025-11-14T03:48:24.281Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 2,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Form Detection",
+          "action": "detect_form_fields",
+          "success": true,
+          "duration": 9,
+          "patterns": [
+            {
+              "action": "detect_field",
+              "selector": "#dropdown",
+              "url": "https://the-internet.herokuapp.com/dropdown",
+              "success": true,
+              "timestamp": "2025-11-14T03:48:24.290Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "select-one",
+                "fieldName": "",
+                "fieldId": "dropdown",
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Button Detection",
+          "action": "detect_buttons",
+          "success": true,
+          "duration": 7,
+          "patterns": []
+        },
+        {
+          "capability": "Link Extraction",
+          "action": "extract_links",
+          "success": true,
+          "duration": 1527,
+          "patterns": [
+            {
+              "action": "extract_links",
+              "selector": "a[href]",
+              "url": "https://the-internet.herokuapp.com/dropdown",
+              "success": true,
+              "timestamp": "2025-11-14T03:48:25.824Z",
+              "metadata": {
+                "capability": "Link Extraction",
+                "linkCount": 2,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Shadow DOM Detection",
+          "action": "detect_shadow_dom",
+          "success": false,
+          "duration": 9,
+          "error": "page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:290:30), <anonymous>:1:208)\n    at UtilityScript.evaluate (<anonymous>:292:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+          "patterns": []
+        },
+        {
+          "capability": "Iframe Detection",
+          "action": "detect_iframes",
+          "success": true,
+          "duration": 9,
+          "patterns": []
+        },
+        {
+          "capability": "Dynamic Content Detection",
+          "action": "detect_spa_framework",
+          "success": true,
+          "duration": 7,
+          "patterns": []
+        },
+        {
+          "capability": "CAPTCHA Detection",
+          "action": "detect_captcha",
+          "success": true,
+          "duration": 7,
+          "patterns": []
+        },
+        {
+          "capability": "Performance Metrics",
+          "action": "measure_performance",
+          "success": true,
+          "duration": 7,
+          "patterns": [
+            {
+              "action": "measure_performance",
+              "selector": "page",
+              "url": "https://the-internet.herokuapp.com/dropdown",
+              "success": true,
+              "timestamp": "2025-11-14T03:48:25.863Z",
+              "metadata": {
+                "capability": "Performance Metrics",
+                "domContentLoaded": 2203.5,
+                "loadComplete": 2209.2999999998137,
+                "responseTime": 92.3999999994412,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "API Interception",
+          "action": "intercept_requests",
+          "success": true,
+          "duration": 2004,
+          "patterns": []
+        }
+      ],
+      "totalDuration": 7336,
+      "successRate": 0.9,
+      "patternsLearned": 5
+    },
+    {
+      "site": {
+        "name": "The Internet Herokuapp - Checkboxes",
+        "url": "https://the-internet.herokuapp.com/checkboxes",
+        "category": "Forms"
+      },
+      "url": "https://the-internet.herokuapp.com/checkboxes",
+      "timestamp": "2025-11-14T03:48:35.799Z",
+      "capabilities": [
+        {
+          "capability": "DOM Detection",
+          "action": "detect_elements",
+          "success": true,
+          "duration": 14,
+          "patterns": [
+            {
+              "action": "detect",
+              "selector": "divs",
+              "url": "https://the-internet.herokuapp.com/checkboxes",
+              "success": true,
+              "timestamp": "2025-11-14T03:48:32.181Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 8,
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect",
+              "selector": "inputs",
+              "url": "https://the-internet.herokuapp.com/checkboxes",
+              "success": true,
+              "timestamp": "2025-11-14T03:48:32.181Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 2,
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect",
+              "selector": "links",
+              "url": "https://the-internet.herokuapp.com/checkboxes",
+              "success": true,
+              "timestamp": "2025-11-14T03:48:32.181Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 2,
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect",
+              "selector": "forms",
+              "url": "https://the-internet.herokuapp.com/checkboxes",
+              "success": true,
+              "timestamp": "2025-11-14T03:48:32.181Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 1,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Form Detection",
+          "action": "detect_form_fields",
+          "success": true,
+          "duration": 7,
+          "patterns": []
+        },
+        {
+          "capability": "Button Detection",
+          "action": "detect_buttons",
+          "success": true,
+          "duration": 6,
+          "patterns": []
+        },
+        {
+          "capability": "Link Extraction",
+          "action": "extract_links",
+          "success": true,
+          "duration": 1562,
+          "patterns": [
+            {
+              "action": "extract_links",
+              "selector": "a[href]",
+              "url": "https://the-internet.herokuapp.com/checkboxes",
+              "success": true,
+              "timestamp": "2025-11-14T03:48:33.756Z",
+              "metadata": {
+                "capability": "Link Extraction",
+                "linkCount": 2,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Shadow DOM Detection",
+          "action": "detect_shadow_dom",
+          "success": false,
+          "duration": 6,
+          "error": "page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:290:30), <anonymous>:1:208)\n    at UtilityScript.evaluate (<anonymous>:292:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+          "patterns": []
+        },
+        {
+          "capability": "Iframe Detection",
+          "action": "detect_iframes",
+          "success": true,
+          "duration": 5,
+          "patterns": []
+        },
+        {
+          "capability": "Dynamic Content Detection",
+          "action": "detect_spa_framework",
+          "success": true,
+          "duration": 5,
+          "patterns": []
+        },
+        {
+          "capability": "CAPTCHA Detection",
+          "action": "detect_captcha",
+          "success": true,
+          "duration": 5,
+          "patterns": []
+        },
+        {
+          "capability": "Performance Metrics",
+          "action": "measure_performance",
+          "success": true,
+          "duration": 8,
+          "patterns": [
+            {
+              "action": "measure_performance",
+              "selector": "page",
+              "url": "https://the-internet.herokuapp.com/checkboxes",
+              "success": true,
+              "timestamp": "2025-11-14T03:48:33.785Z",
+              "metadata": {
+                "capability": "Performance Metrics",
+                "domContentLoaded": 2118.7000000001863,
+                "loadComplete": 2120.100000000559,
+                "responseTime": 94.70000000018626,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "API Interception",
+          "action": "intercept_requests",
+          "success": true,
+          "duration": 2004,
+          "patterns": []
+        }
+      ],
+      "totalDuration": 7289,
+      "successRate": 0.9,
+      "patternsLearned": 6
+    },
+    {
+      "site": {
+        "name": "Practice Test Automation",
+        "url": "https://practicetestautomation.com/practice-test-login/",
+        "category": "Forms"
+      },
+      "url": "https://practicetestautomation.com/practice-test-login/",
+      "timestamp": "2025-11-14T03:48:41.486Z",
+      "capabilities": [
+        {
+          "capability": "DOM Detection",
+          "action": "detect_elements",
+          "success": true,
+          "duration": 14,
+          "patterns": [
+            {
+              "action": "detect",
+              "selector": "divs",
+              "url": "https://practicetestautomation.com/practice-test-login/",
+              "success": true,
+              "timestamp": "2025-11-14T03:48:38.732Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 21,
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect",
+              "selector": "inputs",
+              "url": "https://practicetestautomation.com/practice-test-login/",
+              "success": true,
+              "timestamp": "2025-11-14T03:48:38.732Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 2,
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect",
+              "selector": "buttons",
+              "url": "https://practicetestautomation.com/practice-test-login/",
+              "success": true,
+              "timestamp": "2025-11-14T03:48:38.732Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 3,
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect",
+              "selector": "links",
+              "url": "https://practicetestautomation.com/practice-test-login/",
+              "success": true,
+              "timestamp": "2025-11-14T03:48:38.732Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 9,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Form Detection",
+          "action": "detect_form_fields",
+          "success": true,
+          "duration": 6,
+          "patterns": [
+            {
+              "action": "detect_field",
+              "selector": "#username",
+              "url": "https://practicetestautomation.com/practice-test-login/",
+              "success": true,
+              "timestamp": "2025-11-14T03:48:38.738Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "text",
+                "fieldName": "username",
+                "fieldId": "username",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "#password",
+              "url": "https://practicetestautomation.com/practice-test-login/",
+              "success": true,
+              "timestamp": "2025-11-14T03:48:38.738Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "password",
+                "fieldName": "password",
+                "fieldId": "password",
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Button Detection",
+          "action": "detect_buttons",
+          "success": true,
+          "duration": 6,
+          "patterns": [
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(1)",
+              "value": "",
+              "url": "https://practicetestautomation.com/practice-test-login/",
+              "success": true,
+              "timestamp": "2025-11-14T03:48:38.744Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "#toggle-navigation",
+              "value": "open menu",
+              "url": "https://practicetestautomation.com/practice-test-login/",
+              "success": true,
+              "timestamp": "2025-11-14T03:48:38.744Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "open menu",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "#submit",
+              "value": "Submit",
+              "url": "https://practicetestautomation.com/practice-test-login/",
+              "success": true,
+              "timestamp": "2025-11-14T03:48:38.744Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "Submit",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Link Extraction",
+          "action": "extract_links",
+          "success": true,
+          "duration": 680,
+          "patterns": [
+            {
+              "action": "extract_links",
+              "selector": "a[href]",
+              "url": "https://practicetestautomation.com/practice-test-login/",
+              "success": true,
+              "timestamp": "2025-11-14T03:48:39.424Z",
+              "metadata": {
+                "capability": "Link Extraction",
+                "linkCount": 9,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Shadow DOM Detection",
+          "action": "detect_shadow_dom",
+          "success": false,
+          "duration": 6,
+          "error": "page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:290:30), <anonymous>:1:208)\n    at UtilityScript.evaluate (<anonymous>:292:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+          "patterns": []
+        },
+        {
+          "capability": "Iframe Detection",
+          "action": "detect_iframes",
+          "success": true,
+          "duration": 6,
+          "patterns": []
+        },
+        {
+          "capability": "Dynamic Content Detection",
+          "action": "detect_spa_framework",
+          "success": true,
+          "duration": 7,
+          "patterns": []
+        },
+        {
+          "capability": "CAPTCHA Detection",
+          "action": "detect_captcha",
+          "success": true,
+          "duration": 5,
+          "patterns": []
+        },
+        {
+          "capability": "Performance Metrics",
+          "action": "measure_performance",
+          "success": true,
+          "duration": 5,
+          "patterns": [
+            {
+              "action": "measure_performance",
+              "selector": "page",
+              "url": "https://practicetestautomation.com/practice-test-login/",
+              "success": true,
+              "timestamp": "2025-11-14T03:48:39.454Z",
+              "metadata": {
+                "capability": "Performance Metrics",
+                "domContentLoaded": 834.5999999996275,
+                "loadComplete": 929.8999999994412,
+                "responseTime": 131.29999999981374,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "API Interception",
+          "action": "intercept_requests",
+          "success": true,
+          "duration": 2006,
+          "patterns": []
+        }
+      ],
+      "totalDuration": 5122,
+      "successRate": 0.9,
+      "patternsLearned": 11
+    },
+    {
+      "site": {
+        "name": "SauceDemo",
+        "url": "https://www.saucedemo.com/",
+        "category": "Forms"
+      },
+      "url": "https://www.saucedemo.com/",
+      "timestamp": "2025-11-14T03:48:49.188Z",
+      "capabilities": [
+        {
+          "capability": "DOM Detection",
+          "action": "detect_elements",
+          "success": true,
+          "duration": 16,
+          "patterns": [
+            {
+              "action": "detect",
+              "selector": "divs",
+              "url": "https://www.saucedemo.com/",
+              "success": true,
+              "timestamp": "2025-11-14T03:48:45.597Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 14,
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect",
+              "selector": "inputs",
+              "url": "https://www.saucedemo.com/",
+              "success": true,
+              "timestamp": "2025-11-14T03:48:45.597Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 3,
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect",
+              "selector": "forms",
+              "url": "https://www.saucedemo.com/",
+              "success": true,
+              "timestamp": "2025-11-14T03:48:45.597Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 1,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Form Detection",
+          "action": "detect_form_fields",
+          "success": true,
+          "duration": 7,
+          "patterns": [
+            {
+              "action": "detect_field",
+              "selector": "#user-name",
+              "url": "https://www.saucedemo.com/",
+              "success": true,
+              "timestamp": "2025-11-14T03:48:45.604Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "text",
+                "fieldName": "user-name",
+                "fieldId": "user-name",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "#password",
+              "url": "https://www.saucedemo.com/",
+              "success": true,
+              "timestamp": "2025-11-14T03:48:45.604Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "password",
+                "fieldName": "password",
+                "fieldId": "password",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "#login-button",
+              "url": "https://www.saucedemo.com/",
+              "success": true,
+              "timestamp": "2025-11-14T03:48:45.604Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "submit",
+                "fieldName": "login-button",
+                "fieldId": "login-button",
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Button Detection",
+          "action": "detect_buttons",
+          "success": true,
+          "duration": 6,
+          "patterns": [
+            {
+              "action": "detect_button",
+              "selector": "#login-button",
+              "value": "",
+              "url": "https://www.saucedemo.com/",
+              "success": true,
+              "timestamp": "2025-11-14T03:48:45.610Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Link Extraction",
+          "action": "extract_links",
+          "success": false,
+          "duration": 1525,
+          "patterns": []
+        },
+        {
+          "capability": "Shadow DOM Detection",
+          "action": "detect_shadow_dom",
+          "success": false,
+          "duration": 8,
+          "error": "page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:290:30), <anonymous>:1:208)\n    at UtilityScript.evaluate (<anonymous>:292:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+          "patterns": []
+        },
+        {
+          "capability": "Iframe Detection",
+          "action": "detect_iframes",
+          "success": true,
+          "duration": 5,
+          "patterns": []
+        },
+        {
+          "capability": "Dynamic Content Detection",
+          "action": "detect_spa_framework",
+          "success": true,
+          "duration": 6,
+          "patterns": []
+        },
+        {
+          "capability": "CAPTCHA Detection",
+          "action": "detect_captcha",
+          "success": true,
+          "duration": 7,
+          "patterns": []
+        },
+        {
+          "capability": "Performance Metrics",
+          "action": "measure_performance",
+          "success": true,
+          "duration": 6,
+          "patterns": [
+            {
+              "action": "measure_performance",
+              "selector": "page",
+              "url": "https://www.saucedemo.com/",
+              "success": true,
+              "timestamp": "2025-11-14T03:48:47.167Z",
+              "metadata": {
+                "capability": "Performance Metrics",
+                "domContentLoaded": 1953,
+                "loadComplete": 2130.2999999998137,
+                "responseTime": 158.8999999994412,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "API Interception",
+          "action": "intercept_requests",
+          "success": true,
+          "duration": 2004,
+          "patterns": []
+        }
+      ],
+      "totalDuration": 7087,
+      "successRate": 0.8,
+      "patternsLearned": 8
+    },
+    {
+      "site": {
+        "name": "The Internet - Dynamic Loading",
+        "url": "https://the-internet.herokuapp.com/dynamic_loading/1",
+        "category": "Dynamic"
+      },
+      "url": "https://the-internet.herokuapp.com/dynamic_loading/1",
+      "timestamp": "2025-11-14T03:48:56.951Z",
+      "capabilities": [
+        {
+          "capability": "DOM Detection",
+          "action": "detect_elements",
+          "success": true,
+          "duration": 18,
+          "patterns": [
+            {
+              "action": "detect",
+              "selector": "divs",
+              "url": "https://the-internet.herokuapp.com/dynamic_loading/1",
+              "success": true,
+              "timestamp": "2025-11-14T03:48:53.370Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 10,
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect",
+              "selector": "buttons",
+              "url": "https://the-internet.herokuapp.com/dynamic_loading/1",
+              "success": true,
+              "timestamp": "2025-11-14T03:48:53.370Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 1,
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect",
+              "selector": "links",
+              "url": "https://the-internet.herokuapp.com/dynamic_loading/1",
+              "success": true,
+              "timestamp": "2025-11-14T03:48:53.371Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 2,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Form Detection",
+          "action": "detect_form_fields",
+          "success": true,
+          "duration": 5,
+          "patterns": []
+        },
+        {
+          "capability": "Button Detection",
+          "action": "detect_buttons",
+          "success": true,
+          "duration": 6,
+          "patterns": [
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(1)",
+              "value": "Start",
+              "url": "https://the-internet.herokuapp.com/dynamic_loading/1",
+              "success": true,
+              "timestamp": "2025-11-14T03:48:53.382Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "Start",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Link Extraction",
+          "action": "extract_links",
+          "success": true,
+          "duration": 1523,
+          "patterns": [
+            {
+              "action": "extract_links",
+              "selector": "a[href]",
+              "url": "https://the-internet.herokuapp.com/dynamic_loading/1",
+              "success": true,
+              "timestamp": "2025-11-14T03:48:54.905Z",
+              "metadata": {
+                "capability": "Link Extraction",
+                "linkCount": 2,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Shadow DOM Detection",
+          "action": "detect_shadow_dom",
+          "success": false,
+          "duration": 7,
+          "error": "page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:290:30), <anonymous>:1:208)\n    at UtilityScript.evaluate (<anonymous>:292:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+          "patterns": []
+        },
+        {
+          "capability": "Iframe Detection",
+          "action": "detect_iframes",
+          "success": true,
+          "duration": 6,
+          "patterns": []
+        },
+        {
+          "capability": "Dynamic Content Detection",
+          "action": "detect_spa_framework",
+          "success": true,
+          "duration": 6,
+          "patterns": []
+        },
+        {
+          "capability": "CAPTCHA Detection",
+          "action": "detect_captcha",
+          "success": true,
+          "duration": 5,
+          "patterns": []
+        },
+        {
+          "capability": "Performance Metrics",
+          "action": "measure_performance",
+          "success": true,
+          "duration": 8,
+          "patterns": [
+            {
+              "action": "measure_performance",
+              "selector": "page",
+              "url": "https://the-internet.herokuapp.com/dynamic_loading/1",
+              "success": true,
+              "timestamp": "2025-11-14T03:48:54.937Z",
+              "metadata": {
+                "capability": "Performance Metrics",
+                "domContentLoaded": 2049.100000000559,
+                "loadComplete": 2049.800000000745,
+                "responseTime": 92.29999999981374,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "API Interception",
+          "action": "intercept_requests",
+          "success": true,
+          "duration": 2003,
+          "patterns": []
+        }
+      ],
+      "totalDuration": 7167,
+      "successRate": 0.9,
+      "patternsLearned": 6
+    },
+    {
+      "site": {
+        "name": "The Internet - Infinite Scroll",
+        "url": "https://the-internet.herokuapp.com/infinite_scroll",
+        "category": "Dynamic"
+      },
+      "url": "https://the-internet.herokuapp.com/infinite_scroll",
+      "timestamp": "2025-11-14T03:49:04.736Z",
+      "capabilities": [
+        {
+          "capability": "DOM Detection",
+          "action": "detect_elements",
+          "success": true,
+          "duration": 17,
+          "patterns": [
+            {
+              "action": "detect",
+              "selector": "divs",
+              "url": "https://the-internet.herokuapp.com/infinite_scroll",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:01.152Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 15,
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect",
+              "selector": "links",
+              "url": "https://the-internet.herokuapp.com/infinite_scroll",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:01.152Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 3,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Form Detection",
+          "action": "detect_form_fields",
+          "success": true,
+          "duration": 7,
+          "patterns": []
+        },
+        {
+          "capability": "Button Detection",
+          "action": "detect_buttons",
+          "success": true,
+          "duration": 7,
+          "patterns": []
+        },
+        {
+          "capability": "Link Extraction",
+          "action": "extract_links",
+          "success": true,
+          "duration": 1527,
+          "patterns": [
+            {
+              "action": "extract_links",
+              "selector": "a[href]",
+              "url": "https://the-internet.herokuapp.com/infinite_scroll",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:02.693Z",
+              "metadata": {
+                "capability": "Link Extraction",
+                "linkCount": 3,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Shadow DOM Detection",
+          "action": "detect_shadow_dom",
+          "success": false,
+          "duration": 7,
+          "error": "page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:290:30), <anonymous>:1:208)\n    at UtilityScript.evaluate (<anonymous>:292:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+          "patterns": []
+        },
+        {
+          "capability": "Iframe Detection",
+          "action": "detect_iframes",
+          "success": true,
+          "duration": 5,
+          "patterns": []
+        },
+        {
+          "capability": "Dynamic Content Detection",
+          "action": "detect_spa_framework",
+          "success": true,
+          "duration": 6,
+          "patterns": []
+        },
+        {
+          "capability": "CAPTCHA Detection",
+          "action": "detect_captcha",
+          "success": true,
+          "duration": 5,
+          "patterns": []
+        },
+        {
+          "capability": "Performance Metrics",
+          "action": "measure_performance",
+          "success": true,
+          "duration": 6,
+          "patterns": [
+            {
+              "action": "measure_performance",
+              "selector": "page",
+              "url": "https://the-internet.herokuapp.com/infinite_scroll",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:02.722Z",
+              "metadata": {
+                "capability": "Performance Metrics",
+                "domContentLoaded": 1931.8999999994412,
+                "loadComplete": 1932.5999999996275,
+                "responseTime": 102.5,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "API Interception",
+          "action": "intercept_requests",
+          "success": true,
+          "duration": 2004,
+          "patterns": []
+        }
+      ],
+      "totalDuration": 7059,
+      "successRate": 0.9,
+      "patternsLearned": 4
+    },
+    {
+      "site": {
+        "name": "UI Testing Playground - Dynamic ID",
+        "url": "http://uitestingplayground.com/dynamicid",
+        "category": "Dynamic"
+      },
+      "url": "http://uitestingplayground.com/dynamicid",
+      "timestamp": "2025-11-14T03:49:10.420Z",
+      "capabilities": [
+        {
+          "capability": "DOM Detection",
+          "action": "detect_elements",
+          "success": true,
+          "duration": 20,
+          "patterns": [
+            {
+              "action": "detect",
+              "selector": "divs",
+              "url": "http://uitestingplayground.com/dynamicid",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:07.616Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 8,
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect",
+              "selector": "buttons",
+              "url": "http://uitestingplayground.com/dynamicid",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:07.616Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 2,
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect",
+              "selector": "links",
+              "url": "http://uitestingplayground.com/dynamicid",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:07.616Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 7,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Form Detection",
+          "action": "detect_form_fields",
+          "success": true,
+          "duration": 10,
+          "patterns": []
+        },
+        {
+          "capability": "Button Detection",
+          "action": "detect_buttons",
+          "success": true,
+          "duration": 19,
+          "patterns": [
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(1)",
+              "value": "",
+              "url": "http://uitestingplayground.com/dynamicid",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:07.645Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "",
+                "buttonType": "button",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "#aa241e88-417d-305f-3eb4-50241f2d5141",
+              "value": "Button with Dynamic ID",
+              "url": "http://uitestingplayground.com/dynamicid",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:07.645Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "Button with Dynamic ID",
+                "buttonType": "button",
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Link Extraction",
+          "action": "extract_links",
+          "success": true,
+          "duration": 725,
+          "patterns": [
+            {
+              "action": "extract_links",
+              "selector": "a[href]",
+              "url": "http://uitestingplayground.com/dynamicid",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:08.370Z",
+              "metadata": {
+                "capability": "Link Extraction",
+                "linkCount": 7,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Shadow DOM Detection",
+          "action": "detect_shadow_dom",
+          "success": false,
+          "duration": 7,
+          "error": "page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:290:30), <anonymous>:1:208)\n    at UtilityScript.evaluate (<anonymous>:292:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+          "patterns": []
+        },
+        {
+          "capability": "Iframe Detection",
+          "action": "detect_iframes",
+          "success": true,
+          "duration": 7,
+          "patterns": []
+        },
+        {
+          "capability": "Dynamic Content Detection",
+          "action": "detect_spa_framework",
+          "success": true,
+          "duration": 6,
+          "patterns": []
+        },
+        {
+          "capability": "CAPTCHA Detection",
+          "action": "detect_captcha",
+          "success": true,
+          "duration": 5,
+          "patterns": []
+        },
+        {
+          "capability": "Performance Metrics",
+          "action": "measure_performance",
+          "success": true,
+          "duration": 5,
+          "patterns": [
+            {
+              "action": "measure_performance",
+              "selector": "page",
+              "url": "http://uitestingplayground.com/dynamicid",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:08.400Z",
+              "metadata": {
+                "capability": "Performance Metrics",
+                "domContentLoaded": 663.9000000003725,
+                "loadComplete": 677.1000000005588,
+                "responseTime": 94.5,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "API Interception",
+          "action": "intercept_requests",
+          "success": true,
+          "duration": 2004,
+          "patterns": []
+        }
+      ],
+      "totalDuration": 5001,
+      "successRate": 0.9,
+      "patternsLearned": 7
+    },
+    {
+      "site": {
+        "name": "UI Testing Playground - AJAX Data",
+        "url": "http://uitestingplayground.com/ajax",
+        "category": "Dynamic"
+      },
+      "url": "http://uitestingplayground.com/ajax",
+      "timestamp": "2025-11-14T03:49:16.057Z",
+      "capabilities": [
+        {
+          "capability": "DOM Detection",
+          "action": "detect_elements",
+          "success": true,
+          "duration": 15,
+          "patterns": [
+            {
+              "action": "detect",
+              "selector": "divs",
+              "url": "http://uitestingplayground.com/ajax",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:13.296Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 9,
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect",
+              "selector": "buttons",
+              "url": "http://uitestingplayground.com/ajax",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:13.296Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 2,
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect",
+              "selector": "links",
+              "url": "http://uitestingplayground.com/ajax",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:13.296Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 7,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Form Detection",
+          "action": "detect_form_fields",
+          "success": true,
+          "duration": 6,
+          "patterns": []
+        },
+        {
+          "capability": "Button Detection",
+          "action": "detect_buttons",
+          "success": true,
+          "duration": 8,
+          "patterns": [
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(1)",
+              "value": "",
+              "url": "http://uitestingplayground.com/ajax",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:13.310Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "",
+                "buttonType": "button",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "#ajaxButton",
+              "value": "Button Triggering AJAX Request",
+              "url": "http://uitestingplayground.com/ajax",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:13.310Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "Button Triggering AJAX Request",
+                "buttonType": "button",
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Link Extraction",
+          "action": "extract_links",
+          "success": true,
+          "duration": 698,
+          "patterns": [
+            {
+              "action": "extract_links",
+              "selector": "a[href]",
+              "url": "http://uitestingplayground.com/ajax",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:14.008Z",
+              "metadata": {
+                "capability": "Link Extraction",
+                "linkCount": 7,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Shadow DOM Detection",
+          "action": "detect_shadow_dom",
+          "success": false,
+          "duration": 6,
+          "error": "page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:290:30), <anonymous>:1:208)\n    at UtilityScript.evaluate (<anonymous>:292:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+          "patterns": []
+        },
+        {
+          "capability": "Iframe Detection",
+          "action": "detect_iframes",
+          "success": true,
+          "duration": 5,
+          "patterns": []
+        },
+        {
+          "capability": "Dynamic Content Detection",
+          "action": "detect_spa_framework",
+          "success": true,
+          "duration": 6,
+          "patterns": []
+        },
+        {
+          "capability": "CAPTCHA Detection",
+          "action": "detect_captcha",
+          "success": true,
+          "duration": 5,
+          "patterns": []
+        },
+        {
+          "capability": "Performance Metrics",
+          "action": "measure_performance",
+          "success": true,
+          "duration": 5,
+          "patterns": [
+            {
+              "action": "measure_performance",
+              "selector": "page",
+              "url": "http://uitestingplayground.com/ajax",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:14.035Z",
+              "metadata": {
+                "capability": "Performance Metrics",
+                "domContentLoaded": 788.7999999998137,
+                "loadComplete": 828.5,
+                "responseTime": 91.20000000018626,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "API Interception",
+          "action": "intercept_requests",
+          "success": true,
+          "duration": 2005,
+          "patterns": []
+        }
+      ],
+      "totalDuration": 5087,
+      "successRate": 0.9,
+      "patternsLearned": 7
+    },
+    {
+      "site": {
+        "name": "UI Testing Playground - Shadow DOM",
+        "url": "http://uitestingplayground.com/shadowdom",
+        "category": "Shadow DOM"
+      },
+      "url": "http://uitestingplayground.com/shadowdom",
+      "timestamp": "2025-11-14T03:49:21.716Z",
+      "capabilities": [
+        {
+          "capability": "DOM Detection",
+          "action": "detect_elements",
+          "success": true,
+          "duration": 14,
+          "patterns": [
+            {
+              "action": "detect",
+              "selector": "divs",
+              "url": "http://uitestingplayground.com/shadowdom",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:18.961Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 8,
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect",
+              "selector": "buttons",
+              "url": "http://uitestingplayground.com/shadowdom",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:18.961Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 1,
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect",
+              "selector": "links",
+              "url": "http://uitestingplayground.com/shadowdom",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:18.961Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 7,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Form Detection",
+          "action": "detect_form_fields",
+          "success": true,
+          "duration": 7,
+          "patterns": []
+        },
+        {
+          "capability": "Button Detection",
+          "action": "detect_buttons",
+          "success": true,
+          "duration": 7,
+          "patterns": [
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(1)",
+              "value": "",
+              "url": "http://uitestingplayground.com/shadowdom",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:18.975Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "",
+                "buttonType": "button",
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Link Extraction",
+          "action": "extract_links",
+          "success": true,
+          "duration": 696,
+          "patterns": [
+            {
+              "action": "extract_links",
+              "selector": "a[href]",
+              "url": "http://uitestingplayground.com/shadowdom",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:19.671Z",
+              "metadata": {
+                "capability": "Link Extraction",
+                "linkCount": 7,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Shadow DOM Detection",
+          "action": "detect_shadow_dom",
+          "success": false,
+          "duration": 7,
+          "error": "page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:290:30), <anonymous>:1:208)\n    at UtilityScript.evaluate (<anonymous>:292:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+          "patterns": []
+        },
+        {
+          "capability": "Iframe Detection",
+          "action": "detect_iframes",
+          "success": true,
+          "duration": 5,
+          "patterns": []
+        },
+        {
+          "capability": "Dynamic Content Detection",
+          "action": "detect_spa_framework",
+          "success": true,
+          "duration": 6,
+          "patterns": []
+        },
+        {
+          "capability": "CAPTCHA Detection",
+          "action": "detect_captcha",
+          "success": true,
+          "duration": 6,
+          "patterns": []
+        },
+        {
+          "capability": "Performance Metrics",
+          "action": "measure_performance",
+          "success": true,
+          "duration": 6,
+          "patterns": [
+            {
+              "action": "measure_performance",
+              "selector": "page",
+              "url": "http://uitestingplayground.com/shadowdom",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:19.702Z",
+              "metadata": {
+                "capability": "Performance Metrics",
+                "domContentLoaded": 737.4000000003725,
+                "loadComplete": 772,
+                "responseTime": 97.40000000037253,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "API Interception",
+          "action": "intercept_requests",
+          "success": true,
+          "duration": 2002,
+          "patterns": []
+        }
+      ],
+      "totalDuration": 5026,
+      "successRate": 0.9,
+      "patternsLearned": 6
+    },
+    {
+      "site": {
+        "name": "The Internet - Frames",
+        "url": "https://the-internet.herokuapp.com/frames",
+        "category": "Iframes"
+      },
+      "url": "https://the-internet.herokuapp.com/frames",
+      "timestamp": "2025-11-14T03:49:30.417Z",
+      "capabilities": [
+        {
+          "capability": "DOM Detection",
+          "action": "detect_elements",
+          "success": true,
+          "duration": 16,
+          "patterns": [
+            {
+              "action": "detect",
+              "selector": "divs",
+              "url": "https://the-internet.herokuapp.com/frames",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:26.843Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 8,
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect",
+              "selector": "links",
+              "url": "https://the-internet.herokuapp.com/frames",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:26.843Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 4,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Form Detection",
+          "action": "detect_form_fields",
+          "success": true,
+          "duration": 5,
+          "patterns": []
+        },
+        {
+          "capability": "Button Detection",
+          "action": "detect_buttons",
+          "success": true,
+          "duration": 5,
+          "patterns": []
+        },
+        {
+          "capability": "Link Extraction",
+          "action": "extract_links",
+          "success": true,
+          "duration": 1526,
+          "patterns": [
+            {
+              "action": "extract_links",
+              "selector": "a[href]",
+              "url": "https://the-internet.herokuapp.com/frames",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:28.379Z",
+              "metadata": {
+                "capability": "Link Extraction",
+                "linkCount": 4,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Shadow DOM Detection",
+          "action": "detect_shadow_dom",
+          "success": false,
+          "duration": 6,
+          "error": "page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:290:30), <anonymous>:1:208)\n    at UtilityScript.evaluate (<anonymous>:292:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+          "patterns": []
+        },
+        {
+          "capability": "Iframe Detection",
+          "action": "detect_iframes",
+          "success": true,
+          "duration": 5,
+          "patterns": []
+        },
+        {
+          "capability": "Dynamic Content Detection",
+          "action": "detect_spa_framework",
+          "success": true,
+          "duration": 4,
+          "patterns": []
+        },
+        {
+          "capability": "CAPTCHA Detection",
+          "action": "detect_captcha",
+          "success": true,
+          "duration": 5,
+          "patterns": []
+        },
+        {
+          "capability": "Performance Metrics",
+          "action": "measure_performance",
+          "success": true,
+          "duration": 4,
+          "patterns": [
+            {
+              "action": "measure_performance",
+              "selector": "page",
+              "url": "https://the-internet.herokuapp.com/frames",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:28.403Z",
+              "metadata": {
+                "capability": "Performance Metrics",
+                "domContentLoaded": 3062.5,
+                "loadComplete": 3063.2000000001863,
+                "responseTime": 98.40000000037253,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "API Interception",
+          "action": "intercept_requests",
+          "success": true,
+          "duration": 2002,
+          "patterns": []
+        }
+      ],
+      "totalDuration": 8175,
+      "successRate": 0.9,
+      "patternsLearned": 4
+    },
+    {
+      "site": {
+        "name": "The Internet - Nested Frames",
+        "url": "https://the-internet.herokuapp.com/nested_frames",
+        "category": "Iframes"
+      },
+      "url": "https://the-internet.herokuapp.com/nested_frames",
+      "timestamp": "2025-11-14T03:49:36.842Z",
+      "capabilities": [
+        {
+          "capability": "DOM Detection",
+          "action": "detect_elements",
+          "success": true,
+          "duration": 16,
+          "patterns": []
+        },
+        {
+          "capability": "Form Detection",
+          "action": "detect_form_fields",
+          "success": true,
+          "duration": 5,
+          "patterns": []
+        },
+        {
+          "capability": "Button Detection",
+          "action": "detect_buttons",
+          "success": true,
+          "duration": 6,
+          "patterns": []
+        },
+        {
+          "capability": "Link Extraction",
+          "action": "extract_links",
+          "success": false,
+          "duration": 1524,
+          "patterns": []
+        },
+        {
+          "capability": "Shadow DOM Detection",
+          "action": "detect_shadow_dom",
+          "success": false,
+          "duration": 6,
+          "error": "page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:290:30), <anonymous>:1:208)\n    at UtilityScript.evaluate (<anonymous>:292:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+          "patterns": []
+        },
+        {
+          "capability": "Iframe Detection",
+          "action": "detect_iframes",
+          "success": true,
+          "duration": 5,
+          "patterns": []
+        },
+        {
+          "capability": "Dynamic Content Detection",
+          "action": "detect_spa_framework",
+          "success": true,
+          "duration": 4,
+          "patterns": []
+        },
+        {
+          "capability": "CAPTCHA Detection",
+          "action": "detect_captcha",
+          "success": true,
+          "duration": 4,
+          "patterns": []
+        },
+        {
+          "capability": "Performance Metrics",
+          "action": "measure_performance",
+          "success": true,
+          "duration": 7,
+          "patterns": [
+            {
+              "action": "measure_performance",
+              "selector": "page",
+              "url": "https://the-internet.herokuapp.com/nested_frames",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:34.837Z",
+              "metadata": {
+                "capability": "Performance Metrics",
+                "domContentLoaded": 455,
+                "loadComplete": 909.1000000005588,
+                "responseTime": 97.5,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "API Interception",
+          "action": "intercept_requests",
+          "success": true,
+          "duration": 2002,
+          "patterns": []
+        }
+      ],
+      "totalDuration": 5575,
+      "successRate": 0.8,
+      "patternsLearned": 1
+    },
+    {
+      "site": {
+        "name": "GitHub Homepage",
+        "url": "https://github.com",
+        "category": "Real-World"
+      },
+      "url": "https://github.com",
+      "timestamp": "2025-11-14T03:49:46.584Z",
+      "capabilities": [
+        {
+          "capability": "DOM Detection",
+          "action": "detect_elements",
+          "success": true,
+          "duration": 142,
+          "patterns": [
+            {
+              "action": "detect",
+              "selector": "divs",
+              "url": "https://github.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:42.676Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 377,
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect",
+              "selector": "inputs",
+              "url": "https://github.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:42.676Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 13,
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect",
+              "selector": "buttons",
+              "url": "https://github.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:42.676Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 44,
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect",
+              "selector": "links",
+              "url": "https://github.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:42.676Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 145,
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect",
+              "selector": "forms",
+              "url": "https://github.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:42.676Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 5,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Form Detection",
+          "action": "detect_form_fields",
+          "success": true,
+          "duration": 172,
+          "patterns": [
+            {
+              "action": "detect_field",
+              "selector": "[name=\"type\"]",
+              "url": "https://github.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:42.849Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "hidden",
+                "fieldName": "type",
+                "fieldId": "",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "#query-builder-test",
+              "url": "https://github.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:42.849Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "text",
+                "fieldName": "query-builder-test",
+                "fieldId": "query-builder-test",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "[name=\"authenticity_token\"]",
+              "url": "https://github.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:42.849Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "hidden",
+                "fieldName": "authenticity_token",
+                "fieldId": "",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "#feedback",
+              "url": "https://github.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:42.849Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "textarea",
+                "fieldName": "feedback",
+                "fieldId": "feedback",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "#include_email",
+              "url": "https://github.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:42.849Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "checkbox",
+                "fieldName": "include_email",
+                "fieldId": "include_email",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "[name=\"authenticity_token\"]",
+              "url": "https://github.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:42.849Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "hidden",
+                "fieldName": "authenticity_token",
+                "fieldId": "",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "#custom_scope_id",
+              "url": "https://github.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:42.849Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "hidden",
+                "fieldName": "custom_scope_id",
+                "fieldId": "custom_scope_id",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "#custom_scope_name",
+              "url": "https://github.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:42.849Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "text",
+                "fieldName": "custom_scope_name",
+                "fieldId": "custom_scope_name",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "#custom_scope_query",
+              "url": "https://github.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:42.849Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "text",
+                "fieldName": "custom_scope_query",
+                "fieldId": "custom_scope_query",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "[name=\"source\"]",
+              "url": "https://github.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:42.849Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "hidden",
+                "fieldName": "source",
+                "fieldId": "",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "#hero_user_email",
+              "url": "https://github.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:42.849Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "email",
+                "fieldName": "user_email",
+                "fieldId": "hero_user_email",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "[name=\"source\"]",
+              "url": "https://github.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:42.849Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "hidden",
+                "fieldName": "source",
+                "fieldId": "",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "#bottom_cta_section_user_email",
+              "url": "https://github.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:42.849Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "email",
+                "fieldName": "user_email",
+                "fieldId": "bottom_cta_section_user_email",
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Button Detection",
+          "action": "detect_buttons",
+          "success": true,
+          "duration": 74,
+          "patterns": [
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(1)",
+              "value": "Toggle navigation",
+              "url": "https://github.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:42.922Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "Toggle navigation",
+                "buttonType": "button",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(2)",
+              "value": "",
+              "url": "https://github.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:42.923Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "",
+                "buttonType": "button",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(3)",
+              "value": "Platform",
+              "url": "https://github.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:42.923Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "Platform",
+                "buttonType": "button",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(4)",
+              "value": "Solutions",
+              "url": "https://github.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:42.923Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "Solutions",
+                "buttonType": "button",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(5)",
+              "value": "Resources",
+              "url": "https://github.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:42.923Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "Resources",
+                "buttonType": "button",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(6)",
+              "value": "Open Source",
+              "url": "https://github.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:42.923Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "Open Source",
+                "buttonType": "button",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(7)",
+              "value": "Enterprise",
+              "url": "https://github.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:42.923Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "Enterprise",
+                "buttonType": "button",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(8)",
+              "value": "Search or jump to...",
+              "url": "https://github.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:42.923Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "Search or jump to...",
+                "buttonType": "button",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "#query-builder-test-clear-button",
+              "value": "",
+              "url": "https://github.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:42.923Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "",
+                "buttonType": "button",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(10)",
+              "value": "",
+              "url": "https://github.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:42.923Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "",
+                "buttonType": "button",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(11)",
+              "value": "Cancel",
+              "url": "https://github.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:42.923Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "Cancel",
+                "buttonType": "button",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(12)",
+              "value": "Submit feedback",
+              "url": "https://github.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:42.923Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "Submit feedback",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(13)",
+              "value": "",
+              "url": "https://github.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:42.923Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "",
+                "buttonType": "button",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(14)",
+              "value": "Cancel",
+              "url": "https://github.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:42.923Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "Cancel",
+                "buttonType": "button",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(15)",
+              "value": "Create saved search",
+              "url": "https://github.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:42.923Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "Create saved search",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(16)",
+              "value": "Resetting focus",
+              "url": "https://github.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:42.923Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "Resetting focus",
+                "buttonType": "button",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "#icon-button-d9b4dd77-c765-4b51-98a2-1fe95da67170",
+              "value": "",
+              "url": "https://github.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:42.923Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "",
+                "buttonType": "button",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(18)",
+              "value": "Sign up for GitHub",
+              "url": "https://github.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:42.923Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "Sign up for GitHub",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(19)",
+              "value": "",
+              "url": "https://github.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:42.923Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(20)",
+              "value": "Code",
+              "url": "https://github.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:42.923Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "Code",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Link Extraction",
+          "action": "extract_links",
+          "success": true,
+          "duration": 910,
+          "patterns": [
+            {
+              "action": "extract_links",
+              "selector": "a[href]",
+              "url": "https://github.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:43.833Z",
+              "metadata": {
+                "capability": "Link Extraction",
+                "linkCount": 10,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Shadow DOM Detection",
+          "action": "detect_shadow_dom",
+          "success": false,
+          "duration": 27,
+          "error": "page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:290:30), <anonymous>:1:208)\n    at UtilityScript.evaluate (<anonymous>:292:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+          "patterns": []
+        },
+        {
+          "capability": "Iframe Detection",
+          "action": "detect_iframes",
+          "success": true,
+          "duration": 13,
+          "patterns": []
+        },
+        {
+          "capability": "Dynamic Content Detection",
+          "action": "detect_spa_framework",
+          "success": true,
+          "duration": 24,
+          "patterns": []
+        },
+        {
+          "capability": "CAPTCHA Detection",
+          "action": "detect_captcha",
+          "success": true,
+          "duration": 533,
+          "patterns": []
+        },
+        {
+          "capability": "Performance Metrics",
+          "action": "measure_performance",
+          "success": true,
+          "duration": 46,
+          "patterns": [
+            {
+              "action": "measure_performance",
+              "selector": "page",
+              "url": "https://github.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:44.476Z",
+              "metadata": {
+                "capability": "Performance Metrics",
+                "domContentLoaded": 3574,
+                "loadComplete": 6072.199999999255,
+                "responseTime": 415.8999999994412,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "API Interception",
+          "action": "intercept_requests",
+          "success": true,
+          "duration": 2004,
+          "patterns": []
+        }
+      ],
+      "totalDuration": 9144,
+      "successRate": 0.9,
+      "patternsLearned": 40
+    },
+    {
+      "site": {
+        "name": "Amazon Homepage",
+        "url": "https://www.amazon.com",
+        "category": "Real-World"
+      },
+      "url": "https://www.amazon.com",
+      "timestamp": "2025-11-14T03:49:52.372Z",
+      "capabilities": [
+        {
+          "capability": "DOM Detection",
+          "action": "detect_elements",
+          "success": true,
+          "duration": 19,
+          "patterns": [
+            {
+              "action": "detect",
+              "selector": "divs",
+              "url": "https://www.amazon.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:49.613Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 94,
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect",
+              "selector": "inputs",
+              "url": "https://www.amazon.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:49.613Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 4,
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect",
+              "selector": "links",
+              "url": "https://www.amazon.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:49.613Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 24,
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect",
+              "selector": "forms",
+              "url": "https://www.amazon.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:49.613Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 2,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Form Detection",
+          "action": "detect_form_fields",
+          "success": true,
+          "duration": 6,
+          "patterns": [
+            {
+              "action": "detect_field",
+              "selector": "#nav-bb-search",
+              "url": "https://www.amazon.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:49.619Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "text",
+                "fieldName": "field-keywords",
+                "fieldId": "nav-bb-search",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "[name=\"ue_back\"]",
+              "url": "https://www.amazon.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:49.619Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "hidden",
+                "fieldName": "ue_back",
+                "fieldId": "",
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Button Detection",
+          "action": "detect_buttons",
+          "success": true,
+          "duration": 10,
+          "patterns": [
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(1)",
+              "value": "",
+              "url": "https://www.amazon.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:49.629Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Link Extraction",
+          "action": "extract_links",
+          "success": true,
+          "duration": 687,
+          "patterns": [
+            {
+              "action": "extract_links",
+              "selector": "a[href]",
+              "url": "https://www.amazon.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:50.316Z",
+              "metadata": {
+                "capability": "Link Extraction",
+                "linkCount": 10,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Shadow DOM Detection",
+          "action": "detect_shadow_dom",
+          "success": false,
+          "duration": 6,
+          "error": "page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:290:30), <anonymous>:1:208)\n    at UtilityScript.evaluate (<anonymous>:292:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+          "patterns": []
+        },
+        {
+          "capability": "Iframe Detection",
+          "action": "detect_iframes",
+          "success": true,
+          "duration": 5,
+          "patterns": []
+        },
+        {
+          "capability": "Dynamic Content Detection",
+          "action": "detect_spa_framework",
+          "success": true,
+          "duration": 6,
+          "patterns": []
+        },
+        {
+          "capability": "CAPTCHA Detection",
+          "action": "detect_captcha",
+          "success": true,
+          "duration": 6,
+          "patterns": []
+        },
+        {
+          "capability": "Performance Metrics",
+          "action": "measure_performance",
+          "success": true,
+          "duration": 10,
+          "patterns": [
+            {
+              "action": "measure_performance",
+              "selector": "page",
+              "url": "https://www.amazon.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:50.349Z",
+              "metadata": {
+                "capability": "Performance Metrics",
+                "domContentLoaded": 894.3999999994412,
+                "loadComplete": 1314.0999999996275,
+                "responseTime": 244.40000000037253,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "API Interception",
+          "action": "intercept_requests",
+          "success": true,
+          "duration": 2002,
+          "patterns": []
+        }
+      ],
+      "totalDuration": 5196,
+      "successRate": 0.9,
+      "patternsLearned": 9
+    },
+    {
+      "site": {
+        "name": "Stack Overflow",
+        "url": "https://stackoverflow.com",
+        "category": "Real-World"
+      },
+      "url": "https://stackoverflow.com",
+      "timestamp": "2025-11-14T03:50:02.494Z",
+      "capabilities": [
+        {
+          "capability": "DOM Detection",
+          "action": "detect_elements",
+          "success": true,
+          "duration": 268,
+          "patterns": [
+            {
+              "action": "detect",
+              "selector": "divs",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.614Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 465,
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect",
+              "selector": "inputs",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.614Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 39,
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect",
+              "selector": "buttons",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.614Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 841,
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect",
+              "selector": "links",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.614Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 224,
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect",
+              "selector": "forms",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.614Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 8,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Form Detection",
+          "action": "detect_form_fields",
+          "success": true,
+          "duration": 128,
+          "patterns": [
+            {
+              "action": "detect_field",
+              "selector": "[name=\"fkey\"]",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.742Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "hidden",
+                "fieldName": "fkey",
+                "fieldId": "",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "[name=\"legalLinksShown\"]",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.742Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "hidden",
+                "fieldName": "legalLinksShown",
+                "fieldId": "",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "[name=\"ssrc\"]",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.742Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "hidden",
+                "fieldName": "ssrc",
+                "fieldId": "",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "[name=\"oauth_version\"]",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.742Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "hidden",
+                "fieldName": "oauth_version",
+                "fieldId": "",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "[name=\"oauth_server\"]",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.742Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "hidden",
+                "fieldName": "oauth_server",
+                "fieldId": "",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "[name=\"fkey\"]",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.742Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "hidden",
+                "fieldName": "fkey",
+                "fieldId": "",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "[name=\"legalLinksShown\"]",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.742Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "hidden",
+                "fieldName": "legalLinksShown",
+                "fieldId": "",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "[name=\"ssrc\"]",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.742Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "hidden",
+                "fieldName": "ssrc",
+                "fieldId": "",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "[name=\"vote\"]",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.742Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "hidden",
+                "fieldName": "vote",
+                "fieldId": "",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "[name=\"votehash\"]",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.742Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "hidden",
+                "fieldName": "votehash",
+                "fieldId": "",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "[name=\"tagAction\"]",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.742Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "hidden",
+                "fieldName": "tagAction",
+                "fieldId": "",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "[name=\"tagNames\"]",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.742Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "hidden",
+                "fieldName": "tagNames",
+                "fieldId": "",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "[name=\"anonTheme\"]",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.742Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "hidden",
+                "fieldName": "anonTheme",
+                "fieldId": "",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "#signup-modal-email",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.742Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "text",
+                "fieldName": "email",
+                "fieldId": "signup-modal-email",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "#signup-modal-password",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.742Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "password",
+                "fieldName": "password",
+                "fieldId": "signup-modal-password",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "[name=\"fKey\"]",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.742Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "hidden",
+                "fieldName": "fKey",
+                "fieldId": "",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "[name=\"googleIdToken\"]",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.742Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "hidden",
+                "fieldName": "googleIdToken",
+                "fieldId": "",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "[name=\"q\"]",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.742Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "text",
+                "fieldName": "q",
+                "fieldId": "",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "#filterInput",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.742Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "search",
+                "fieldName": "",
+                "fieldId": "filterInput",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "[name=\"uqlId\"]",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.742Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "hidden",
+                "fieldName": "uqlId",
+                "fieldId": "",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "#f43a35b8-c70d-4eb5-82d9-9da762a532b3",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.742Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "checkbox",
+                "fieldName": "filterId",
+                "fieldId": "f43a35b8-c70d-4eb5-82d9-9da762a532b3",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "#ae45e607-ca49-4bb9-bc06-31c466b4fe56",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.742Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "checkbox",
+                "fieldName": "filterId",
+                "fieldId": "ae45e607-ca49-4bb9-bc06-31c466b4fe56",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "#ffb2df00-3456-4a88-9881-a66e8eb169a8",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.742Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "checkbox",
+                "fieldName": "filterId",
+                "fieldId": "ffb2df00-3456-4a88-9881-a66e8eb169a8",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "#ef87f04c-d495-473f-8c35-d78d788a74ce",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.742Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "checkbox",
+                "fieldName": "filterId",
+                "fieldId": "ef87f04c-d495-473f-8c35-d78d788a74ce",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "#5a82ca6b-347b-47e6-a516-798f2426d9d8",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.742Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "number",
+                "fieldName": "days",
+                "fieldId": "5a82ca6b-347b-47e6-a516-798f2426d9d8",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "#b0980ec8-fdbf-4c91-85ed-60ef00d226b8",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.742Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "radio",
+                "fieldName": "sortId",
+                "fieldId": "b0980ec8-fdbf-4c91-85ed-60ef00d226b8",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "#849777af-cba6-4ddf-931a-e6ee00f54b26",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.742Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "radio",
+                "fieldName": "sortId",
+                "fieldId": "849777af-cba6-4ddf-931a-e6ee00f54b26",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "#13e30cd3-7cdf-4b2a-8ad3-daba858a5736",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.742Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "radio",
+                "fieldName": "sortId",
+                "fieldId": "13e30cd3-7cdf-4b2a-8ad3-daba858a5736",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "#b8ae0fcd-b714-4446-b6fc-a8eaedb1d718",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.742Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "radio",
+                "fieldName": "sortId",
+                "fieldId": "b8ae0fcd-b714-4446-b6fc-a8eaedb1d718",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "#4bd5cb4e-911f-44f3-bdef-25c23cf14c8c",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.742Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "radio",
+                "fieldName": "sortId",
+                "fieldId": "4bd5cb4e-911f-44f3-bdef-25c23cf14c8c",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "#c2175626-3747-47f6-a62a-2810ec0a985c",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.742Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "radio",
+                "fieldName": "sortId",
+                "fieldId": "c2175626-3747-47f6-a62a-2810ec0a985c",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "#5bd8246c-78d8-42cc-b483-1be44f045ef4",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.742Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "radio",
+                "fieldName": "sortId",
+                "fieldId": "5bd8246c-78d8-42cc-b483-1be44f045ef4",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "#50b8bb9c-e415-4465-9f4b-4cf84b5de40e",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.742Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "radio",
+                "fieldName": "tagModeId",
+                "fieldId": "50b8bb9c-e415-4465-9f4b-4cf84b5de40e",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "#153c248e-d44d-4a87-b2e0-08faecdd45a2",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.742Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "radio",
+                "fieldName": "tagModeId",
+                "fieldId": "153c248e-d44d-4a87-b2e0-08faecdd45a2",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "#uql-modal-tag-input",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.742Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "text",
+                "fieldName": "tagQuery",
+                "fieldId": "uql-modal-tag-input",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "[name=\"fkey\"]",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.742Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "hidden",
+                "fieldName": "fkey",
+                "fieldId": "",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "[name=\"fkey\"]",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.742Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "hidden",
+                "fieldName": "fkey",
+                "fieldId": "",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "[name=\"fkey\"]",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.742Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "hidden",
+                "fieldName": "fkey",
+                "fieldId": "",
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Button Detection",
+          "action": "detect_buttons",
+          "success": true,
+          "duration": 41,
+          "patterns": [
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(1)",
+              "value": "Sign up with Google",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.782Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "Sign up with Google",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(2)",
+              "value": "Sign up with GitHub",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.782Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "Sign up with GitHub",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(3)",
+              "value": "",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.782Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "",
+                "buttonType": "button",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "#signup-modal-submit-button",
+              "value": "Sign up",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.783Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "Sign up",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(5)",
+              "value": "",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.783Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(6)",
+              "value": "Products",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.783Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "Products",
+                "buttonType": "button",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(7)",
+              "value": "",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.783Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "",
+                "buttonType": "button",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(8)",
+              "value": "",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.783Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(9)",
+              "value": "python",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.783Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "python",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(10)",
+              "value": "javascript",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.783Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "javascript",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(11)",
+              "value": "c#",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.783Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "c#",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(12)",
+              "value": "reactjs",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.783Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "reactjs",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(13)",
+              "value": "java",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.783Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "java",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(14)",
+              "value": "android",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.783Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "android",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(15)",
+              "value": "html",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.783Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "html",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(16)",
+              "value": "flutter",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.783Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "flutter",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(17)",
+              "value": "c++",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.783Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "c++",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(18)",
+              "value": "node.js",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.783Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "node.js",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(19)",
+              "value": "typescript",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.783Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "typescript",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(20)",
+              "value": "css",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:49:57.783Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "css",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Link Extraction",
+          "action": "extract_links",
+          "success": true,
+          "duration": 2403,
+          "patterns": [
+            {
+              "action": "extract_links",
+              "selector": "a[href]",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:00.186Z",
+              "metadata": {
+                "capability": "Link Extraction",
+                "linkCount": 10,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Shadow DOM Detection",
+          "action": "detect_shadow_dom",
+          "success": false,
+          "duration": 14,
+          "error": "page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:290:30), <anonymous>:1:208)\n    at UtilityScript.evaluate (<anonymous>:292:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+          "patterns": []
+        },
+        {
+          "capability": "Iframe Detection",
+          "action": "detect_iframes",
+          "success": true,
+          "duration": 33,
+          "patterns": [
+            {
+              "action": "detect_iframes",
+              "selector": "iframe",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:00.233Z",
+              "metadata": {
+                "capability": "Iframe Detection",
+                "iframeCount": 6,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Dynamic Content Detection",
+          "action": "detect_spa_framework",
+          "success": true,
+          "duration": 18,
+          "patterns": []
+        },
+        {
+          "capability": "CAPTCHA Detection",
+          "action": "detect_captcha",
+          "success": true,
+          "duration": 10,
+          "patterns": []
+        },
+        {
+          "capability": "Performance Metrics",
+          "action": "measure_performance",
+          "success": true,
+          "duration": 7,
+          "patterns": [
+            {
+              "action": "measure_performance",
+              "selector": "page",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:00.268Z",
+              "metadata": {
+                "capability": "Performance Metrics",
+                "domContentLoaded": 2645.4000000003725,
+                "loadComplete": -184.3999999994412,
+                "responseTime": 209.5,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "API Interception",
+          "action": "intercept_requests",
+          "success": true,
+          "duration": 2003,
+          "patterns": [
+            {
+              "action": "intercept_api",
+              "selector": "xhr/fetch",
+              "url": "https://stackoverflow.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:02.271Z",
+              "metadata": {
+                "capability": "API Interception",
+                "apiCallCount": 13,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        }
+      ],
+      "totalDuration": 9498,
+      "successRate": 0.9,
+      "patternsLearned": 67
+    },
+    {
+      "site": {
+        "name": "Reddit",
+        "url": "https://www.reddit.com",
+        "category": "Real-World"
+      },
+      "url": "https://www.reddit.com",
+      "timestamp": "2025-11-14T03:50:08.153Z",
+      "capabilities": [
+        {
+          "capability": "DOM Detection",
+          "action": "detect_elements",
+          "success": true,
+          "duration": 22,
+          "patterns": [
+            {
+              "action": "detect",
+              "selector": "divs",
+              "url": "https://www.reddit.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:05.239Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 7,
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect",
+              "selector": "links",
+              "url": "https://www.reddit.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:05.239Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 6,
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect",
+              "selector": "forms",
+              "url": "https://www.reddit.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:05.240Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 1,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Form Detection",
+          "action": "detect_form_fields",
+          "success": true,
+          "duration": 7,
+          "patterns": [
+            {
+              "action": "detect_field",
+              "selector": "#g-recaptcha-response",
+              "url": "https://www.reddit.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:05.247Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "textarea",
+                "fieldName": "g-recaptcha-response",
+                "fieldId": "g-recaptcha-response",
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Button Detection",
+          "action": "detect_buttons",
+          "success": true,
+          "duration": 5,
+          "patterns": []
+        },
+        {
+          "capability": "Link Extraction",
+          "action": "extract_links",
+          "success": true,
+          "duration": 798,
+          "patterns": [
+            {
+              "action": "extract_links",
+              "selector": "a[href]",
+              "url": "https://www.reddit.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:06.050Z",
+              "metadata": {
+                "capability": "Link Extraction",
+                "linkCount": 6,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Shadow DOM Detection",
+          "action": "detect_shadow_dom",
+          "success": false,
+          "duration": 29,
+          "error": "page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:290:30), <anonymous>:1:208)\n    at UtilityScript.evaluate (<anonymous>:292:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+          "patterns": []
+        },
+        {
+          "capability": "Iframe Detection",
+          "action": "detect_iframes",
+          "success": true,
+          "duration": 10,
+          "patterns": [
+            {
+              "action": "detect_iframes",
+              "selector": "iframe",
+              "url": "https://www.reddit.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:06.089Z",
+              "metadata": {
+                "capability": "Iframe Detection",
+                "iframeCount": 2,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Dynamic Content Detection",
+          "action": "detect_spa_framework",
+          "success": true,
+          "duration": 7,
+          "patterns": []
+        },
+        {
+          "capability": "CAPTCHA Detection",
+          "action": "detect_captcha",
+          "success": true,
+          "duration": 6,
+          "patterns": [
+            {
+              "action": "detect_captcha",
+              "selector": "recaptcha",
+              "url": "https://www.reddit.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:06.102Z",
+              "metadata": {
+                "capability": "CAPTCHA Detection",
+                "captchaType": "recaptcha",
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Performance Metrics",
+          "action": "measure_performance",
+          "success": true,
+          "duration": 8,
+          "patterns": [
+            {
+              "action": "measure_performance",
+              "selector": "page",
+              "url": "https://www.reddit.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:06.110Z",
+              "metadata": {
+                "capability": "Performance Metrics",
+                "domContentLoaded": 418.40000000037253,
+                "loadComplete": 2746.7999999998137,
+                "responseTime": 150.59999999962747,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "API Interception",
+          "action": "intercept_requests",
+          "success": true,
+          "duration": 2002,
+          "patterns": []
+        }
+      ],
+      "totalDuration": 4872,
+      "successRate": 0.9,
+      "patternsLearned": 8
+    },
+    {
+      "site": {
+        "name": "Twitter/X",
+        "url": "https://twitter.com",
+        "category": "Real-World"
+      },
+      "url": "https://twitter.com",
+      "timestamp": "2025-11-14T03:50:20.979Z",
+      "capabilities": [
+        {
+          "capability": "DOM Detection",
+          "action": "detect_elements",
+          "success": true,
+          "duration": 1904,
+          "patterns": [
+            {
+              "action": "detect",
+              "selector": "divs",
+              "url": "https://twitter.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:17.937Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 80,
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect",
+              "selector": "buttons",
+              "url": "https://twitter.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:17.937Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 1,
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect",
+              "selector": "links",
+              "url": "https://twitter.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:17.937Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 24,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Form Detection",
+          "action": "detect_form_fields",
+          "success": true,
+          "duration": 104,
+          "patterns": []
+        },
+        {
+          "capability": "Button Detection",
+          "action": "detect_buttons",
+          "success": true,
+          "duration": 57,
+          "patterns": [
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(1)",
+              "value": "Sign up with Apple",
+              "url": "https://twitter.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:18.098Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "Sign up with Apple",
+                "buttonType": "button",
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Link Extraction",
+          "action": "extract_links",
+          "success": true,
+          "duration": 804,
+          "patterns": [
+            {
+              "action": "extract_links",
+              "selector": "a[href]",
+              "url": "https://twitter.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:18.902Z",
+              "metadata": {
+                "capability": "Link Extraction",
+                "linkCount": 10,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Shadow DOM Detection",
+          "action": "detect_shadow_dom",
+          "success": false,
+          "duration": 11,
+          "error": "page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:290:30), <anonymous>:1:208)\n    at UtilityScript.evaluate (<anonymous>:292:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+          "patterns": []
+        },
+        {
+          "capability": "Iframe Detection",
+          "action": "detect_iframes",
+          "success": true,
+          "duration": 6,
+          "patterns": [
+            {
+              "action": "detect_iframes",
+              "selector": "iframe",
+              "url": "https://twitter.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:18.919Z",
+              "metadata": {
+                "capability": "Iframe Detection",
+                "iframeCount": 1,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Dynamic Content Detection",
+          "action": "detect_spa_framework",
+          "success": true,
+          "duration": 6,
+          "patterns": []
+        },
+        {
+          "capability": "CAPTCHA Detection",
+          "action": "detect_captcha",
+          "success": true,
+          "duration": 6,
+          "patterns": []
+        },
+        {
+          "capability": "Performance Metrics",
+          "action": "measure_performance",
+          "success": true,
+          "duration": 5,
+          "patterns": [
+            {
+              "action": "measure_performance",
+              "selector": "page",
+              "url": "https://twitter.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:18.936Z",
+              "metadata": {
+                "capability": "Performance Metrics",
+                "domContentLoaded": 5659.200000000186,
+                "loadComplete": 6116.5999999996275,
+                "responseTime": 141.8999999994412,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "API Interception",
+          "action": "intercept_requests",
+          "success": true,
+          "duration": 2005,
+          "patterns": [
+            {
+              "action": "intercept_api",
+              "selector": "xhr/fetch",
+              "url": "https://twitter.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:20.941Z",
+              "metadata": {
+                "capability": "API Interception",
+                "apiCallCount": 1,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        }
+      ],
+      "totalDuration": 12264,
+      "successRate": 0.9,
+      "patternsLearned": 8
+    },
+    {
+      "site": {
+        "name": "LinkedIn",
+        "url": "https://www.linkedin.com",
+        "category": "Real-World"
+      },
+      "url": "https://www.linkedin.com",
+      "timestamp": "2025-11-14T03:50:28.042Z",
+      "capabilities": [
+        {
+          "capability": "DOM Detection",
+          "action": "detect_elements",
+          "success": true,
+          "duration": 1022,
+          "patterns": [
+            {
+              "action": "detect",
+              "selector": "divs",
+              "url": "https://www.linkedin.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:24.500Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 56,
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect",
+              "selector": "inputs",
+              "url": "https://www.linkedin.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:24.500Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 2,
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect",
+              "selector": "buttons",
+              "url": "https://www.linkedin.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:24.500Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 42,
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect",
+              "selector": "links",
+              "url": "https://www.linkedin.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:24.500Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 157,
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect",
+              "selector": "forms",
+              "url": "https://www.linkedin.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:24.500Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 1,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Form Detection",
+          "action": "detect_form_fields",
+          "success": true,
+          "duration": 174,
+          "patterns": [
+            {
+              "action": "detect_field",
+              "selector": "[name=\"loginCsrfParam\"]",
+              "url": "https://www.linkedin.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:24.675Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "hidden",
+                "fieldName": "loginCsrfParam",
+                "fieldId": "",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "[name=\"trk\"]",
+              "url": "https://www.linkedin.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:24.675Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "hidden",
+                "fieldName": "trk",
+                "fieldId": "",
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Button Detection",
+          "action": "detect_buttons",
+          "success": true,
+          "duration": 127,
+          "patterns": [
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(1)",
+              "value": "Show more",
+              "url": "https://www.linkedin.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:24.801Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "Show more",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(2)",
+              "value": "Show less",
+              "url": "https://www.linkedin.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:24.801Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "Show less",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(3)",
+              "value": "",
+              "url": "https://www.linkedin.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:24.801Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(4)",
+              "value": "",
+              "url": "https://www.linkedin.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:24.801Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(5)",
+              "value": "Choose a topic to learn about",
+              "url": "https://www.linkedin.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:24.801Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "Choose a topic to learn about",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(6)",
+              "value": "العربية (Arabic)",
+              "url": "https://www.linkedin.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:24.801Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "العربية (Arabic)",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(7)",
+              "value": "বাংলা (Bangla)",
+              "url": "https://www.linkedin.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:24.801Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "বাংলা (Bangla)",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(8)",
+              "value": "Čeština (Czech)",
+              "url": "https://www.linkedin.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:24.802Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "Čeština (Czech)",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(9)",
+              "value": "Dansk (Danish)",
+              "url": "https://www.linkedin.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:24.802Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "Dansk (Danish)",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(10)",
+              "value": "Deutsch (German)",
+              "url": "https://www.linkedin.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:24.802Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "Deutsch (German)",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(11)",
+              "value": "Ελληνικά (Greek)",
+              "url": "https://www.linkedin.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:24.802Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "Ελληνικά (Greek)",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(12)",
+              "value": "English (English)",
+              "url": "https://www.linkedin.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:24.802Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "English (English)",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(13)",
+              "value": "Español (Spanish)",
+              "url": "https://www.linkedin.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:24.802Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "Español (Spanish)",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(14)",
+              "value": "فارسی (Persian)",
+              "url": "https://www.linkedin.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:24.802Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "فارسی (Persian)",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(15)",
+              "value": "Suomi (Finnish)",
+              "url": "https://www.linkedin.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:24.802Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "Suomi (Finnish)",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(16)",
+              "value": "Français (French)",
+              "url": "https://www.linkedin.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:24.802Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "Français (French)",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(17)",
+              "value": "हिंदी (Hindi)",
+              "url": "https://www.linkedin.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:24.802Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "हिंदी (Hindi)",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(18)",
+              "value": "Magyar (Hungarian)",
+              "url": "https://www.linkedin.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:24.802Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "Magyar (Hungarian)",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(19)",
+              "value": "Bahasa Indonesia (Indonesian)",
+              "url": "https://www.linkedin.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:24.802Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "Bahasa Indonesia (Indonesian)",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(20)",
+              "value": "Italiano (Italian)",
+              "url": "https://www.linkedin.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:24.802Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "Italiano (Italian)",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Link Extraction",
+          "action": "extract_links",
+          "success": true,
+          "duration": 1053,
+          "patterns": [
+            {
+              "action": "extract_links",
+              "selector": "a[href]",
+              "url": "https://www.linkedin.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:25.855Z",
+              "metadata": {
+                "capability": "Link Extraction",
+                "linkCount": 10,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Shadow DOM Detection",
+          "action": "detect_shadow_dom",
+          "success": false,
+          "duration": 33,
+          "error": "page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:290:30), <anonymous>:1:208)\n    at UtilityScript.evaluate (<anonymous>:292:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+          "patterns": []
+        },
+        {
+          "capability": "Iframe Detection",
+          "action": "detect_iframes",
+          "success": true,
+          "duration": 8,
+          "patterns": [
+            {
+              "action": "detect_iframes",
+              "selector": "iframe",
+              "url": "https://www.linkedin.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:25.896Z",
+              "metadata": {
+                "capability": "Iframe Detection",
+                "iframeCount": 3,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Dynamic Content Detection",
+          "action": "detect_spa_framework",
+          "success": true,
+          "duration": 12,
+          "patterns": []
+        },
+        {
+          "capability": "CAPTCHA Detection",
+          "action": "detect_captcha",
+          "success": true,
+          "duration": 6,
+          "patterns": []
+        },
+        {
+          "capability": "Performance Metrics",
+          "action": "measure_performance",
+          "success": true,
+          "duration": 5,
+          "patterns": [
+            {
+              "action": "measure_performance",
+              "selector": "page",
+              "url": "https://www.linkedin.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:25.919Z",
+              "metadata": {
+                "capability": "Performance Metrics",
+                "domContentLoaded": 345.70000000018626,
+                "loadComplete": 1424.6000000005588,
+                "responseTime": 220.70000000018626,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "API Interception",
+          "action": "intercept_requests",
+          "success": true,
+          "duration": 2004,
+          "patterns": [
+            {
+              "action": "intercept_api",
+              "selector": "xhr/fetch",
+              "url": "https://www.linkedin.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:27.923Z",
+              "metadata": {
+                "capability": "API Interception",
+                "apiCallCount": 2,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        }
+      ],
+      "totalDuration": 6426,
+      "successRate": 0.9,
+      "patternsLearned": 31
+    },
+    {
+      "site": {
+        "name": "YouTube",
+        "url": "https://www.youtube.com",
+        "category": "Real-World"
+      },
+      "url": "https://www.youtube.com",
+      "timestamp": "2025-11-14T03:50:40.308Z",
+      "capabilities": [
+        {
+          "capability": "DOM Detection",
+          "action": "detect_elements",
+          "success": true,
+          "duration": 276,
+          "patterns": [
+            {
+              "action": "detect",
+              "selector": "divs",
+              "url": "https://www.youtube.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:36.972Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 272,
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect",
+              "selector": "inputs",
+              "url": "https://www.youtube.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:36.972Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 1,
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect",
+              "selector": "buttons",
+              "url": "https://www.youtube.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:36.972Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 9,
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect",
+              "selector": "links",
+              "url": "https://www.youtube.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:36.972Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 40,
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect",
+              "selector": "forms",
+              "url": "https://www.youtube.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:36.972Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 1,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Form Detection",
+          "action": "detect_form_fields",
+          "success": true,
+          "duration": 20,
+          "patterns": [
+            {
+              "action": "detect_field",
+              "selector": "[name=\"search_query\"]",
+              "url": "https://www.youtube.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:36.992Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "text",
+                "fieldName": "search_query",
+                "fieldId": "",
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Button Detection",
+          "action": "detect_buttons",
+          "success": true,
+          "duration": 19,
+          "patterns": [
+            {
+              "action": "detect_button",
+              "selector": "#button",
+              "value": "",
+              "url": "https://www.youtube.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:37.011Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "#button",
+              "value": "",
+              "url": "https://www.youtube.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:37.011Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(3)",
+              "value": "Skip navigation",
+              "url": "https://www.youtube.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:37.011Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "Skip navigation",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(4)",
+              "value": "",
+              "url": "https://www.youtube.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:37.011Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "#button",
+              "value": "Search",
+              "url": "https://www.youtube.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:37.011Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "Search",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(6)",
+              "value": "",
+              "url": "https://www.youtube.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:37.011Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "#button",
+              "value": "",
+              "url": "https://www.youtube.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:37.011Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "#button",
+              "value": "",
+              "url": "https://www.youtube.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:37.011Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "#button",
+              "value": "",
+              "url": "https://www.youtube.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:37.011Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Link Extraction",
+          "action": "extract_links",
+          "success": true,
+          "duration": 1072,
+          "patterns": [
+            {
+              "action": "extract_links",
+              "selector": "a[href]",
+              "url": "https://www.youtube.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:38.083Z",
+              "metadata": {
+                "capability": "Link Extraction",
+                "linkCount": 10,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Shadow DOM Detection",
+          "action": "detect_shadow_dom",
+          "success": false,
+          "duration": 47,
+          "error": "page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:290:30), <anonymous>:1:208)\n    at UtilityScript.evaluate (<anonymous>:292:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+          "patterns": []
+        },
+        {
+          "capability": "Iframe Detection",
+          "action": "detect_iframes",
+          "success": true,
+          "duration": 28,
+          "patterns": [
+            {
+              "action": "detect_iframes",
+              "selector": "iframe",
+              "url": "https://www.youtube.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:38.158Z",
+              "metadata": {
+                "capability": "Iframe Detection",
+                "iframeCount": 2,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Dynamic Content Detection",
+          "action": "detect_spa_framework",
+          "success": true,
+          "duration": 10,
+          "patterns": []
+        },
+        {
+          "capability": "CAPTCHA Detection",
+          "action": "detect_captcha",
+          "success": true,
+          "duration": 28,
+          "patterns": []
+        },
+        {
+          "capability": "Performance Metrics",
+          "action": "measure_performance",
+          "success": true,
+          "duration": 27,
+          "patterns": [
+            {
+              "action": "measure_performance",
+              "selector": "page",
+              "url": "https://www.youtube.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:38.223Z",
+              "metadata": {
+                "capability": "Performance Metrics",
+                "domContentLoaded": 6528.300000000745,
+                "loadComplete": 6639.300000000745,
+                "responseTime": 274.20000000018626,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "API Interception",
+          "action": "intercept_requests",
+          "success": true,
+          "duration": 2013,
+          "patterns": [
+            {
+              "action": "intercept_api",
+              "selector": "xhr/fetch",
+              "url": "https://www.youtube.com",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:40.236Z",
+              "metadata": {
+                "capability": "API Interception",
+                "apiCallCount": 65,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        }
+      ],
+      "totalDuration": 11659,
+      "successRate": 0.9,
+      "patternsLearned": 19
+    },
+    {
+      "site": {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org",
+        "category": "Real-World"
+      },
+      "url": "https://en.wikipedia.org",
+      "timestamp": "2025-11-14T03:50:46.383Z",
+      "capabilities": [
+        {
+          "capability": "DOM Detection",
+          "action": "detect_elements",
+          "success": true,
+          "duration": 13,
+          "patterns": [
+            {
+              "action": "detect",
+              "selector": "divs",
+              "url": "https://en.wikipedia.org",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:43.533Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 241,
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect",
+              "selector": "inputs",
+              "url": "https://en.wikipedia.org",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:43.533Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 18,
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect",
+              "selector": "buttons",
+              "url": "https://en.wikipedia.org",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:43.533Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 10,
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect",
+              "selector": "links",
+              "url": "https://en.wikipedia.org",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:43.533Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 688,
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect",
+              "selector": "forms",
+              "url": "https://en.wikipedia.org",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:43.533Z",
+              "metadata": {
+                "capability": "DOM Detection",
+                "count": 5,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Form Detection",
+          "action": "detect_form_fields",
+          "success": true,
+          "duration": 12,
+          "patterns": [
+            {
+              "action": "detect_field",
+              "selector": "#vector-main-menu-dropdown-checkbox",
+              "url": "https://en.wikipedia.org",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:43.545Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "checkbox",
+                "fieldName": "",
+                "fieldId": "vector-main-menu-dropdown-checkbox",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "#searchInput",
+              "url": "https://en.wikipedia.org",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:43.545Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "search",
+                "fieldName": "search",
+                "fieldId": "searchInput",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "[name=\"title\"]",
+              "url": "https://en.wikipedia.org",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:43.545Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "hidden",
+                "fieldName": "title",
+                "fieldId": "",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "#vector-appearance-dropdown-checkbox",
+              "url": "https://en.wikipedia.org",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:43.545Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "checkbox",
+                "fieldName": "",
+                "fieldId": "vector-appearance-dropdown-checkbox",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "#vector-user-links-dropdown-checkbox",
+              "url": "https://en.wikipedia.org",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:43.545Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "checkbox",
+                "fieldName": "",
+                "fieldId": "vector-user-links-dropdown-checkbox",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "#vector-variants-dropdown-checkbox",
+              "url": "https://en.wikipedia.org",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:43.545Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "checkbox",
+                "fieldName": "",
+                "fieldId": "vector-variants-dropdown-checkbox",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "#vector-page-tools-dropdown-checkbox",
+              "url": "https://en.wikipedia.org",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:43.545Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "checkbox",
+                "fieldName": "",
+                "fieldId": "vector-page-tools-dropdown-checkbox",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "#skin-client-pref-vector-feature-custom-font-size-value-0",
+              "url": "https://en.wikipedia.org",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:43.545Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "radio",
+                "fieldName": "skin-client-pref-vector-feature-custom-font-size-group",
+                "fieldId": "skin-client-pref-vector-feature-custom-font-size-value-0",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "#skin-client-pref-vector-feature-custom-font-size-value-1",
+              "url": "https://en.wikipedia.org",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:43.545Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "radio",
+                "fieldName": "skin-client-pref-vector-feature-custom-font-size-group",
+                "fieldId": "skin-client-pref-vector-feature-custom-font-size-value-1",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "#skin-client-pref-vector-feature-custom-font-size-value-2",
+              "url": "https://en.wikipedia.org",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:43.545Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "radio",
+                "fieldName": "skin-client-pref-vector-feature-custom-font-size-group",
+                "fieldId": "skin-client-pref-vector-feature-custom-font-size-value-2",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "#skin-client-pref-vector-feature-limited-width-value-1",
+              "url": "https://en.wikipedia.org",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:43.545Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "radio",
+                "fieldName": "skin-client-pref-vector-feature-limited-width-group",
+                "fieldId": "skin-client-pref-vector-feature-limited-width-value-1",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "#skin-client-pref-vector-feature-limited-width-value-0",
+              "url": "https://en.wikipedia.org",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:43.545Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "radio",
+                "fieldName": "skin-client-pref-vector-feature-limited-width-group",
+                "fieldId": "skin-client-pref-vector-feature-limited-width-value-0",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "#skin-client-pref-skin-theme-value-os",
+              "url": "https://en.wikipedia.org",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:43.545Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "radio",
+                "fieldName": "skin-client-pref-skin-theme-group",
+                "fieldId": "skin-client-pref-skin-theme-value-os",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "#skin-client-pref-skin-theme-value-day",
+              "url": "https://en.wikipedia.org",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:43.545Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "radio",
+                "fieldName": "skin-client-pref-skin-theme-group",
+                "fieldId": "skin-client-pref-skin-theme-value-day",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "#skin-client-pref-skin-theme-value-night",
+              "url": "https://en.wikipedia.org",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:43.545Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "radio",
+                "fieldName": "skin-client-pref-skin-theme-group",
+                "fieldId": "skin-client-pref-skin-theme-value-night",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "#p-lang-btn-checkbox",
+              "url": "https://en.wikipedia.org",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:43.545Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "checkbox",
+                "fieldName": "",
+                "fieldId": "p-lang-btn-checkbox",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "[name=\"search\"]",
+              "url": "https://en.wikipedia.org",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:43.545Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "search",
+                "fieldName": "search",
+                "fieldId": "",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_field",
+              "selector": "[name=\"title\"]",
+              "url": "https://en.wikipedia.org",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:43.545Z",
+              "metadata": {
+                "capability": "Form Detection",
+                "fieldType": "hidden",
+                "fieldName": "title",
+                "fieldId": "",
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Button Detection",
+          "action": "detect_buttons",
+          "success": true,
+          "duration": 12,
+          "patterns": [
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(1)",
+              "value": "move to sidebar",
+              "url": "https://en.wikipedia.org",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:43.557Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "move to sidebar",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(2)",
+              "value": "hide",
+              "url": "https://en.wikipedia.org",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:43.557Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "hide",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(3)",
+              "value": "Search",
+              "url": "https://en.wikipedia.org",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:43.557Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "Search",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(4)",
+              "value": "move to sidebar",
+              "url": "https://en.wikipedia.org",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:43.557Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "move to sidebar",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(5)",
+              "value": "hide",
+              "url": "https://en.wikipedia.org",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:43.557Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "hide",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(6)",
+              "value": "move to sidebar",
+              "url": "https://en.wikipedia.org",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:43.557Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "move to sidebar",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(7)",
+              "value": "hide",
+              "url": "https://en.wikipedia.org",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:43.557Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "hide",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(8)",
+              "value": "Search",
+              "url": "https://en.wikipedia.org",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:43.557Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "Search",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "button:nth-of-type(9)",
+              "value": "Search",
+              "url": "https://en.wikipedia.org",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:43.557Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "Search",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            },
+            {
+              "action": "detect_button",
+              "selector": "#p-lang-btn-sticky-header",
+              "value": "353 languages",
+              "url": "https://en.wikipedia.org",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:43.557Z",
+              "metadata": {
+                "capability": "Button Detection",
+                "buttonText": "353 languages",
+                "buttonType": "submit",
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Link Extraction",
+          "action": "extract_links",
+          "success": true,
+          "duration": 668,
+          "patterns": [
+            {
+              "action": "extract_links",
+              "selector": "a[href]",
+              "url": "https://en.wikipedia.org",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:44.225Z",
+              "metadata": {
+                "capability": "Link Extraction",
+                "linkCount": 10,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "Shadow DOM Detection",
+          "action": "detect_shadow_dom",
+          "success": false,
+          "duration": 20,
+          "error": "page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:290:30), <anonymous>:1:208)\n    at UtilityScript.evaluate (<anonymous>:292:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+          "patterns": []
+        },
+        {
+          "capability": "Iframe Detection",
+          "action": "detect_iframes",
+          "success": true,
+          "duration": 5,
+          "patterns": []
+        },
+        {
+          "capability": "Dynamic Content Detection",
+          "action": "detect_spa_framework",
+          "success": true,
+          "duration": 8,
+          "patterns": []
+        },
+        {
+          "capability": "CAPTCHA Detection",
+          "action": "detect_captcha",
+          "success": true,
+          "duration": 6,
+          "patterns": []
+        },
+        {
+          "capability": "Performance Metrics",
+          "action": "measure_performance",
+          "success": true,
+          "duration": 5,
+          "patterns": [
+            {
+              "action": "measure_performance",
+              "selector": "page",
+              "url": "https://en.wikipedia.org",
+              "success": true,
+              "timestamp": "2025-11-14T03:50:44.269Z",
+              "metadata": {
+                "capability": "Performance Metrics",
+                "domContentLoaded": 846,
+                "loadComplete": 1120,
+                "responseTime": 115.80000000074506,
+                "source": "100-page-test"
+              }
+            }
+          ]
+        },
+        {
+          "capability": "API Interception",
+          "action": "intercept_requests",
+          "success": true,
+          "duration": 2002,
+          "patterns": []
+        }
+      ],
+      "totalDuration": 5423,
+      "successRate": 0.9,
+      "patternsLearned": 35
+    }
+  ]
+}

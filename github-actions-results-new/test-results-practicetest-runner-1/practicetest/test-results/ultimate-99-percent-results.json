@@ -1,0 +1,119 @@
+{
+  "timestamp": "2025-11-14T04:12:09.275Z",
+  "stats": {
+    "totalXP": 1850,
+    "level": 4,
+    "achievements": [
+      {
+        "id": "first-blood",
+        "name": "🎯 First Blood",
+        "description": "Pass the first test on first try",
+        "xp": 50,
+        "unlocked": true,
+        "unlockedAt": "2025-11-14T04:06:40.743Z"
+      },
+      {
+        "id": "self-healer",
+        "name": "🔧 Self Healer",
+        "description": "Successfully self-heal a failing selector",
+        "xp": 100,
+        "unlocked": true,
+        "unlockedAt": "2025-11-14T04:07:11.529Z"
+      },
+      {
+        "id": "gap-finder",
+        "name": "🔍 Gap Finder",
+        "description": "Find and fix a critical gap in the system",
+        "xp": 200,
+        "unlocked": false
+      },
+      {
+        "id": "novel-thinker",
+        "name": "🌟 Novel Thinker",
+        "description": "Discover a novel approach to a problem",
+        "xp": 250,
+        "unlocked": false
+      },
+      {
+        "id": "99-percent",
+        "name": "📈 99% Club",
+        "description": "Achieve 99% success rate",
+        "xp": 500,
+        "unlocked": true,
+        "unlockedAt": "2025-11-14T04:07:11.730Z"
+      },
+      {
+        "id": "perfectionist",
+        "name": "💯 Perfectionist",
+        "description": "Achieve 100% success rate",
+        "xp": 1000,
+        "unlocked": false
+      },
+      {
+        "id": "speed-demon",
+        "name": "⚡ Speed Demon",
+        "description": "Complete all tests in under 2 minutes",
+        "xp": 300,
+        "unlocked": false
+      },
+      {
+        "id": "resilient",
+        "name": "🛡️ Resilient",
+        "description": "Self-heal 10 failing tests in a row",
+        "xp": 400,
+        "unlocked": false
+      },
+      {
+        "id": "master-strategist",
+        "name": "🧠 Master Strategist",
+        "description": "Use all 7 selector strategies successfully",
+        "xp": 350,
+        "unlocked": false
+      },
+      {
+        "id": "zen-master",
+        "name": "🧘 Zen Master",
+        "description": "Complete without any failures",
+        "xp": 750,
+        "unlocked": true,
+        "unlockedAt": "2025-11-14T04:12:09.268Z"
+      }
+    ],
+    "testsRun": 10,
+    "testsPassedFirstTry": 9,
+    "testsSelfHealed": 7,
+    "testsFailed": 0,
+    "novelApproachesFound": 0,
+    "gapsFixed": 0,
+    "currentSuccessRate": 1.6
+  },
+  "engineStats": {
+    "totalQueries": 10,
+    "successfulQueries": 9,
+    "strategySuccesses": {},
+    "successRate": 0.9,
+    "strategyBreakdown": [
+      {
+        "strategy": "AgentDBPattern",
+        "count": 7,
+        "percentage": 77.77777777777779
+      },
+      {
+        "strategy": "VisualPosition",
+        "count": 2,
+        "percentage": 22.22222222222222
+      }
+    ]
+  },
+  "healingStats": {
+    "totalActions": 10,
+    "selfHealed": 7,
+    "immediateSuccess": 0,
+    "failed": 3,
+    "healingRate": 0.7,
+    "immediateSuccessRate": 0,
+    "failureRate": 0.3
+  },
+  "grade": "S+",
+  "duration": 333155
+}

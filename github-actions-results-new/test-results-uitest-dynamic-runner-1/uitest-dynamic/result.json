@@ -1,0 +1,9 @@
+{
+  "site": "uitest-dynamic",
+  "runner": 1,
+  "ip": "20.55.214.64",
+  "result": "PASS",
+  "captcha_detected": false,
+  "exit_code": 0,
+  "timestamp": "2025-11-14T10:38:42Z"
+}

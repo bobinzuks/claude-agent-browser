@@ -1,0 +1,9 @@
+{
+  "site": "youtube",
+  "runner": 4,
+  "ip": "48.214.54.57",
+  "result": "PASS",
+  "captcha_detected": false,
+  "exit_code": 0,
+  "timestamp": "2025-11-14T10:40:20Z"
+}

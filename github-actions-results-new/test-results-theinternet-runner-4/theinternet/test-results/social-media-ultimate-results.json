@@ -1,0 +1,163 @@
+{
+  "timestamp": "2025-11-14T08:32:50.609Z",
+  "goal": {
+    "targetSuccessRate": 0.99,
+    "maxIterations": 10,
+    "capabilities": [
+      "button-detection",
+      "form-detection",
+      "link-extraction",
+      "self-healing",
+      "stealth-mode",
+      "captcha-avoidance"
+    ],
+    "testSites": [
+      {
+        "name": "GitHub",
+        "url": "https://github.com",
+        "category": "Tech Platform",
+        "requiredCapabilities": [
+          "button-detection",
+          "link-extraction",
+          "stealth-mode"
+        ]
+      },
+      {
+        "name": "Reddit",
+        "url": "https://www.reddit.com",
+        "category": "Social Media",
+        "requiredCapabilities": [
+          "button-detection",
+          "stealth-mode",
+          "captcha-avoidance"
+        ]
+      },
+      {
+        "name": "Twitter/X",
+        "url": "https://twitter.com",
+        "category": "Social Media",
+        "requiredCapabilities": [
+          "form-detection",
+          "stealth-mode",
+          "captcha-avoidance"
+        ]
+      },
+      {
+        "name": "LinkedIn",
+        "url": "https://www.linkedin.com",
+        "category": "Professional Network",
+        "requiredCapabilities": [
+          "form-detection",
+          "button-detection",
+          "stealth-mode"
+        ]
+      },
+      {
+        "name": "Stack Overflow",
+        "url": "https://stackoverflow.com",
+        "category": "Q&A Platform",
+        "requiredCapabilities": [
+          "button-detection",
+          "link-extraction",
+          "self-healing"
+        ]
+      },
+      {
+        "name": "YouTube",
+        "url": "https://www.youtube.com",
+        "category": "Video Platform",
+        "requiredCapabilities": [
+          "button-detection",
+          "stealth-mode"
+        ]
+      },
+      {
+        "name": "Medium",
+        "url": "https://medium.com",
+        "category": "Publishing Platform",
+        "requiredCapabilities": [
+          "button-detection",
+          "link-extraction"
+        ]
+      },
+      {
+        "name": "Dev.to",
+        "url": "https://dev.to",
+        "category": "Developer Community",
+        "requiredCapabilities": [
+          "button-detection",
+          "link-extraction"
+        ]
+      },
+      {
+        "name": "Product Hunt",
+        "url": "https://www.producthunt.com",
+        "category": "Product Discovery",
+        "requiredCapabilities": [
+          "button-detection",
+          "stealth-mode"
+        ]
+      },
+      {
+        "name": "Hacker News",
+        "url": "https://news.ycombinator.com",
+        "category": "Tech News",
+        "requiredCapabilities": [
+          "link-extraction",
+          "button-detection"
+        ]
+      },
+      {
+        "name": "The Internet - Login",
+        "url": "https://the-internet.herokuapp.com/login",
+        "category": "Test Site",
+        "requiredCapabilities": [
+          "form-detection",
+          "button-detection"
+        ]
+      },
+      {
+        "name": "Practice Test Automation",
+        "url": "https://practicetestautomation.com/practice-test-login/",
+        "category": "Test Site",
+        "requiredCapabilities": [
+          "form-detection",
+          "button-detection"
+        ]
+      },
+      {
+        "name": "SauceDemo",
+        "url": "https://www.saucedemo.com/",
+        "category": "Test Site",
+        "requiredCapabilities": [
+          "form-detection",
+          "button-detection"
+        ]
+      },
+      {
+        "name": "UI Testing Playground - Dynamic",
+        "url": "http://uitestingplayground.com/dynamicid",
+        "category": "Test Site",
+        "requiredCapabilities": [
+          "button-detection",
+          "self-healing"
+        ]
+      },
+      {
+        "name": "UI Testing Playground - Shadow DOM",
+        "url": "http://uitestingplayground.com/shadowdom",
+        "category": "Test Site",
+        "requiredCapabilities": [
+          "button-detection"
+        ]
+      }
+    ]
+  },
+  "stats": {
+    "totalIterations": 10,
+    "currentSuccessRate": 0.9333333333333333,
+    "averageIterationTime": 133819.5,
+    "totalImprovements": 0
+  },
+  "status": "INCOMPLETE"
+}
