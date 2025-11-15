@@ -37,7 +37,7 @@ jobs:
       fail-fast: false
 
     # Only run jobs up to parallel_jobs count
-    if: matrix.job_index < fromJson(inputs.parallel_jobs)
+    if: ${{ matrix.job_index < fromJson(inputs.parallel_jobs) }}
 
     steps:
       - name: Checkout repository
