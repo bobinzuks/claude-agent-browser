@@ -221,13 +221,30 @@ describe('🚀 Twitter/X Accessibility API Breakthrough', () => {
     console.log('  📍 Step 1: Wait for login page to fully load...');
 
     // Wait for input field to appear (Twitter lazy loads the form)
+    // Try multiple strategies to ensure form is ready
+    let formReady = false;
+
     try {
-      await page.waitForSelector('input[autocomplete="username"]', { timeout: 15000 });
-      console.log('    ✅ Login form detected via standard selector');
+      await page.waitForSelector('input[autocomplete="username"]', { timeout: 15000, state: 'visible' });
+      console.log('    ✅ Login form detected via username input');
+      formReady = true;
     } catch {
-      console.log('    ⚠️  Standard input selector not found, waiting additional time...');
-      await page.waitForTimeout(5000);
+      console.log('    ⚠️  Username input not found, trying alternative selectors...');
     }
+
+    if (!formReady) {
+      try {
+        await page.waitForSelector('input[name="text"]', { timeout: 10000, state: 'visible' });
+        console.log('    ✅ Login form detected via text input name');
+        formReady = true;
+      } catch {
+        console.log('    ⚠️  Text input not found, waiting additional time...');
+        await page.waitForTimeout(5000);
+      }
+    }
+
+    // Additional buffer for React hydration and accessibility tree population
+    await page.waitForTimeout(2000);
 
     await page.screenshot({ path: 'twitter-accessibility-phase5-initial.png', fullPage: true });
 
