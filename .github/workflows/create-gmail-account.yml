@@ -32,12 +32,8 @@ jobs:
 
     strategy:
       matrix:
-        job_index: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
-      max-parallel: ${{ fromJson(inputs.parallel_jobs) }}
+        job_index: ${{ fromJson(format('[{0}]', join(range(0, fromJson(inputs.parallel_jobs)), ','))) }}
       fail-fast: false
-
-    # Only run jobs up to parallel_jobs count
-    if: ${{ matrix.job_index < fromJson(inputs.parallel_jobs) }}
 
     steps:
       - name: Checkout repository
