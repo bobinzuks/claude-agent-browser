@@ -191,7 +191,7 @@ export class GitHubActionsTool {
       run_id: runId
     });
 
-    return response.data.artifacts.map(artifact => ({
+    return response.data.artifacts.map((artifact: any) => ({
       id: artifact.id,
       name: artifact.name,
       size_in_bytes: artifact.size_in_bytes,
@@ -260,7 +260,7 @@ export class GitHubActionsTool {
       repo: this.repo
     });
 
-    return response.data.workflows.map(workflow => ({
+    return response.data.workflows.map((workflow: any) => ({
       id: workflow.id,
       name: workflow.name,
       path: workflow.path,
@@ -321,14 +321,14 @@ export class GitHubActionsTool {
       run_id: runId
     });
 
-    return response.data.jobs.map(job => ({
+    return response.data.jobs.map((job: any) => ({
       id: job.id,
       name: job.name,
       status: job.status,
       conclusion: job.conclusion,
       started_at: job.started_at,
       completed_at: job.completed_at,
-      steps: job.steps?.map(step => ({
+      steps: job.steps?.map((step: any) => ({
         name: step.name,
         status: step.status,
         conclusion: step.conclusion,
