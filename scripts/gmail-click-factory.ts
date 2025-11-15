@@ -22,10 +22,13 @@ class GmailClickFactory {
   async init() {
     console.log('🚀 Launching browser...');
 
+    // Detect if running in CI environment
+    const isCI = process.env.CI === 'true' || process.env.GITHUB_ACTIONS === 'true';
+
     // Launch browser in non-headless mode with VISIBLE window
     this.browser = await chromium.launch({
-      headless: false,
-      channel: 'chrome', // Try to use system Chrome if available
+      headless: isCI, // Use headless mode in CI
+      channel: isCI ? undefined : 'chrome', // Try to use system Chrome if available (local only)
       args: [
         '--start-maximized',
         '--window-size=1920,1080',
