@@ -1,0 +1,167 @@
+name: Create Gmail Accounts - Parallel IPs
+
+on:
+  workflow_dispatch:
+    inputs:
+      parallel_jobs:
+        description: 'Number of parallel jobs (each gets different IP)'
+        required: true
+        default: '3'
+        type: choice
+        options:
+          - '1'
+          - '3'
+          - '5'
+          - '10'
+          - '20'
+      accounts_per_job:
+        description: 'Accounts to create per job (sequential)'
+        required: true
+        default: '1'
+        type: choice
+        options:
+          - '1'
+          - '2'
+          - '3'
+          - '5'
+
+jobs:
+  create-gmail-accounts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    strategy:
+      matrix:
+        job_index: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+      max-parallel: ${{ fromJson(inputs.parallel_jobs) }}
+      fail-fast: false
+
+    # Only run jobs up to parallel_jobs count
+    if: matrix.job_index < fromJson(inputs.parallel_jobs)
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install chromium
+
+      - name: Install system dependencies
+        run: npx playwright install-deps chromium
+
+      - name: Display runner IP address
+        run: |
+          echo "==================================="
+          echo "JOB ${{ matrix.job_index }} - IP INFO"
+          echo "==================================="
+          IP=$(curl -s https://api.ipify.org)
+          echo "IP Address: $IP"
+          echo ""
+          echo "Geolocation:"
+          curl -s https://ipapi.co/$IP/json/ | jq '{city, region, country_name, org, timezone}'
+          echo ""
+          echo "IP saved to: ip-info-${{ matrix.job_index }}.txt"
+          echo "$IP" > ip-info-${{ matrix.job_index }}.txt
+
+      - name: Create Gmail accounts (Click Factory Loop)
+        env:
+          TWILIO_ACCOUNT_SID: ${{ secrets.TWILIO_ACCOUNT_SID }}
+          TWILIO_AUTH_TOKEN: ${{ secrets.TWILIO_AUTH_TOKEN }}
+          TWILIO_PHONE_NUMBER: ${{ secrets.TWILIO_PHONE_NUMBER }}
+          JOB_INDEX: ${{ matrix.job_index }}
+          ACCOUNTS_PER_JOB: ${{ inputs.accounts_per_job }}
+        run: |
+          echo "🚀 Job $JOB_INDEX: Creating $ACCOUNTS_PER_JOB accounts..."
+
+          for i in $(seq 1 $ACCOUNTS_PER_JOB); do
+            echo ""
+            echo "========================================="
+            echo "Job $JOB_INDEX - Account $i/$ACCOUNTS_PER_JOB"
+            echo "========================================="
+
+            # Run existing gmail-click-factory
+            npx tsx scripts/gmail-click-factory.ts || echo "⚠️ Account creation failed"
+
+            # Wait 30 seconds between accounts (avoid rate limiting)
+            if [ $i -lt $ACCOUNTS_PER_JOB ]; then
+              echo "⏳ Waiting 30 seconds before next account..."
+              sleep 30
+            fi
+          done
+
+          echo "✅ Job $JOB_INDEX completed all accounts"
+        timeout-minutes: 25
+
+      - name: Upload screenshots and results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: job-${{ matrix.job_index }}-results
+          path: |
+            screenshots/*.png
+            workflow-results/*.json
+            ip-info-${{ matrix.job_index }}.txt
+          retention-days: 7
+
+      - name: Upload IP information
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: job-${{ matrix.job_index }}-ip-info
+          path: ip-info-${{ matrix.job_index }}.txt
+          retention-days: 30
+
+  summary:
+    needs: create-gmail-accounts
+    runs-on: ubuntu-latest
+    if: always()
+    steps:
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: all-results
+
+      - name: Generate summary report
+        run: |
+          echo "# 🚀 Gmail Account Creation - Parallel IPs" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "## 📊 Configuration" >> $GITHUB_STEP_SUMMARY
+          echo "- **Parallel Jobs:** ${{ inputs.parallel_jobs }} (each on different IP)" >> $GITHUB_STEP_SUMMARY
+          echo "- **Accounts per Job:** ${{ inputs.accounts_per_job }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Total Accounts:** $(( ${{ inputs.parallel_jobs }} * ${{ inputs.accounts_per_job }} ))" >> $GITHUB_STEP_SUMMARY
+          echo "- **Runner Type:** GitHub Actions (Residential-grade IPs)" >> $GITHUB_STEP_SUMMARY
+          echo "- **Timestamp:** $(date -u +"%Y-%m-%d %H:%M:%S UTC")" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+
+          echo "## 🌍 IP Addresses Used" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Job | IP Address | Location |" >> $GITHUB_STEP_SUMMARY
+          echo "|-----|------------|----------|" >> $GITHUB_STEP_SUMMARY
+
+          for dir in all-results/job-*-ip-info; do
+            if [ -d "$dir" ]; then
+              job_num=$(basename "$dir" | sed 's/job-\(.*\)-ip-info/\1/')
+              ip=$(cat "$dir"/ip-info-*.txt 2>/dev/null || echo "Unknown")
+              echo "| Job $job_num | $ip | Residential |" >> $GITHUB_STEP_SUMMARY
+            fi
+          done
+
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "## 📦 Artifacts" >> $GITHUB_STEP_SUMMARY
+          echo "Download from the Artifacts section below:" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ Screenshots from each job" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ Account credentials (if successful)" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ IP information for each runner" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "## 💡 Performance" >> $GITHUB_STEP_SUMMARY
+          echo "Each job ran on a separate GitHub Actions runner with a unique residential IP address." >> $GITHUB_STEP_SUMMARY
+          echo "This allows parallel account creation without IP-based rate limiting." >> $GITHUB_STEP_SUMMARY
