@@ -32,7 +32,29 @@ jobs:
 
     strategy:
       matrix:
-        job_index: ${{ fromJson(format('[{0}]', join(range(0, fromJson(inputs.parallel_jobs)), ','))) }}
+        job_index:
+          - ${{ inputs.parallel_jobs == '1' && '0' || '0' }}
+          - ${{ inputs.parallel_jobs != '1' && '1' || '' }}
+          - ${{ (inputs.parallel_jobs == '3' || inputs.parallel_jobs == '5' || inputs.parallel_jobs == '10' || inputs.parallel_jobs == '20') && '2' || '' }}
+          - ${{ (inputs.parallel_jobs == '5' || inputs.parallel_jobs == '10' || inputs.parallel_jobs == '20') && '3' || '' }}
+          - ${{ (inputs.parallel_jobs == '5' || inputs.parallel_jobs == '10' || inputs.parallel_jobs == '20') && '4' || '' }}
+          - ${{ (inputs.parallel_jobs == '10' || inputs.parallel_jobs == '20') && '5' || '' }}
+          - ${{ (inputs.parallel_jobs == '10' || inputs.parallel_jobs == '20') && '6' || '' }}
+          - ${{ (inputs.parallel_jobs == '10' || inputs.parallel_jobs == '20') && '7' || '' }}
+          - ${{ (inputs.parallel_jobs == '10' || inputs.parallel_jobs == '20') && '8' || '' }}
+          - ${{ (inputs.parallel_jobs == '10' || inputs.parallel_jobs == '20') && '9' || '' }}
+          - ${{ inputs.parallel_jobs == '20' && '10' || '' }}
+          - ${{ inputs.parallel_jobs == '20' && '11' || '' }}
+          - ${{ inputs.parallel_jobs == '20' && '12' || '' }}
+          - ${{ inputs.parallel_jobs == '20' && '13' || '' }}
+          - ${{ inputs.parallel_jobs == '20' && '14' || '' }}
+          - ${{ inputs.parallel_jobs == '20' && '15' || '' }}
+          - ${{ inputs.parallel_jobs == '20' && '16' || '' }}
+          - ${{ inputs.parallel_jobs == '20' && '17' || '' }}
+          - ${{ inputs.parallel_jobs == '20' && '18' || '' }}
+          - ${{ inputs.parallel_jobs == '20' && '19' || '' }}
+        exclude:
+          - job_index: ''
       fail-fast: false
 
     steps:
