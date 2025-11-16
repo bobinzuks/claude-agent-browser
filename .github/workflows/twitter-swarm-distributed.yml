@@ -1,0 +1,302 @@
+name: Twitter Swarm - Distributed IP Testing
+
+on:
+  workflow_dispatch:
+    inputs:
+      parallel_jobs:
+        description: 'Number of parallel jobs (different IPs)'
+        required: true
+        default: '10'
+        type: number
+      agents_per_job:
+        description: 'Agents per job'
+        required: true
+        default: '4'
+        type: number
+      duration_minutes:
+        description: 'Test duration in minutes'
+        required: true
+        default: '90'
+        type: number
+
+jobs:
+  generate-matrix:
+    name: Generate IP Matrix
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.set-matrix.outputs.matrix }}
+    steps:
+      - id: set-matrix
+        run: |
+          # Generate matrix based on input parallel jobs
+          JOBS='{"include":['
+          for i in $(seq 1 ${{ inputs.parallel_jobs || 10 }}); do
+            if [ $i -gt 1 ]; then JOBS="${JOBS},"; fi
+            JOBS="${JOBS}{\"job_id\":${i}}"
+          done
+          JOBS="${JOBS}]}"
+          echo "matrix=$JOBS" >> $GITHUB_OUTPUT
+          echo "Generated matrix: $JOBS"
+
+  distributed-swarm:
+    name: Swarm Job ${{ matrix.job_id }}
+    needs: generate-matrix
+    runs-on: ubuntu-latest
+    timeout-minutes: ${{ inputs.duration_minutes || 90 }}
+
+    strategy:
+      fail-fast: false
+      max-parallel: 10
+      matrix: ${{ fromJson(needs.generate-matrix.outputs.matrix) }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: Detect IP and geolocation
+        id: ip-info
+        run: |
+          echo "🌍 Detecting runner IP and location..."
+          IP_INFO=$(curl -s https://ipinfo.io/json)
+          echo "$IP_INFO"
+
+          IP=$(echo "$IP_INFO" | jq -r '.ip // "unknown"')
+          CITY=$(echo "$IP_INFO" | jq -r '.city // "unknown"')
+          REGION=$(echo "$IP_INFO" | jq -r '.region // "unknown"')
+          COUNTRY=$(echo "$IP_INFO" | jq -r '.country // "unknown"')
+          ORG=$(echo "$IP_INFO" | jq -r '.org // "unknown"')
+
+          echo "ip=$IP" >> $GITHUB_OUTPUT
+          echo "city=$CITY" >> $GITHUB_OUTPUT
+          echo "region=$REGION" >> $GITHUB_OUTPUT
+          echo "country=$COUNTRY" >> $GITHUB_OUTPUT
+          echo "org=$ORG" >> $GITHUB_OUTPUT
+
+          echo "📍 Location: $CITY, $REGION, $COUNTRY"
+          echo "🏢 ISP: $ORG"
+          echo "🔢 IP: $IP"
+
+      - name: Create job-specific swarm config
+        run: |
+          cat > swarm-config-${{ matrix.job_id }}.json << EOF
+          {
+            "job_id": ${{ matrix.job_id }},
+            "agent_count": ${{ inputs.agents_per_job || 4 }},
+            "duration_minutes": ${{ inputs.duration_minutes || 90 }},
+            "ip_info": {
+              "ip": "${{ steps.ip-info.outputs.ip }}",
+              "city": "${{ steps.ip-info.outputs.city }}",
+              "region": "${{ steps.ip-info.outputs.region }}",
+              "country": "${{ steps.ip-info.outputs.country }}",
+              "org": "${{ steps.ip-info.outputs.org }}"
+            },
+            "github": {
+              "run_id": "${{ github.run_id }}",
+              "run_number": ${{ github.run_number }},
+              "actor": "${{ github.actor }}"
+            }
+          }
+          EOF
+          cat swarm-config-${{ matrix.job_id }}.json
+
+      - name: Run Twitter swarm
+        id: swarm
+        timeout-minutes: ${{ inputs.duration_minutes || 90 }}
+        env:
+          JOB_ID: ${{ matrix.job_id }}
+          AGENT_COUNT: ${{ inputs.agents_per_job || 4 }}
+          RUNNER_IP: ${{ steps.ip-info.outputs.ip }}
+          RUNNER_LOCATION: ${{ steps.ip-info.outputs.city }}, ${{ steps.ip-info.outputs.country }}
+        run: |
+          echo "🚀 Starting swarm job ${{ matrix.job_id }}"
+          echo "📍 Running from: ${{ steps.ip-info.outputs.city }}, ${{ steps.ip-info.outputs.country }}"
+          echo "🔢 IP: ${{ steps.ip-info.outputs.ip }}"
+          echo "🤖 Agents: ${{ inputs.agents_per_job || 4 }}"
+
+          # Run the Twitter swarm
+          npx tsx scripts/twitter-90-percent.ts 2>&1 | tee twitter-swarm-job-${{ matrix.job_id }}.log
+
+      - name: Analyze results
+        if: always()
+        id: analyze
+        run: |
+          if [ -f twitter-90-percent-results.json ]; then
+            echo "📊 Results for Job ${{ matrix.job_id }}:"
+
+            # Extract metrics using jq
+            HIT_RATE=$(jq -r '.metrics.currentHitRate // 0' twitter-90-percent-results.json)
+            PATTERNS=$(jq -r '.metrics.patternsLearned // 0' twitter-90-percent-results.json)
+            TOTAL_ACTIONS=$(jq -r '.metrics.totalActions // 0' twitter-90-percent-results.json)
+            CACHE_HITS=$(jq -r '.metrics.totalCacheHits // 0' twitter-90-percent-results.json)
+            DURATION=$(jq -r '.duration // 0' twitter-90-percent-results.json)
+
+            # Add IP info to results
+            jq --arg ip "${{ steps.ip-info.outputs.ip }}" \
+               --arg city "${{ steps.ip-info.outputs.city }}" \
+               --arg country "${{ steps.ip-info.outputs.country }}" \
+               --arg org "${{ steps.ip-info.outputs.org }}" \
+               '. + {
+                 runner_info: {
+                   ip: $ip,
+                   city: $city,
+                   country: $country,
+                   org: $org,
+                   job_id: ${{ matrix.job_id }}
+                 }
+               }' twitter-90-percent-results.json > results-with-ip.json
+
+            mv results-with-ip.json twitter-90-percent-results.json
+
+            echo "✅ Hit Rate: $(echo "$HIT_RATE * 100" | bc -l | cut -d. -f1)%"
+            echo "✅ Patterns Learned: $PATTERNS"
+            echo "✅ Total Actions: $TOTAL_ACTIONS"
+            echo "✅ Cache Hits: $CACHE_HITS"
+            echo "✅ Duration: $(echo "$DURATION / 1000 / 60" | bc) minutes"
+
+            echo "hit_rate=$HIT_RATE" >> $GITHUB_OUTPUT
+            echo "patterns=$PATTERNS" >> $GITHUB_OUTPUT
+            echo "actions=$TOTAL_ACTIONS" >> $GITHUB_OUTPUT
+          else
+            echo "❌ No results file found"
+            echo "hit_rate=0" >> $GITHUB_OUTPUT
+            echo "patterns=0" >> $GITHUB_OUTPUT
+            echo "actions=0" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Upload results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: swarm-job-${{ matrix.job_id }}-results
+          path: |
+            twitter-90-percent-results.json
+            twitter-swarm-job-${{ matrix.job_id }}.log
+            swarm-config-${{ matrix.job_id }}.json
+          retention-days: 30
+
+      - name: Upload AgentDB data
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: agentdb-job-${{ matrix.job_id }}
+          path: data/unified-agentdb/
+          retention-days: 7
+
+  aggregate-results:
+    name: Aggregate Multi-IP Results
+    needs: distributed-swarm
+    runs-on: ubuntu-latest
+    if: always()
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: all-results/
+
+      - name: Aggregate and analyze
+        run: |
+          echo "🔍 Aggregating results from ${{ inputs.parallel_jobs || 10 }} different IPs..."
+
+          # Create comprehensive report
+          cat > MULTI-IP-REPORT.md << 'REPORT_START'
+          # 🌍 Twitter Swarm Multi-IP Test Report
+
+          **Run ID:** ${{ github.run_id }}
+          **Run Number:** #${{ github.run_number }}
+          **Date:** $(date -u +"%Y-%m-%d %H:%M:%S UTC")
+          **Parallel Jobs:** ${{ inputs.parallel_jobs || 10 }}
+          **Agents per Job:** ${{ inputs.agents_per_job || 4 }}
+          **Total Agents:** $(( ${{ inputs.parallel_jobs || 10 }} * ${{ inputs.agents_per_job || 4 }} ))
+
+          ---
+
+          ## 📊 Summary Statistics
+
+          | Metric | Value |
+          |--------|-------|
+          REPORT_START
+
+          # Collect metrics
+          TOTAL_PATTERNS=0
+          TOTAL_ACTIONS=0
+          TOTAL_HIT_RATE=0
+          JOB_COUNT=0
+
+          for job_dir in all-results/swarm-job-*-results/; do
+            if [ -f "$job_dir/twitter-90-percent-results.json" ]; then
+              JOB_COUNT=$((JOB_COUNT + 1))
+
+              PATTERNS=$(jq -r '.metrics.patternsLearned // 0' "$job_dir/twitter-90-percent-results.json")
+              ACTIONS=$(jq -r '.metrics.totalActions // 0' "$job_dir/twitter-90-percent-results.json")
+              HIT_RATE=$(jq -r '.metrics.currentHitRate // 0' "$job_dir/twitter-90-percent-results.json")
+
+              TOTAL_PATTERNS=$((TOTAL_PATTERNS + PATTERNS))
+              TOTAL_ACTIONS=$((TOTAL_ACTIONS + ACTIONS))
+              TOTAL_HIT_RATE=$(echo "$TOTAL_HIT_RATE + $HIT_RATE" | bc -l)
+            fi
+          done
+
+          AVG_HIT_RATE=$(echo "scale=4; $TOTAL_HIT_RATE / $JOB_COUNT" | bc -l)
+
+          echo "| Jobs Completed | $JOB_COUNT |" >> MULTI-IP-REPORT.md
+          echo "| Total Patterns | $TOTAL_PATTERNS |" >> MULTI-IP-REPORT.md
+          echo "| Total Actions | $TOTAL_ACTIONS |" >> MULTI-IP-REPORT.md
+          echo "| Average Hit Rate | $(echo "$AVG_HIT_RATE * 100" | bc -l | cut -d. -f1)% |" >> MULTI-IP-REPORT.md
+          echo "" >> MULTI-IP-REPORT.md
+          echo "---" >> MULTI-IP-REPORT.md
+          echo "" >> MULTI-IP-REPORT.md
+          echo "## 🗺️ Results by IP/Location" >> MULTI-IP-REPORT.md
+          echo "" >> MULTI-IP-REPORT.md
+
+          # Detail each job
+          for job_dir in all-results/swarm-job-*-results/; do
+            if [ -f "$job_dir/twitter-90-percent-results.json" ]; then
+              JOB_ID=$(jq -r '.runner_info.job_id // "unknown"' "$job_dir/twitter-90-percent-results.json")
+              IP=$(jq -r '.runner_info.ip // "unknown"' "$job_dir/twitter-90-percent-results.json")
+              CITY=$(jq -r '.runner_info.city // "unknown"' "$job_dir/twitter-90-percent-results.json")
+              COUNTRY=$(jq -r '.runner_info.country // "unknown"' "$job_dir/twitter-90-percent-results.json")
+              HIT_RATE=$(jq -r '.metrics.currentHitRate // 0' "$job_dir/twitter-90-percent-results.json")
+              PATTERNS=$(jq -r '.metrics.patternsLearned // 0' "$job_dir/twitter-90-percent-results.json")
+
+              echo "### Job $JOB_ID - $CITY, $COUNTRY" >> MULTI-IP-REPORT.md
+              echo "" >> MULTI-IP-REPORT.md
+              echo "- **IP:** $IP" >> MULTI-IP-REPORT.md
+              echo "- **Hit Rate:** $(echo "$HIT_RATE * 100" | bc -l | cut -d. -f1)%" >> MULTI-IP-REPORT.md
+              echo "- **Patterns Learned:** $PATTERNS" >> MULTI-IP-REPORT.md
+              echo "" >> MULTI-IP-REPORT.md
+            fi
+          done
+
+          cat MULTI-IP-REPORT.md
+
+      - name: Upload aggregated report
+        uses: actions/upload-artifact@v4
+        with:
+          name: multi-ip-aggregated-report
+          path: MULTI-IP-REPORT.md
+          retention-days: 90
+
+      - name: Create summary
+        run: |
+          cat MULTI-IP-REPORT.md >> $GITHUB_STEP_SUMMARY

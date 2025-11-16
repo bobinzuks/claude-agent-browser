@@ -1,0 +1,185 @@
+name: Twitter Swarm Multi-IP Test
+
+on:
+  workflow_dispatch:
+    inputs:
+      duration_minutes:
+        description: 'Test duration in minutes'
+        required: true
+        default: '60'
+        type: number
+      target_hit_rate:
+        description: 'Target cache hit rate %'
+        required: true
+        default: '90'
+        type: number
+  schedule:
+    # Run daily at 2 AM UTC
+    - cron: '0 2 * * *'
+
+jobs:
+  twitter-swarm:
+    name: Twitter Swarm (${{ matrix.region }})
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 120
+
+    strategy:
+      fail-fast: false
+      matrix:
+        # GitHub Actions provides different IP ranges per runner type
+        include:
+          - region: "US-East"
+            os: ubuntu-latest
+            swarm_id: "SWARM-A"
+            agent_count: 13
+          - region: "US-West"
+            os: ubuntu-latest
+            swarm_id: "SWARM-B"
+            agent_count: 13
+          - region: "EU-Central"
+            os: ubuntu-latest
+            swarm_id: "SWARM-C"
+            agent_count: 13
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: Get runner IP info
+        run: |
+          echo "Runner IP information:"
+          curl -s https://ipinfo.io/json || echo "IP lookup failed"
+          echo ""
+          echo "Runner: ${{ matrix.region }}"
+          echo "Swarm ID: ${{ matrix.swarm_id }}"
+          echo "Agent Count: ${{ matrix.agent_count }}"
+
+      - name: Run Twitter swarm test
+        id: swarm
+        timeout-minutes: ${{ inputs.duration_minutes || 60 }}
+        env:
+          SWARM_ID: ${{ matrix.swarm_id }}
+          REGION: ${{ matrix.region }}
+          AGENT_COUNT: ${{ matrix.agent_count }}
+          TARGET_HIT_RATE: ${{ inputs.target_hit_rate || 90 }}
+        run: |
+          echo "🎯 Starting Twitter swarm on ${{ matrix.region }}"
+          npx tsx scripts/twitter-90-percent.ts 2>&1 | tee twitter-swarm-${{ matrix.region }}.log
+        continue-on-error: true
+
+      - name: Extract metrics
+        if: always()
+        run: |
+          if [ -f twitter-90-percent-results.json ]; then
+            echo "📊 Swarm Results for ${{ matrix.region }}:"
+            cat twitter-90-percent-results.json
+
+            # Extract hit rate
+            HIT_RATE=$(cat twitter-90-percent-results.json | grep -oP '"currentHitRate":\s*\K[0-9.]+' || echo "0")
+            PATTERNS=$(cat twitter-90-percent-results.json | grep -oP '"patternsLearned":\s*\K[0-9]+' || echo "0")
+
+            echo "hit_rate=$HIT_RATE" >> $GITHUB_OUTPUT
+            echo "patterns_learned=$PATTERNS" >> $GITHUB_OUTPUT
+            echo "✅ Hit Rate: $(echo "$HIT_RATE * 100" | bc)%"
+            echo "✅ Patterns Learned: $PATTERNS"
+          else
+            echo "❌ No results file found"
+          fi
+
+      - name: Upload swarm results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: swarm-results-${{ matrix.region }}
+          path: |
+            twitter-90-percent-results.json
+            twitter-swarm-${{ matrix.region }}.log
+            data/unified-agentdb/metadata.json
+          retention-days: 30
+
+      - name: Upload AgentDB patterns
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: agentdb-patterns-${{ matrix.region }}
+          path: |
+            data/unified-agentdb/
+          retention-days: 7
+
+  consolidate-results:
+    name: Consolidate Multi-IP Results
+    runs-on: ubuntu-latest
+    needs: twitter-swarm
+    if: always()
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: swarm-artifacts/
+
+      - name: Consolidate and analyze results
+        run: |
+          echo "🔍 Consolidating results from all regions..."
+
+          # Create consolidated report
+          cat > consolidated-report.md << 'EOF'
+          # Twitter Swarm Multi-IP Test Results
+
+          **Run:** ${{ github.run_number }}
+          **Date:** $(date -u +"%Y-%m-%d %H:%M:%S UTC")
+
+          ## Regional Results
+
+          EOF
+
+          # Process each region's results
+          for region in US-East US-West EU-Central; do
+            RESULT_FILE="swarm-artifacts/swarm-results-${region}/twitter-90-percent-results.json"
+            if [ -f "$RESULT_FILE" ]; then
+              echo "### ${region}" >> consolidated-report.md
+              echo '```json' >> consolidated-report.md
+              cat "$RESULT_FILE" >> consolidated-report.md
+              echo '```' >> consolidated-report.md
+              echo "" >> consolidated-report.md
+            fi
+          done
+
+          cat consolidated-report.md
+
+      - name: Upload consolidated report
+        uses: actions/upload-artifact@v4
+        with:
+          name: consolidated-multi-ip-report
+          path: consolidated-report.md
+          retention-days: 90
+
+      - name: Comment on PR (if applicable)
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const report = fs.readFileSync('consolidated-report.md', 'utf8');
+
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: report
+            });
