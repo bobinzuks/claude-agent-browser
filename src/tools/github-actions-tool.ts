@@ -3,7 +3,8 @@
  * Trigger and monitor GitHub Actions workflows programmatically
  */
 
-import { Octokit } from '@octokit/rest';
+// TODO: Add @octokit/rest to package.json dependencies
+// import { Octokit } from '@octokit/rest';
 import * as fs from 'fs';
 import * as path from 'path';
 
@@ -40,14 +41,15 @@ export interface WorkflowArtifact {
 }
 
 export class GitHubActionsTool {
-  private octokit: Octokit;
+  private octokit: any;
   private owner: string;
   private repo: string;
 
   constructor(config: GitHubActionsConfig) {
-    this.octokit = new Octokit({
-      auth: config.token
-    });
+    this.octokit = null; // Stubbed until @octokit/rest is added
+    // this.octokit = new Octokit({
+    //   auth: config.token
+    // });
     this.owner = config.owner;
     this.repo = config.repo;
   }
